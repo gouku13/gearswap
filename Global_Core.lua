@@ -1,5 +1,3 @@
--- butts!
-
 include('organizer-lib')
 require('Action_Reactions')
 
