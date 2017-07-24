@@ -38,6 +38,16 @@ sets.Rolls["Blitzer's Roll"] = set_combine(sets.Rolls.All, {head="Chasseur's Tri
 sets.Rolls["Caster's Roll"] = set_combine(sets.Rolls.All, {legs="Chasseur's Culottes +1"})
 Last_Roll = ''
 
+-- Quick Draw
+sets.QDraw = {}
+sets.QDraw.All = set_combine(set.MAB,{
+  head="Blood Mask",
+  ring1="Fenrir Ring +1",
+  ring2="Dingir Ring",
+})
+sets.QDraw["Light Shot"] = set_combine(sets.QDraw.All, {})
+sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, {})
+
 --- ===============================
 --- 	DT Sets
 --- ===============================
@@ -220,3 +230,15 @@ function job_specific_precast(spell)
     return false
 	end
 end
+--[[function job_specific_midcast(spell)
+  	if (string.find(spell.english,' Shot')) then
+	QDraw_set = {}
+	if (spell.english = "Light Shot") then
+	  QDraw_set = sets.QDraw["Light Shot"]
+	elseif (spell.english = "Dark Shot") then
+	  QDraw_set = sets.QDraw["Dark Shot"]
+	else
+	  QDraw_set = sets.QDraw.All
+	end
+end	
+]]
