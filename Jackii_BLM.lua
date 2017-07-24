@@ -61,7 +61,7 @@ function get_job_sets()
 	})
 	
 	sets.MB = set_combine(sets.MB, { 
-	body="Spaekona's Coat +2",
+	body="Spaekona's Coat +3",
 	--body="Amalric Doublet +1",
 	back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	})
