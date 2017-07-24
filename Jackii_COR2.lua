@@ -226,19 +226,19 @@ function job_specific_precast(spell)
     
     equip(roll_set)
     return true
+  elseif (string.find(spell.english,' Shot')) then
+    QDraw_set = {}
+    if (spell.english = "Light Shot") then
+      QDraw_set = sets.QDraw["Light Shot"]
+    elseif (spell.english = "Dark Shot") then
+      QDraw_set = sets.QDraw["Dark Shot"]
+    else
+      QDraw_set = sets.QDraw.All
+    end
+    
+    equip(QDraw_set)
+    return true
   else
     return false
 	end
 end
---[[function job_specific_midcast(spell)
-  	if (string.find(spell.english,' Shot')) then
-	QDraw_set = {}
-	if (spell.english = "Light Shot") then
-	  QDraw_set = sets.QDraw["Light Shot"]
-	elseif (spell.english = "Dark Shot") then
-	  QDraw_set = sets.QDraw["Dark Shot"]
-	else
-	  QDraw_set = sets.QDraw.All
-	end
-end	
-]]
