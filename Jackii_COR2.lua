@@ -178,7 +178,7 @@ sets.MAB = set_combine(sets.MAB, {
 	sets.WS["Wildfire"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
     ammo="Chrono Bullet",
     ear1="Crematio Earring",
-    ring1="Gardua Ring +1",
+    ring1="Garuda Ring +1",
     ring2="Dingir Ring"
   })
 	
