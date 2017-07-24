@@ -915,6 +915,7 @@ send_command('unbind ^1')
 send_command('unbind ^2')
 send_command('unbind ^3')
 
+--- CTRL= ^   ALT= !
 send_command('bind !- gs c toggleacc')
 send_command('bind != gs c toggledef')
 send_command('bind ^- gs c toggleutility')
