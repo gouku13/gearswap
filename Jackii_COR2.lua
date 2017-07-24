@@ -4,8 +4,8 @@ require('Jackii_LightDD')
 function get_job_sets()
 	get_base_sets()
 
-	Macro_Book = 2
-	Macro_Set = 11
+	Macro_Book = 11
+	Macro_Set = 2
 
 	sets.weapons = {main="Fettering Blade",sub="Blurred Knife +1",range="Fomalhaut",ammo="Chrono Bullet"}
 	set.proc_weapons = {}
@@ -117,10 +117,43 @@ sets.MAB = set_combine(sets.MAB, {
 --- ===============================
 	
 	sets.WS_All = set_combine(sets.WS_All,{
+	body="Laksa. Frac +3",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	})
+	
+	sets.WS_Weak = {
+	head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    legs={ name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}},
+    feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}},
+    neck="Iskur Gorget",
+    waist="Reiki Yotai",
+    left_ear="Suppanomimi",
+    right_ear="Eabani Earring",
+    left_ring="Epona's Ring",
+    right_ring="Hetairoi Ring",
+    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}},
+	}
+	
+	sets.WS["Fast Blade"] = set_combine(sets.WS_Weak,{
+	})
+	
+	sets.WS["Burning Blade"] = set_combine(sets.WS_Weak,{
+	})
+	
+	sets.WS["Flat Blade"] = set_combine(sets.WS_Weak,{
+	})
+	
+	sets.WS["Savage Blade"] = set_combine(sets.WS_All,{
+			neck="Caro Necklace",
+			ear1="Ishvara Earring",
+			ring1="Ifrit Ring +1",
+			ring2="Shukuyu Ring",
+			})
   
   sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
+    body="Laksa. Frac +3",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 	})
   
@@ -134,7 +167,7 @@ sets.MAB = set_combine(sets.MAB, {
 
 	sets.WS["Wildfire"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
     ammo="Chrono Bullet",
-    ear1="Moonshade Earring",
+    ear1="Crematio Earring",
     ring1="Gardua Ring +1",
     ring2="Dingir Ring"
   })

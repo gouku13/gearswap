@@ -189,7 +189,7 @@ sets.WS_All = {
   ear2="Moonshade Earring",
   body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
   hands="Meg. Gloves +2",
-  ring1="Hetairoi Ring",
+  ring2="Hetairoi Ring",
   waist="Fotia Belt",
   legs={ name="Herculean Trousers", augments={'Weapon skill damage +2%','DEX+9','Accuracy+12','Attack+10',}},
   feet={ name="Herculean Boots", augments={'Accuracy+20 Attack+20','Weapon skill damage +3%','STR+5','Accuracy+13',}},

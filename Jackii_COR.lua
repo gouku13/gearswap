@@ -64,7 +64,7 @@ function get_sets()
 			head="Chass. Tricorne +1",
 			hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- Snapshot +8
 			legs="Laksa. Trews +2", -- Snapshot +8
-			feet="Meg. Jam. +1", -- Snapshot +8
+			feet="Meg. Jam. +2", -- Snapshot +10
 			waist="Impulse Belt", -- Snapshot +3
 			}
 			
@@ -140,7 +140,7 @@ function get_sets()
 			body="Oshosi Vest",
 			hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
 			legs="Laksa. Trews +2",
-			feet="Meg. Jam. +1",
+			feet="Meg. Jam. +2",
 			neck="Iskur Gorget",
 			waist="Kwahu Kachina Belt",
 			ear1="Enervating Earring",
@@ -196,7 +196,7 @@ function get_sets()
 			ear1="Moonshade Earring",
 			ear2="Brutal Earring",
 			body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
-			hands="Meg. Gloves +1",
+			hands="Meg. Gloves +2",
 			ring1="Epona's ring",
 			ring2="Regal ring",
 			back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
@@ -211,7 +211,7 @@ function get_sets()
 			ear2="Ishvara Earring",
 			ear1="Moonshade Earring",
 			body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
-			hands="Meg. Gloves +1",
+			hands="Meg. Gloves +2",
 			ring1="Epona's Ring",
 			ring2="Shukuyu Ring",
 			back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
@@ -241,7 +241,7 @@ function get_sets()
 			ear2="Brutal Earring",
 			ear1="Moonshade Earring",
 			body="Abnoba Kaftan",
-			hands="Meg. Gloves +1",
+			hands="Meg. Gloves +2",
 			ring1="Hetairoi Ring",
 			feet={ name="Herculean Boots", augments={'Accuracy+20 Attack+20','Weapon skill damage +3%','STR+5','Accuracy+13',}},
 			ring2="Ramuh Ring +1",
@@ -257,8 +257,8 @@ function get_sets()
 			neck="Fotia Gorget",
 			ear1="Enervating Earring",
 			ear2="Moonshade Earring",
-			body="Meg. Cuirie +1",
-			hands="Meg. Gloves +1",
+			body="Meg. Cuirie +2",
+			hands="Meg. Gloves +2",
 			ring1="Garuda Ring +1",
 			ring2="Garuda Ring +1",
 			back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
@@ -273,8 +273,8 @@ function get_sets()
 			neck="Fotia Gorget",
 			ear1="Enervating Earring",
 			ear2="Moonshade Earring",
-			body="Meg. Cuirie +1",
-			hands="Meg. Gloves +1",
+			body="Meg. Cuirie +2",
+			hands="Meg. Gloves +2",
 			ring1="Garuda Ring +1",
 			ring2="Garuda Ring +1",
 			back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
