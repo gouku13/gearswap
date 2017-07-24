@@ -21,7 +21,7 @@ sets.DT = { --- PDT: 56%, MDT: 44%, BDT: 31%
     neck="Loricate Torque +1", -- DT -6%
     ear1="Genmei Earring", -- PDT -2%
     ear2="Etiolation Earring", -- MDT -3%
-    body="Meg. Cuirie +1", -- PDT -7%
+    body="Meg. Cuirie +2", -- PDT -8%
     hands={ name="Herculean Gloves", augments={'Accuracy+20 Attack+20','Damage taken-2%','Accuracy+6','Attack+7',}}, -- PDT -2%, DT - 2%
     ring1= Hybrid_DT_Ring1,
     ring2= Hybrid_DT_Ring2,
@@ -107,9 +107,9 @@ end
 
   --- Sacrifice some tiny DPS for some PDT
   sets.TP.PDT_Mix = { -- PDT: 26%, MDT: 12%
-    body="Meg. Cuirie +1", -- PDT -7%
+    body="Meg. Cuirie +2", -- PDT -8%
     ring1=Hybrid_DT_Ring1, -- DT -10%
-    legs="Meg. Chausses +1", -- PDT -5%
+    legs="Meg. Chausses +2", -- PDT -6%
     feet={ name="Herculean Boots", augments={'Accuracy+23 Attack+23','Damage taken-2%','DEX+5','Attack+6',}} -- PDT -2%, DT -2%
   }
 
@@ -134,8 +134,8 @@ sets.Full_Acc = set_combine(sets.Some_Acc, {
 
 if (Main_Job ~= 'BLU') then
   sets.Full_Acc = set_combine(sets.Full_Acc, {
-    hands="Meg. Gloves +1",
-    feet="Meg. Jam. +1"
+    hands="Meg. Gloves +2",
+    feet="Meg. Jam. +2",
   })
 end
 
@@ -154,7 +154,7 @@ sets.Preshot = {
   body="Pursuer's Doublet", -- Snapshot +6
   waist="Impulse Belt", -- Snapshot +3
   legs="Nahtirah Trousers", -- Snapshot +9
-  feet="Meg. Jam. +1", -- Snapshot +8
+  feet="Meg. Jam. +2", -- Snapshot +10
 }
 
 sets.Midshot = {
@@ -162,17 +162,17 @@ sets.Midshot = {
   neck="Iskur Gorget", 
   ear1="Enervating Earring", 
   ear2="Telos Earring",
-  body="Meg. Cuirie +1",
+  body="Meg. Cuirie +2",
   hands="Adhemar Wristbands",
   ring1="Regal Ring",
   ring2="Ilabrat Ring",
   waist="Eschan Stone", 
-  legs="Meg. Chausses +1",
-  feet="Meg. Jam. +1",
+  legs="Meg. Chausses +2",
+  feet="Meg. Jam. +2",
 }
 
 sets.Some_Ranged_Acc = {
-  hands="Meg. Gloves +1",
+  hands="Meg. Gloves +2",
 }
 
 sets.Full_Ranged_Acc = set_combine(sets.Some_Ranged_Acc,{
@@ -188,7 +188,7 @@ sets.WS_All = {
   ear1="Brutal Earring",
   ear2="Moonshade Earring",
   body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
-  hands="Meg. Gloves +1",
+  hands="Meg. Gloves +2",
   ring1="Hetairoi Ring",
   waist="Fotia Belt",
   legs={ name="Herculean Trousers", augments={'Weapon skill damage +2%','DEX+9','Accuracy+12','Attack+10',}},
