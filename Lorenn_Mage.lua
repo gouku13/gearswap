@@ -1,4 +1,4 @@
-require('All_Lorenn')
+require('Global_Core')
 
 function get_base_sets()
 
@@ -16,7 +16,25 @@ end
 
 --- ===============================
 --- 	DT Sets
---- ===============================	
+--- ===============================
+
+Hybrid_DT_Ring1 = {name="Defending Ring"}
+Hybrid_DT_Ring2 = { name="Dark Ring", augments={'Phys. dmg. taken -4%','Magic dmg. taken -6%',}}
+PDT_Ring1 = Hybrid_DT_Ring1
+PDT_Ring2 = Hybrid_DT_Ring2
+MDT_Ring1 = Hybrid_DT_Ring1
+MDT_Ring2 = Hybrid_DT_Ring2
+
+--- Full -DT%. For TP/PDT and idle sets.
+sets.DT = { -- PDT: 25%, MDT: 21%, BDT: 15%
+  neck="Loricate Torque +1", --- DT: 5%
+  ring1=Hybrid_DT_Ring1,
+  ring2={ name="Dark Ring", augments={'Phys. dmg. taken -4%','Magic dmg. taken -6%',}},
+  ear1="Colossus's Earring",
+  ear2="Genmei Earring",
+  back="Umbra Cape +1", -- PDT +6%
+}
+
 if (Dark_Mage or (Main_Job == 'BLU')) then
   -- Without head/pants: PDT: 29%, MDT: 19%, BDT: 18%
   sets.DT = set_combine(sets.DT, {
@@ -37,6 +55,23 @@ if (Light_Mage) then
     feet="Gende. Galosh. +1" --- PDT: 4%
 	})
 end
+
+sets.PDT = set_combine(sets.DT, {
+  ring1=PDT_Ring1,
+  ring2=PDT_Ring2
+})
+sets.MDT = set_combine(sets.DT, {
+  ring1=MDT_Ring1,
+  ring2=MDT_Ring2,
+  back="Tuilha Cape"
+})
+
+--- ===============================
+--- 	Regen/Refresh/Resting Sets
+--- ===============================	
+
+sets.Refresh = {
+}
 
 --- ===============================
 --- 	Precasts
@@ -205,7 +240,7 @@ sets.MAB = {
 }
 
 sets.MB = {
-  main={ name="Emissary", augments={'DMG:+15','Accuracy+15','Attack+15',}},
+    main={ name="Emissary", augments={'DMG:+15','Accuracy+15','Attack+15',}},
     sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
     head="Ea Hat",
@@ -223,8 +258,8 @@ sets.MB = {
 }
 
 sets.Weather = {
-back="Twilight Cape",
-waist="Hachirin-no-Obi"
+  back="Twilight Cape",
+  waist="Hachirin-no-Obi"
 }
 
 
@@ -244,8 +279,28 @@ sets.Divine_Skill = {
 sets.Dark_Skill = {
 }
 
-sets.TP_All = set_combine(sets.TP_All,{
-  head="Telchine Cap",
-})
+--- ===============================
+--- 	Melee Sets
+--- ===============================
+
+sets.TP.Base = {
+  neck="Asperity Necklace",
+  ear1="Steelflash Earring",
+  ear2="Bladeborn Earring",
+  waist="Windbuffet Belt"
+}
+
+--- ===============================
+--- 	Weaponskills
+--- ===============================
+
+sets.WS_All= {
+  head="Sukeroku Hachi.",
+  neck="Fotia Gorget",
+  ear1="Moonshade Earring",
+  ear2="Brutal Earring",
+  back="Rancorous Mantle",
+  waist="Fotia Belt"
+}
 
 end
