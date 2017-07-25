@@ -195,11 +195,70 @@ sets.WS_All = {
   feet={ name="Herculean Boots", augments={'Accuracy+20 Attack+20','Weapon skill damage +3%','STR+5','Accuracy+13',}},
 }
 
+sets.WS_Weak = {
+  head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
+  body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
+  hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+  legs={ name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}},
+  feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}},
+  neck="Iskur Gorget",
+  waist="Reiki Yotai",
+  left_ear="Suppanomimi",
+  right_ear="Eabani Earring",
+  left_ring="Epona's Ring",
+  right_ring="Hetairoi Ring",
+}
+
+--- ===============================
+--- 	  Sword Weaponskills
+--- ===============================
+
+sets.WS["Fast Blade"] = set_combine(sets.WS_Weak, {
+})
+	
+sets.WS["Burning Blade"] = set_combine(sets.WS_Weak, {
+})
+	
+sets.WS["Flat Blade"] = set_combine(sets.WS_Weak, {
+})
+
+sets.WS["Savage Blade"] = set_combine(sets.WS_All, { -- Delivers a twofold attack. Damage varies with TP. STR:50% MND:50% 
+  neck="Caro Necklace",
+  ear1="Ishvara Earring",
+  ring1="Ifrit Ring +1",
+  ring2="Shukuyu Ring",
+})
+
+sets.WS["Requiescat"] = set_combine(sets.WS_All, { -- Delivers a fivefold attack of non-elemental damage. Attack strength varies with TP. MND:73% / 76% / 79% / 82% / 85% 
+})
+
+--- ===============================
+--- 	  Dagger Weaponskills
+--- ===============================
+
+sets.WS["Evisceration"] = set_combine(sets.WS.All, { -- Delivers a fivefold attack. Chance of critical hit varies with TP. DEX:50% 
+})
+
+sets.WS["Exenterator"] = set_combine(sets.WS.All, { -- Delivers a fourfold attack that lowers enemy's accuracy. Duration of effect varies with TP. AGI:73% / 76% / 79% / 82% / 85%
+})
+
+sets.WS["Aeolian Edge"] = set_combine(sets.WS.All, { -- Delivers an area attack that deals wind elemental damage. Damage varies with TP. DEX:40% INT:40%
+})
+
+sets.WS["Rudra's Storm"] = set_combine(sets.WS.All, { -- Deals quintuple damage and weighs target down. Damage varies with TP. DEX:80% 
+})
+
+--- ===============================
+---      Ranged Weaponskills
+--- ===============================
+
 sets.WS.Ranged_All = set_combine(sets.Midshot,{ 
   neck="Fotia Gorget",
   ear2="Moonshade Earring",
+  hands="Meg. Gloves +2",
   ring1="Garuda Ring +1",
   ring2="Garuda Ring +1",
+  waist="Fotia Belt",
   legs={ name="Herculean Trousers", augments={'Rng.Acc.+23 Rng.Atk.+23','Enmity-3','DEX+4','Rng.Acc.+5','Rng.Atk.+7',}},
   feet={ name="Herculean Boots", augments={'Rng.Acc.+21 Rng.Atk.+21','Enmity-2','STR+1','Rng.Acc.+9','Rng.Atk.+11',}},
 })
@@ -210,7 +269,7 @@ sets.WS.Ranged_All = set_combine(sets.Midshot,{
 
 sets.Quick_Magic = {
   ammo="Impatiens", -- +2% QM
-  ring1="Prolix Ring" -- 2% QM
+  ring1="Lebeche Ring" -- 2% QM
 }
 
 sets.Fast_Cast = { -- FC: 25%
@@ -219,7 +278,7 @@ sets.Fast_Cast = { -- FC: 25%
   ear2="Enchntr. Earring +1", --2% FC
   body="Dread Jupon", --7% FC
   hands="Leyline Gloves", --8% FC
-  ring1="Lebeche Ring", --2% FC
+  ring1="Rahab Ring", --2% FC
   ring2="Kishar Ring" -- 4% FC
 }
   

@@ -142,40 +142,26 @@ sets.Fast_Cast = set_combine(sets.Fast_Cast, {
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	})
 	
-	sets.WS_Weak = {
-	head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
-    legs={ name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}},
-    feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}},
-    neck="Iskur Gorget",
-    waist="Reiki Yotai",
-    left_ear="Suppanomimi",
-    right_ear="Eabani Earring",
-    left_ring="Epona's Ring",
-    right_ring="Hetairoi Ring",
+	sets.WS_Weak = set_combine(sets.WS_Weak,{
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}},
-	}
-	
-	sets.WS["Fast Blade"] = set_combine(sets.WS_Weak,{
-	})
-	
-	sets.WS["Burning Blade"] = set_combine(sets.WS_Weak,{
-	})
-	
-	sets.WS["Flat Blade"] = set_combine(sets.WS_Weak,{
 	})
 	
 	sets.WS["Savage Blade"] = set_combine(sets.WS_All,{
-			neck="Caro Necklace",
-			ear1="Ishvara Earring",
-			ring1="Ifrit Ring +1",
-			ring2="Shukuyu Ring",
-			})
+	})
   
-  sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
+    sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
     body="Laksa. Frac +3",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
+	})
+	
+	sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
+	head="Meghanada Visor +1",
+	neck="Iskur Gorget",
+	ear1="Telos Earring",
+	ear2="Moonshade Earring",
+	ring1="Regal Ring",
+	ring2="Dingir Ring",
+	waist="Kwahu Kachina Belt",
 	})
   
 	sets.WS["Leaden Salute"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
@@ -183,14 +169,15 @@ sets.Fast_Cast = set_combine(sets.Fast_Cast, {
     head="Pixie Hairpin +1",
     ear1="Moonshade Earring",
     ring1="Archon Ring",
-    ring2="Dingir Ring"
+    ring2="Dingir Ring",
+	back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
   })
 
 	sets.WS["Wildfire"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
-    ammo="Chrono Bullet",
-    ear1="Crematio Earring",
+	ammo="Chrono Bullet",
     ring1="Garuda Ring +1",
-    ring2="Dingir Ring"
+    ring2="Dingir Ring",
+	back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
   })
 	
   
