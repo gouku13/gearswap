@@ -561,7 +561,6 @@ function self_command(command)
         send_command('@wait 10; gs c ring '.. command_args[2])
       end
     elseif command == 'kill' then
-    elseif command == 'kill' then
       Utility_Index = 1
       Utility_Name = Utility_Set_Names[Utility_Index]
       add_to_chat(121, '--- '.. Utility_Title ..' Mode: '.. Utility_Name ..' ---')
@@ -574,8 +573,12 @@ function self_command(command)
     --- Rebuild idle/engaged sets and equip as appropriate.
     else
       if command == 'toggledef' then
-        Defense_Index = Defense_Index - 1
-        if Defense_Index < 1 then Defense_Index = #Defense_Set_Names end
+        if (command_args[2] == 'onoff') then
+          Defense_Index = Defense_Index - 2
+        else
+          Defense_Index = Defense_Index - 1
+        end
+        if (Defense_Index < 1) then Defense_Index = #Defense_Set_Names end
         Defense_Name = Defense_Set_Names[Defense_Index]
         add_to_chat(121, '--- Defense Mode: '.. Defense_Name ..' ---')
       elseif command == 'toggleacc' then
@@ -917,7 +920,7 @@ send_command('unbind ^3')
 
 --- CTRL= ^   ALT= !
 send_command('bind !- gs c toggleacc')
-send_command('bind != gs c toggledef')
+send_command('bind != gs c toggledef cycle')
 send_command('bind ^- gs c toggleutility')
 send_command('bind ^= gs c toggledisplay')
 send_command('bind ^d gs c toggledt')
@@ -925,7 +928,7 @@ send_command('bind ^w gs c ring Warp')
 send_command('bind ^f1 gs c ring Holla')
 send_command('bind ^f2 gs c ring Dem')
 send_command('bind ^f3 gs c ring Mea')
-send_command('bind f7 gs c toggledef')
+send_command('bind f7 gs c toggledef onoff')
 send_command('bind f9 gs c toggleacc')
 send_command('bind f12 gs c restrainws')
 
