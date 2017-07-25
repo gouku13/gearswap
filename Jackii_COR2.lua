@@ -123,6 +123,16 @@ sets.MAB = set_combine(sets.MAB, {
   back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 })
 
+sets.Quick_Magic = set_combine(sets.Quick_Magic, {
+  range="Fomalhaut",
+  ammo="Chrono Bullet",
+})
+
+sets.Fast_Cast = set_combine(sets.Fast_Cast, {
+  range="Fomalhaut",
+  ammo="Chrono Bullet",
+})
+
 --- ===============================
 --- 	Weaponskills
 --- ===============================
