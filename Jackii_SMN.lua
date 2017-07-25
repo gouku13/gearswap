@@ -131,7 +131,9 @@ function get_job_sets()
     ear2="Domesticator's Earring", -- Pet: Enmity +5, Double Attack +3%
     --body="Shomonjijoe +1", -- Avatar: Enmity +14
     hands="Regimen Mittens", -- Pet: Acc +20, M.Acc +20, Haste +6%
+	ring1="Varar Ring",
     back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
+	ring2="Varar Ring",
     waist="Klouskap Sash", -- Pet: Haste +8%
     legs="Convoker's Spats +1", -- Avatar: Acc +20, Enmity +4
     feet="Psycloth Boots" -- Avatar: Acc +20, Atk +20, Double Attack +3%
