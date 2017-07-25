@@ -226,8 +226,7 @@ function job_specific_precast(spell)
     
     equip(roll_set)
     return true
-	end
- --[[elseif (string.find(spell.english,' Shot')) then
+ elseif (string.find(spell.english,' Shot')) then
     QDraw_set = {}
     if (spell.english = "Light Shot") then
       QDraw_set = sets.QDraw["Light Shot"]
@@ -242,5 +241,4 @@ function job_specific_precast(spell)
   else
     return false
 	end
-	]]
 end
