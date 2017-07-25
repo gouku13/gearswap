@@ -149,49 +149,48 @@ sets.Fast_Cast = set_combine(sets.Fast_Cast, {
 --- 	Weaponskills
 --- ===============================
 	
-	sets.WS_All = set_combine(sets.WS_All,{
-	body="Laksa. Frac +3",
-    back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
-	})
-	
-	sets.WS_Weak = set_combine(sets.WS_Weak,{
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}},
-	})
-	
-	sets.WS["Savage Blade"] = set_combine(sets.WS_All,{
-	})
-  
-    sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
-    body="Laksa. Frac +3",
-    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
-	})
-	
-	sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
-	head="Meghanada Visor +1",
-	neck="Iskur Gorget",
-	ear1="Telos Earring",
-	ear2="Moonshade Earring",
-	ring1="Regal Ring",
-	ring2="Dingir Ring",
-	waist="Kwahu Kachina Belt",
-	})
-  
-	sets.WS["Leaden Salute"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
-    ammo="Chrono Bullet",
-    head="Pixie Hairpin +1",
-    ear1="Moonshade Earring",
-    ring1="Archon Ring",
-    ring2="Dingir Ring",
-	back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
-  })
+sets.WS_All = set_combine(sets.WS_All,{
+  body="Laksa. Frac +3",
+  back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+})
 
-	sets.WS["Wildfire"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
-	ammo="Chrono Bullet",
-    ring1="Garuda Ring +1",
-    ring2="Dingir Ring",
-	back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
-  })
+sets.WS_Weak = set_combine(sets.WS_Weak,{
+  back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}},
+})
+
+sets.WS["Savage Blade"] = set_combine(sets.WS_All,{
+})
+  
+sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
+  body="Laksa. Frac +3",
+  back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
+})
 	
+sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
+  head="Meghanada Visor +1",
+  neck="Iskur Gorget",
+  ear1="Telos Earring",
+  ear2="Moonshade Earring",
+  ring1="Regal Ring",
+  ring2="Dingir Ring",
+  waist="Kwahu Kachina Belt",
+})
+  
+sets.WS["Leaden Salute"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
+  ammo="Chrono Bullet",
+  head="Pixie Hairpin +1",
+  ear1="Moonshade Earring",
+  ring1="Archon Ring",
+  ring2="Dingir Ring",
+  back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+})
+
+sets.WS["Wildfire"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
+  ammo="Chrono Bullet",
+  ring1="Garuda Ring +1",
+  ring2="Dingir Ring",
+  back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+})
   
 --- ===============================
 --- 	Utility Modes
@@ -246,8 +245,34 @@ function job_specific_precast(spell)
       QDraw_set = sets.QDraw.All
     end
     
+    if ((spell.element == world.day_element) or (spell.element == world.weather_element)) then
+      if (sets.Weather) then
+        QDraw_set = set_combine(QDraw_set, sets.Weather)
+      elseif (sets.Obis) then
+        QDraw_set = set_combine(QDraw_set, sets.Obis[spell.element])
+      end
+    end
+    
     equip(QDraw_set)
     return true
+  elseif ((spell.english == 'Wildfire') or (spell.english == 'Leaden Salute')) then
+    if ((spell.element == world.day_element) or (spell.element == world.weather_element)) then
+      if (sets.Weather) then
+        weather = sets.Weather
+      elseif (sets.Obis) then
+        weather = sets.Obis[spell.element]
+      end
+      
+      if (sets.WS[spell.english]) then
+        equip(set_combine(sets.WS[spell.english], weather))
+      else
+        equip(set_combine(sets.WS.Ranged_All, sets.MAB, weather))
+      end
+      
+      return true
+    else
+      return false
+    end
   else
     return false
 	end

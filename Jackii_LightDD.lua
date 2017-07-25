@@ -311,6 +311,10 @@ if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_J
   })
 end
 
+sets.Weather = {
+  waist="Hachirin-no-Obi"
+}
+
 --- ===============================
 --- 	Supplies
 --- ===============================
