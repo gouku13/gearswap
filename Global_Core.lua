@@ -926,6 +926,7 @@ send_command('bind ^f1 gs c ring Holla')
 send_command('bind ^f2 gs c ring Dem')
 send_command('bind ^f3 gs c ring Mea')
 send_command('bind f7 gs c toggledef')
+send_command('bind f9 gs c toggleacc')
 send_command('bind f12 gs c restrainws')
 
 windower.register_event('Zone change', zone_change)
