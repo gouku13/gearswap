@@ -228,9 +228,9 @@ function job_specific_precast(spell)
     return true
  elseif (string.find(spell.english,' Shot')) then
     QDraw_set = {}
-    if (spell.english = "Light Shot") then
+    if (spell.english == "Light Shot") then
       QDraw_set = sets.QDraw["Light Shot"]
-    elseif (spell.english = "Dark Shot") then
+    elseif (spell.english == "Dark Shot") then
       QDraw_set = sets.QDraw["Dark Shot"]
     else
       QDraw_set = sets.QDraw.All
