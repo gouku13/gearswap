@@ -40,7 +40,8 @@ Last_Roll = ''
 
 -- Quick Draw
 sets.QDraw = {}
-sets.QDraw.All = set_combine(set.MAB,{
+sets.QDraw.All = set_combine(sets.MAB,{
+  ammo="Orichalcum Bullet",
   head="Blood Mask",
   ring1="Fenrir Ring +1",
   ring2="Dingir Ring",
