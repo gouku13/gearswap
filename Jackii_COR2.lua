@@ -46,8 +46,20 @@ sets.QDraw.All = set_combine(sets.MAB,{
   ring1="Fenrir Ring +1",
   ring2="Dingir Ring",
 })
-sets.QDraw["Light Shot"] = set_combine(sets.QDraw.All, {})
-sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, {})
+sets.QDraw["Light Shot"] = set_combine(sets.QDraw.All, {
+  --head="Laksa. Tricorne +3",
+  neck="Sanctity Necklace",
+  ear1="Gwati Earring",
+  ear2="Digni. Earring",
+  --body="Mirke Wardecors",
+  --hands="Laksa. Gants +3",
+  ring1="Arvina Ringlet +1",
+  ring2="Stikini Ring +1",
+  waist="Kwahu Kachina Belt",
+  legs="Mummu Kecks +1",
+  --feet="Laksa. Boots +3"
+})
+sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], {})
 
 --- ===============================
 --- 	DT Sets
@@ -120,7 +132,7 @@ sets.Midshot = set_combine(sets.Midshot, {
 --- ===============================
 
 sets.MAB = set_combine(sets.MAB, {
-  back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+  back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
 })
 
 sets.Quick_Magic = set_combine(sets.Quick_Magic, {
