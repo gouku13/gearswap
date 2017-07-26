@@ -177,7 +177,7 @@ sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
 })
   
 sets.WS["Leaden Salute"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
-  ammo="Chrono Bullet",
+  ammo="Orichalcum Bullet",
   head="Pixie Hairpin +1",
   ear1="Moonshade Earring",
   ring1="Archon Ring",
