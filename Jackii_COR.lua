@@ -41,7 +41,7 @@ Last_Roll = ''
 -- Quick Draw
 sets.QDraw = {}
 sets.QDraw.All = set_combine(sets.MAB,{
-  ammo="Orichalcum Bullet",
+  ammo="Animikii Bullet",
   head="Blood Mask",
   ring1="Fenrir Ring +1",
   ring2="Dingir Ring",
@@ -51,7 +51,7 @@ sets.QDraw["Light Shot"] = set_combine(sets.QDraw.All, {
   neck="Sanctity Necklace",
   ear1="Gwati Earring",
   ear2="Digni. Earring",
-  --body="Mirke Wardecors",
+  body="Mirke Wardecors",
   --hands="Laksa. Gants +3",
   ring1="Arvina Ringlet +1",
   ring2="Stikini Ring +1",
