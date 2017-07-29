@@ -117,6 +117,7 @@ sets.Preshot = set_combine(sets.Preshot, {
   head="Chass. Tricorne +1",
   body="Oshosi Vest", -- Snapshot +12
   hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- Snapshot +8
+  legs="Laksa. Trews +3",
 })
 
 sets.Midshot = set_combine(sets.Midshot, {
@@ -124,7 +125,7 @@ sets.Midshot = set_combine(sets.Midshot, {
   body="Oshosi Vest",
   back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
   waist="Kwahu Kachina Belt",
-  -- legs="Laksa. Trews +3",
+  legs="Laksa. Trews +3",
 })
 
 --- ===============================
