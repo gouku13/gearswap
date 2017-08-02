@@ -797,7 +797,7 @@ function precast(spell)
       precast = sets.Preshot
     end
     
-    if (precast[spell.name]) then
+    if (sets.precast[spell.name]) then
       precast = set_combine(precast, sets.precast[spell.name])
     end
     
