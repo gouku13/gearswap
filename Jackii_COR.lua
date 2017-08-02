@@ -76,6 +76,34 @@ sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], 
 --- 	TP Sets
 --- ===============================
 
+  sets.DW['10'] = {
+	back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}, -- DW +10
+  }
+  
+  sets.DW['15'] = set_combine(sets.DW['10'], {
+    body="Adhemar Jacket" -- DW +5
+  }
+
+  sets.DW['20'] = set_combine(sets.DW['15'], {
+    ear1="Suppanomimi", -- DW +5
+  }
+  
+  sets.DW['25'] = set_combine(sets.DW['20'], {
+    legs={name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}}, -- DW +5
+  }
+  
+  sets.DW['29'] = set_combine(sets.DW['25'], {
+    ear2="Eabani Earring", -- DW +4
+  }
+  
+  sets.DW['36'] = set_combine(sets.DW['29'], {
+    waist="Reiki Yotai", -- DW +7
+  }
+  
+  sets.DW['45'] = set_combine(sets.DW['36'], {
+    feet={name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}} -- DW +9
+  }
+
   sets.TP.Max = set_combine(sets.TP.Max,{
     neck="Iskur Gorget",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}, -- DW +10
