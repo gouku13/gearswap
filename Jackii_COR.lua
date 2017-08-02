@@ -76,7 +76,7 @@ sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], 
 --- 	TP Sets
 --- ===============================
 
-  sets.TP_All = set_combine(sets.TP_All,{
+  sets.TP.Max = set_combine(sets.TP.Max,{
     neck="Iskur Gorget",
     back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}, -- DW +10
   })

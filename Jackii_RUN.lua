@@ -145,7 +145,7 @@ sets.JA['Warcry'] = set_combine(sets.Enmity)
 --- 	TP Sets
 --- ===============================
 
-  sets.TP_All = set_combine(sets.TP_All,{
+  sets.TP.Max = set_combine(sets.TP.Max,{
   })
 
 -- Adding more damage gear if we have higher magic haste.

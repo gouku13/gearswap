@@ -327,7 +327,7 @@ function get_job_sets()
 --- 	TP Sets
 --- ===============================
 
-	sets.TP_All = set_combine(sets.TP_All,{
+	sets.TP.Max = set_combine(sets.TP.Max,{
     ammo="Sancus Sachet +1",
     head="Convoker's Horn +3",
     neck="Shulmanu Collar",
@@ -343,7 +343,7 @@ function get_job_sets()
     feet="Battlecast Gaiters"
 	})
 	
-	sets.TP_All = set_combine(sets.TP_All, sets.TP_Weapon)
+	sets.TP.Max = set_combine(sets.TP.Max, sets.TP_Weapon)
 
 --- ===============================
 --- 	Weaponskills

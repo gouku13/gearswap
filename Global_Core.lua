@@ -58,6 +58,8 @@ function initialize_sets()
   sets.TP.Defense = {}
   sets.TP.Accuracy = {}
   sets.TP.Haste = {}
+  
+  sets.DW = {}
 
   sets.TP.PDT_Mix = {}
   sets.Some_Acc = {}
@@ -161,17 +163,17 @@ function compile_sets()
     sets.Pet.TP = nil
   end
 
-  sets.TP_All = set_combine(sets.TP.Base, sets.TP_All)
+  sets.TP.Max = set_combine(sets.TP.Base, sets.TP.Max)
 
   if (HeavyDD[Main_Job]) then
-    sets.TP_All = set_combine(sets.TP_All, sets.TP.Heavy)
+    sets.TP.Max = set_combine(sets.TP.Max, sets.TP.Heavy)
   else
     sets.TP.Heavy = nil
   end
   
   if (DW_Jobs[Main_Job]) then
     if (not (HeavyDD[Main_Job] and (Main_Job ~= 'BST'))) then
-      sets.TP_All = set_combine(sets.TP_All, sets.TP.DW)
+      sets.TP.Max = set_combine(sets.TP.Max, sets.TP.DW)
     else
       sets.TP.DW = nil
     end
@@ -180,7 +182,7 @@ function compile_sets()
   end
   
   if (TA_Jobs[Main_Job] or (LightDD[Main_Job] and (not (DW_Jobs[Main_Job] or DW_Jobs[Sub_Job])))) then
-    sets.TP_All = set_combine(sets.TP_All, sets.TP.TA)
+    sets.TP.Max = set_combine(sets.TP.Max, sets.TP.TA)
   else
     sets.TP.TA = nil
   end
@@ -194,12 +196,12 @@ function post_job_sets()
   sets.PDT = set_combine(sets.DT, sets.PDT, {ring1=PDT_Ring1, ring2=PDT_Ring2})
   sets.MDT = set_combine(sets.DT, sets.MDT, {ring1=MDT_Ring1, ring2=MDT_Ring2})
   
-  sets.TP_All = set_combine(sets.TP_All, sets.weapons)
+  sets.TP.Max = set_combine(sets.TP.Max, sets.weapons)
   
-  sets.TP.Defense["Attack"] = set_combine(sets.TP_All)
-  sets.TP.Defense["Standard"] = set_combine(sets.TP_All, sets.TP.PDT_Mix)
-  sets.TP.Defense["PDT"] = set_combine(sets.TP_All, sets.DT)
-  sets.TP.Accuracy["Low"] = sets.TP_All
+  sets.TP.Defense["Attack"] = set_combine(sets.TP.Max)
+  sets.TP.Defense["Standard"] = set_combine(sets.TP.Max, sets.TP.PDT_Mix)
+  sets.TP.Defense["PDT"] = set_combine(sets.TP.Max, sets.DT)
+  sets.TP.Accuracy["Low"] = sets.TP.Max
   sets.TP.Accuracy["Some"] = set_combine(sets.TP.Accuracy["Low"], sets.Some_Acc)
   sets.TP.Accuracy["Full"] = set_combine(sets.TP.Accuracy["Some"], sets.Full_Acc)
   sets.RA.Accuracy["Low"] = sets.Midshot
@@ -297,7 +299,7 @@ end
 
 --- Puts together the engaged set based on current defense, accuracy, and Utility settings
 function build_engaged_set()
-  engaged_set = sets.TP_All
+  engaged_set = sets.TP.Max
   
   if Accuracy_Index > 1 then
     engaged_set = set_combine(engaged_set, sets.Some_Acc)
@@ -307,11 +309,20 @@ function build_engaged_set()
     end
   else
     engaged_set = sets.TP.Defense[Defense_Name]
-    local magic_haste = calculate_haste()
+    local magic_haste = Magic_Haste
     local haste_set = tostring(magic_haste)
     if (sets.TP.Haste[haste_set] ~= nil) then
+      -- If you're hard-defining equipment for specific haste values,
+      -- we'll just assume that you know what you're doing.
       engaged_set = set_combine(engaged_set, sets.TP.Haste[haste_set])
+    elseif (native_dw > 0) then
+      -- Otherwise, let's see if you need some DW.
+      local dw_set = get_dw_set(magic_haste)
+      if (dw_set) then
+        engaged_set = set_combine(engaged_set, dw_set)
+      end
     end
+  
   end
   
 	if Defense_Index < 3 then
@@ -461,6 +472,10 @@ function buff_change(name, gain)
 	end
   
   if ((name == 'Haste') or (name == 'March')) then
+    Magic_Haste = calculate_haste()
+    if (Display_Haste) then
+      add_to_chat(160, 'Magic Haste: '.. Magic_Haste)
+    end
     build_engaged_set()
     if (player.status == 'Engaged') then
       equip(engaged_set)
@@ -496,6 +511,92 @@ function calculate_haste()
   
   return magic_haste
 end
+
+-- Calculates and returns our native dual wield value from our
+-- main/sub jobs.
+------------------------------------------------------------------------
+function calculate_native_dw()
+  local main_job_dw_values = {
+    ['THF'] = 30, -- Assumes 1200 JP.
+    ['BLU'] = 25, -- Assumes DW III from set spells.
+    ['DNC'] = 35, -- Assumes 1200 JP.
+    ['NIN'] = 35
+  }
+  local sub_job_dw_values = {
+    ['DNC'] = 15,
+    ['NIN'] = 25
+  }
+  local main_native_dw = main_job_dw_values[Main_Job] or 0
+  local sub_native_dw = sub_job_dw_values[Sub_Job] or 0
+  
+  if (main_native_dw > sub_native_dw) then
+    return main_native_dw
+  else
+    return sub_native_dw
+  end
+end
+
+-- Calculates how much DW in equipment we need need based off our
+-- main/sub job and current haste value.
+------------------------------------------------------------------------
+function calculate_needed_equipment_dw(magic_haste)
+  -- We'll be assuming 25% gear haste. If this assumption is inaccurate,
+  -- then you're doing something very weird, and probably wrong.
+  local magic_haste = magic_haste or 0
+  magic_haste = magic_haste / 1024
+  local native_dw = calculate_native_dw()
+  local needed_equipment_dw = ((1 - (0.2 / (1 - (magic_haste + .25)))) * 100) - native_dw
+  return math.ceil(needed_equipment_dw)
+end
+
+-- Returns our DW set which best allows us to hit delay cap,
+-- taking our current magic haste in account.
+------------------------------------------------------------------------
+function get_dw_set(magic_haste)
+  local dw_set = nil
+  local equipment_dw_values = {1, 6, 11, 21, 26, 31, 32, 35, 37, 39, 40, 41, 42, 44, 45, 46, 49, 52, 55, 57, 59, 64}
+  local needed_equipment_dw = calculate_needed_equipment_dw(magic_haste)
+  if (needed_equipment_dw > 0) then
+    -- See if we have a set for exactly the amount we need
+    if (sets.DW[needed_equipment_dw]) then
+      dw_set = sets.DW[needed_equipment_dw]
+    else
+      -- Of course not, because that would have been too easy.
+      local remaining_dw_needed = needed_equipment_dw
+      local current_dw_checked_for = needed_equipment_dw
+      -- We'll try going up to reach our needed DW first.
+      while ((remaining_dw_needed >= 1) and (current_dw_checked_for <= 64)) do
+        current_dw_checked_for = current_dw_checked_for + 1
+        if (sets.DW[needed_equipment_dw]) then
+          dw_set = sets.DW[needed_equipment_dw]
+          remaining_dw_needed = needed_equipment_dw - current_dw_checked_for
+        end
+      end
+      
+      -- Did we fail to find a set which (almost) caps our delay?
+      if (not (remaining_dw_needed <= 1)) then
+        -- Okay, so we can't hit delay cap. But let's reduce our delay as much as we can.
+        -- If we already have a set from our attempts going up, we should use it, otherwise...
+        if (dw_set == nil) then
+          -- We have to start going down.
+          current_dw_checked_for = needed_equipment_dw
+          while ((dw_set == nil) and (current_dw_checked_for > 0)) do
+            current_dw_checked_for = current_dw_checked_for - 1
+            if (sets.DW[current_dw_checked_for]) then
+              dw_set = sets.DW[current_dw_checked_for]
+            end
+          end
+        end
+      end
+    end
+  end
+  
+  return dw_set
+end
+
+--- ===============================
+--- 	Event Listerner Functions
+--- ===============================
 
 
 --- Change our idle/engaged sets based on current HPP
@@ -618,6 +719,9 @@ function self_command(command)
           restrain_ws = true
           add_to_chat(121, '--- Restrained WS: On ---')
         end
+      elseif command == 'displayhaste' then
+        Display_Haste = (not Display_Haste)
+        add_to_chat(121, '--- Display Haste: '.. tostring(Display_Haste) ..' ---')
       end
       
       changed_equipment = true
@@ -953,5 +1057,7 @@ Regen_Capped = false
 
 Warp_Ring_Equipped = false
 Locked_Style = false
+Display_Haste = false
+Magic_Haste = calculate_haste()
 
 initialize_sets()

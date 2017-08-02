@@ -37,7 +37,7 @@ function get_job_sets()
     feet="Taeon Boots"
 	})
 	
-  sets.TP_All = set_combine(sets.TP_All,{
+  sets.TP.Max = set_combine(sets.TP.Max,{
     ammo="Thunder Sachet",
     head="Taeon Chapeau",
     neck="Asperity Necklace",

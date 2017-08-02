@@ -306,7 +306,7 @@ sets.midcast["WarpII"] = set_combine(sets.Fast_Cast,{
 --- 	Melee Sets
 --- ===============================
 
-sets.TP_All = set_combine(sets.TP_All,{
+sets.TP.Max = set_combine(sets.TP.Max,{
   head="Telchine Cap",
   neck="Sanctity Necklace",
   ring1="Rajas Ring",

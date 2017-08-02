@@ -56,7 +56,7 @@ end
 --- ===============================
 
 -- This assumes you need all DW pieces you own. Bigger damage pieces are added later.
-sets.TP_All = {
+sets.TP.Max = {
   ammo="Ginsen",
   head="Adhemar Bonnet",
   neck="Ainia Collar",
@@ -82,7 +82,7 @@ sets.DW = {  -- Total DW: 35%
 }
 
 if (Main_Job ~= 'RUN') then
-  sets.TP_All = set_combine(sets.TP_All, sets.DW)
+  sets.TP.Max = set_combine(sets.TP.Max, sets.DW)
 end
 
 -- Adding more damage gear if we have higher magic haste.

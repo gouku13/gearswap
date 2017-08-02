@@ -253,7 +253,7 @@ sets.Dark_Skill = {
 sets.midcast["WarpII"] = set_combine(sets.Fast_Cast,{
 })
 
-sets.TP_All = set_combine(sets.TP_All,{
+sets.TP.Max = set_combine(sets.TP.Max,{
   head="Telchine Cap",
 })
 
