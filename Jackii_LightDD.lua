@@ -72,7 +72,7 @@ sets.TP.Max = {
   feet={name="Herculean Boots", augments={'Accuracy+15 Attack+15','"Triple Atk."+4','DEX+7','Attack+3',}}
 }
 
-sets.DW = {  -- Total DW: 35%
+--[[sets.DW = {  -- Total DW: 35%
   ear1="Suppanomimi", -- DW: 5%
   ear2="Eabani Earring", -- DW: 4%
   body="Adhemar Jacket", -- DW: 5%
@@ -80,9 +80,10 @@ sets.DW = {  -- Total DW: 35%
   legs={name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}}, -- DW: 5%
   feet={name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}} -- DW: 9%
 }
+--]]
 
 if (Main_Job ~= 'RUN') then
-  sets.TP.Max = set_combine(sets.TP.Max, sets.DW)
+  sets.TP.Max = set_combine(sets.TP.Max)
 end
 
 -- Adding more damage gear if we have higher magic haste.
