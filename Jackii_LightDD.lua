@@ -297,6 +297,8 @@ sets.Enhancing_Skill = {
   neck="Incanter's torque",
   ear1="Andoaa earring",
   ear2="Augmenting Earring",
+  ring1="Stikini Ring +1",
+  ring2="Stikini Ring",
   waist="Olympus sash",
   back="Merciful cape",
 }
