@@ -18,6 +18,7 @@ function get_job_sets()
 sets.JA['Lunge'] = set_combine(sets.MAB,{
 	left_ring="Fenrir ring +1",
 	right_ring="Fenrir ring +1",
+	--back="Argochampsa mantle",
     })
 sets.JA['Swipe'] = set_combine(sets.JA['Lunge'],{})
 sets.JA['Vallation'] = set_combine(sets.Enmity,{body="Runeist Coat +1", back="Ogma's cape"})
@@ -27,11 +28,11 @@ sets.JA['Valiance'] = set_combine(sets.Enmity,{body="Runeist Coat +1", back="Ogm
 sets.JA['Embolden'] = set_combine(sets.Enmity,{legs="Futhark Trousers +1"})
 sets.JA['Gambit'] = set_combine(sets.Enmity,{hands="Runeist Mitons +1"})
 sets.JA['Liement'] = set_combine(sets.Enmity,{body="Futhark Coat +1"})
-sets.JA['One For All'] = set_combine(sets.Enmity)
+sets.JA['One For All'] = set_combine(sets.Enmity,{})
 sets.JA['Battuta'] = set_combine(sets.Enmity,{head="Fu. Bandeau +1"})
 sets.JA['Rayke'] = set_combine(sets.Enmity,{feet="Futhark Boots +1"})
 sets.JA['Elemental Sforzo'] = set_combine(sets.Enmity,{body="Futhark Coat +1"})
-sets.JA['Vivacious Pulse'] = set_combine(sets.Enmity,{head="Erilaz Galea +1"})
+sets.JA['Vivacious Pulse'] = set_combine(sets.Enmity, sets.Divine_Skill,{head="Erilaz Galea +1"})
 
 sets.JA['Provoke'] = set_combine(sets.Enmity)
 sets.JA['Warcry'] = set_combine(sets.Enmity)
@@ -45,6 +46,59 @@ sets.JA['Warcry'] = set_combine(sets.Enmity)
   
   sets.Refresh = {
   }
+  
+  sets["RUN Ailment"] = {  --Some form of Toggle needed
+    main="Epeolatry",
+    sub="Refined Grip +1",
+    ammo="Staunch Tathlum +1",
+    head="Herculean Helm",
+    neck="Loricate Torque +1",
+    ear1="Hearty Earring",
+    ear2="Genmei Earring",
+    body="Runeist's Coat +3",
+    hands="Herculean Gloves",
+    ring1="Gelatinous Ring +1",
+    ring2="Defending Ring",
+    back="Ogma's cape",
+    waist="Engraved Belt",
+    legs="Rune. Trousers +3",
+    feet="Erilaz Greaves +1"
+  }
+  
+  sets["RUN (MDT Absorb)"] = { --Some form of toggle needed
+    sub="Refined Grip +1",
+    ammo="Vanir Battery",
+    head="Erilaz Galea +1",
+    neck="Inq. Bead Necklace",
+    ear1="Etiolation Earring",
+    ear2="Sanare Earring",
+    body="Erilaz Surcoat +1",
+    hands="Erilaz Gauntlets +1",
+    ring1="Lunette Ring +1",
+    ring2="Shadow Ring",
+    back="Engulfer Cape +1",
+    waist="Lieutenant's Sash",
+    legs="Eri. Leg Guards +1",
+    feet="Erilaz Greaves +1"
+  }
+  
+  sets["RUN Turms"] = { --Probably for engaged tanking later
+    main="Epeolatry",
+    sub="Refined Grip +1",
+    ammo="Staunch Tathlum +1",
+    head="Meghanada Visor +2",
+    neck="Loricate Torque +1",
+    ear1="Genmei Earring",
+    ear2="Odnowa Earring +1",
+    body="Futhark Coat +1",
+    hands="Turms Mittens",
+    ring1="Gelatinous Ring +1",
+    ring2="Defending Ring",
+    back="Ogma's cape",
+    waist="Engraved Belt",
+    legs="Eri. Leg Guards +1",
+    feet="Turms Leggings"
+}
 
 --- ===============================
 --- 	Enmity Related Sets
@@ -67,7 +121,7 @@ sets.JA['Warcry'] = set_combine(sets.Enmity)
 	feet="Erilaz greaves +1"}
 
 -- Spell Interruption - Set --	
-  sets.Midcast = set_combeine(sets.Enmity, {
+  sets.Midcast = set_combine(sets.Enmity, {
 	ammo="Staunch Tathlum", --SIR -10%
 	head="Taeon Chapeau", --SIR ~-10%
 	neck="Moonbeam Necklace", --SIR -10%
@@ -136,14 +190,35 @@ sets.Enhancing_Precast = set_combine(sets.Enhacing_Precast, {
   legs="Futhark Trousers +1"
 })
 
+sets.Divine_Skill = {
+  neck="Incanter's Torque",
+  ear1="Beatific Earring",
+  ear2="Divine Earring",
+  ring1="Stikini Ring +1",
+  ring2="Stikini Ring",
+  back="Altruistic Cape",
+  waist="Bishop's Sash",
+  legs="Rune. Trousers +3"
+}
+
 sets.Enhancing_Skill = set_combine(sets.Enhancing_Skill, {
-  head="Erilaz Galea +1",
   hands="Runeist Mitons +1",
+})
+
+sets.Enhancing_Duration = set_combine(sets.Enhancing_Skill, {
+  head="Erilaz Galea +1",
+  legs="Futhark Trousers +1"
 })
 
 sets.Midcast.Phalanx = set_combine(sets.Midcast['Enhancing Magic'],{head="Futhark bandeau +1"})
 
-sets.Midcast.Regen = {head="Rune. Bandeau +1"}
+sets.Midcast.Regen = set_combine(sets.Enhancing_Duration, {
+  head="Rune. Bandeau +1"
+})
+
+sets.Midcast.Refresh = set_combine(sets.Enhancing_Duration,{
+  head="Erilaz Galea +1",
+})
 
 sets.MAB = set_combine(sets.MAB, {
 })
@@ -153,11 +228,28 @@ sets.MAB = set_combine(sets.MAB, {
 --- ===============================
 	
 sets.WS_All = set_combine(sets.WS_All,{
+  ammo="Knobkierrie",
+  ear1="Sherida Earring",
+  ring1="Niqmaddu Ring",
+  ring2="Shukuyu Ring",
 })
 
 sets.WS_Weak = set_combine(sets.WS_Weak,{
 })
-  
+
+sets.WS['Resolution'] = set_combine(sets.WS_All,{
+  --back=Ogma's Cape with STR, acc/atk, double attack
+})
+
+sets.WS['Dimidation'] = set_combine(sets.WS_All,{
+  ring2="Ilabrat Ring",
+  legs="Lustratio Subligar +1",
+  --back=Ogma's Cape with DEX, acc/atk, WSD
+})
+
+sets.WS['Herculean Slash'] = set_combine(sets.MAB,{
+})
+
 --- ===============================
 --- 	Utility Modes
 --- ===============================
