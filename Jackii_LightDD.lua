@@ -289,6 +289,24 @@ if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_J
   })
 end
 
+sets.Enhancing_Precast = {
+  waist="Siegel Sash"
+}
+
+sets.Enhancing_Skill = {
+  neck="Incanter's torque",
+  ear1="Andoaa earring",
+  ear2="Augmenting Earring",
+  waist="Olympus sash",
+  back="Merciful cape",
+}
+
+if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_Job == 'RNG')) then
+  sets.Enhancing_Skill = set_combine(sets.Enhancing_Skill, {
+    legs="Carmine Cuisses +1"
+  })
+end
+
 sets.MAB = {
   ammo="Pemphredo Tathlum",
   head={ name="Herculean Helm", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Enmity-1','INT+8','Mag. Acc.+13','"Mag.Atk.Bns."+7',}},
@@ -299,6 +317,7 @@ sets.MAB = {
   hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
   ring1="Shiva Ring +1",
   ring2="Shiva Ring +1",
+  back="Toro Cape",
   waist="Eschan Stone",
   legs={ name="Herculean Trousers", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Weapon skill damage +3%','MND+9','Mag. Acc.+9',}},
   feet={ name="Herculean Boots", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Weapon skill damage +2%','INT+9','Mag. Acc.+11','"Mag.Atk.Bns."+11',}},
@@ -308,6 +327,12 @@ if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_J
   sets.MAB = set_combine(sets.MAB, {
     body="Carm. Sc. Mail +1",
     hands="Carmine Fin. Ga. +1",
+  })
+end
+
+if ((Main_Job == 'THF') or (Main_Job == 'RUN') or (Main_Job == 'NIN')) then
+  sets.MAB = set_combine(sets.MAB, {
+    ammo="Seething Bomblet +1"
   })
 end
 
