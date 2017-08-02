@@ -152,6 +152,8 @@ function initialize_sets()
       pet_engaged = true
     end
   end
+  
+  native_dw = calculate_native_dw()
 end
 
 -- Compiles TP sets based off the current Main/Sub Jobs
