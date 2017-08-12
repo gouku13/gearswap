@@ -7,7 +7,7 @@ function get_job_sets()
 	Macro_Book = 11
 	Macro_Set = 2
 
-	sets.weapons = {main="Fettering Blade",sub="Blurred Knife +1",range="Fomalhaut",ammo="Chrono Bullet"}
+	sets.weapons = {main="Fettering Blade",sub="Blurred Knife +1",ammo="Chrono Bullet"}
 	set.proc_weapons = {}
 
 
@@ -47,7 +47,7 @@ sets.QDraw.All = set_combine(sets.MAB,{
   ring2="Dingir Ring",
 })
 sets.QDraw["Light Shot"] = set_combine(sets.QDraw.All, {
-  --head="Laksa. Tricorne +3",
+  head="Laksa. Tricorne +3",
   neck="Sanctity Necklace",
   ear1="Gwati Earring",
   ear2="Digni. Earring",
@@ -165,12 +165,10 @@ sets.MAB = set_combine(sets.MAB, {
 })
 
 sets.Quick_Magic = set_combine(sets.Quick_Magic, {
-  range="Fomalhaut",
   ammo="Chrono Bullet",
 })
 
 sets.Fast_Cast = set_combine(sets.Fast_Cast, {
-  range="Fomalhaut",
   ammo="Chrono Bullet",
 })
 
