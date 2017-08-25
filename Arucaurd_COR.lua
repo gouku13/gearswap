@@ -19,12 +19,12 @@ function get_sets()
 	sets.JA['Snake Eye'] = {legs="Lanun Culottes +1"}
 	sets.JA['Fold'] = {hands="Lanun Gants +1"}
 	sets.JA['Triple Shot'] = {body="Chasseur's Frac +1"}
-	sets.JA['Phantom Roll'] = {head="Lanun Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1", ring2="Barataria Ring", back="Camulus's Mantle"}
-	sets.JA['Double-Up'] = {head="Lanun Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1", ring2="Barataria Ring", back="Camulus's Mantle"}
-	sets.JA['Tactician\'s Roll'] ={head="Lanun Tricorne +1",body="Chasseur's Frac +1",hands="Chasseur's Gants +1",ring2="Barataria Ring",back="Camulus's Mantle"}
-	sets.JA['Courser\'s Roll'] = {head="Lanun Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1",feet="Chasseur's Bottes +1",ring2="Barataria Ring",back="Camulus's Mantle"}
-	sets.JA['Blitzer\'s Roll'] = {head="Chasseur's Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1",ring2="Barataria Ring",back="Camulus's Mantle"}
-	sets.JA['Caster\'s Roll'] = {head="Lanun Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1",legs="Chasseur's Culottes +1",ring2="Barataria Ring",back="Camulus's Mantle"}
+	sets.JA['Phantom Roll'] = {head="Lanun Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1", neck="Regal Necklace", back="Camulus's Mantle"}
+	sets.JA['Double-Up'] = {head="Lanun Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1", neck="Regal Necklace", back="Camulus's Mantle"}
+	sets.JA['Tactician\'s Roll'] ={head="Lanun Tricorne +1",body="Chasseur's Frac +1",hands="Chasseur's Gants +1",neck="Regal Necklace",back="Camulus's Mantle"}
+	sets.JA['Courser\'s Roll'] = {head="Lanun Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1",feet="Chasseur's Bottes +1",neck="Regal Necklace",back="Camulus's Mantle"}
+	sets.JA['Blitzer\'s Roll'] = {head="Chasseur's Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1",neck="Regal Necklace",back="Camulus's Mantle"}
+	sets.JA['Caster\'s Roll'] = {head="Lanun Tricorne +1",body="Lanun Frac +1",hands="Chasseur's Gants +1",legs="Chasseur's Culottes +1",neck="Regal Necklace",back="Camulus's Mantle"}
  
  
 --Luzaf Ring index for Self Command toggle--
