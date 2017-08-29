@@ -162,7 +162,7 @@
                             ear2="Regal Earring",
                             body="Brioso Justau. +3",
                             hands="Inyanga dastanas +1",
-                            ring1="Stikini Ring",
+                            ring1="Stikini Ring +1",
                             ring2="Stikini Ring",
                             back="Intarabus's Cape",
                             waist="Luminary Sash",
