@@ -156,6 +156,14 @@ sets.Midshot = set_combine(sets.Midshot, {
   legs="Laksa. Trews +3",
 })
 
+sets.Some_Ranged_Acc = set_combine(sets.Some_Ranged_Acc, {
+})
+
+sets.Full_Ranged_Acc = set_combine(sets.Full_Ranged_Acc, {
+  ring1="Regal Ring",
+  ring2="Cacoethic Ring +1",
+})
+
 --- ===============================
 --- 	Magic
 --- ===============================
