@@ -66,7 +66,7 @@ sets.TP.Max = {
   hands="Adhemar Wristbands",
   ring1="Epona's Ring",
   ring2="Hetairoi Ring",
-  back="Bleating Mantle +1",
+  back="Bleating Mantle",
   waist="Reiki Yotai", -- DW: 7%
   legs="Samnuha Tights",
   feet={name="Herculean Boots", augments={'Accuracy+15 Attack+15','"Triple Atk."+4','DEX+7','Attack+3',}}
