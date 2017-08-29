@@ -152,6 +152,7 @@ end
 --- ===============================
 
 sets.Preshot = {
+  head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+4',}},
   body="Pursuer's Doublet", -- Snapshot +6
   waist="Impulse Belt", -- Snapshot +3
   legs="Nahtirah Trousers", -- Snapshot +9
