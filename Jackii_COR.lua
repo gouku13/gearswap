@@ -195,12 +195,12 @@ sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
 	
 sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
   head="Meghanada Visor +2",
-  neck="Iskur Gorget",
+  neck="Fotia Gorget",
   ear1="Telos Earring",
   ear2="Moonshade Earring",
   ring1="Regal Ring",
   ring2="Dingir Ring",
-  waist="Kwahu Kachina Belt",
+  waist="Fotia Belt",
 })
   
 sets.WS["Leaden Salute"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
