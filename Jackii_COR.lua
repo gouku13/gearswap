@@ -57,7 +57,7 @@ sets.QDraw["Light Shot"] = set_combine(sets.QDraw.All, {
   ring2="Stikini Ring +1",
   waist="Kwahu Kachina Belt",
   legs="Mummu Kecks +1",
-  --feet="Laksa. Boots +3"
+  feet="Laksa. Boots +3"
 })
 sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], {})
 
@@ -194,7 +194,7 @@ sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
 })
 	
 sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
-  head="Meghanada Visor +1",
+  head="Meghanada Visor +2",
   neck="Iskur Gorget",
   ear1="Telos Earring",
   ear2="Moonshade Earring",

@@ -159,7 +159,7 @@ sets.Preshot = {
 }
 
 sets.Midshot = {
-  head="Meghanada Visor +1",
+  head="Meghanada Visor +2",
   neck="Iskur Gorget", 
   ear1="Enervating Earring", 
   ear2="Telos Earring",
