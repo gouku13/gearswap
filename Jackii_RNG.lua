@@ -84,9 +84,7 @@ sets.TP.PDT_Mix = set_combine(sets.TP.PDT_Mix,{
 --- ===============================
 
 sets.Preshot = set_combine(sets.Preshot, {
-  --head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+5',}},
-  --body="Amini Caban +1",
-  body="Oshosi Vest", -- Snapshot +12
+  body="Amini Caban +1",
   hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- Snapshot +8
   --legs="Adhemar Kecks",
   --back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},
