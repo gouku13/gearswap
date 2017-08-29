@@ -15,7 +15,7 @@ function get_job_sets()
 --- 	Job Abilities
 --- ===============================
 
-sets.JA["Shadowbind"] = {head="Orion Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Orion Jerkin +3 +1",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},waist="Yemaya Belt",legs="Adhemar Kecks +1",feet="Meg. Jam. +2"}
+sets.JA["Shadowbind"] = {head="Orion Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Orion Jerkin +3",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},waist="Yemaya Belt",legs="Adhemar Kecks +1",feet="Meg. Jam. +2"}
 sets.JA["Scavenge"] = {feet="Orion Socks +3"}
 sets.JA["Camouflage"] = {body="Orion Jerkin +3"}
 sets.JA["Sharpshot"] = {legs="Orion Braccae +2"}
@@ -112,7 +112,7 @@ sets.Some_Ranged_Acc = set_combine(sets.Midshot, {
 })
 
 sets.Full_Ranged_Acc = set_combine(sets.Midshot, {
-  head="Orion Beret +3",
+  --head="Orion Beret +3",
   ring1="Regal Ring",
   ring2="Cacoethic Ring +1",
 })
