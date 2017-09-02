@@ -155,7 +155,7 @@ sets.Preshot = {
   head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+4',}},
   body="Pursuer's Doublet", -- Snapshot +6
   waist="Impulse Belt", -- Snapshot +3
-  legs="Nahtirah Trousers", -- Snapshot +9
+  legs={ name="Adhemar Kecks", augments={'AGI+10','"Rapid Shot"+10','Enmity-5',}}, -- Snapshot +9
   feet="Meg. Jam. +2", -- Snapshot +10
 }
 
