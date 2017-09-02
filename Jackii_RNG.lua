@@ -15,15 +15,15 @@ function get_job_sets()
 --- 	Job Abilities
 --- ===============================
 
-sets.JA["Shadowbind"] = {head="Orion Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Orion Jerkin +3",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},waist="Yemaya Belt",legs="Adhemar Kecks +1",feet="Meg. Jam. +2"}
+sets.JA["Shadowbind"] = {head="Orion Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Orion Jerkin +2",hands="Orion Bracers +3",ring1="Regal Ring",ring2="Cacoethic Ring +1",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},waist="Yemaya Belt",legs="Adhemar Kecks +1",feet="Meg. Jam. +2"}
 sets.JA["Scavenge"] = {feet="Orion Socks +3"}
-sets.JA["Camouflage"] = {body="Orion Jerkin +3"}
+sets.JA["Camouflage"] = {body="Orion Jerkin +2"}
 sets.JA["Sharpshot"] = {legs="Orion Braccae +2"}
-sets.JA["Bounty Shot"] = {hands="Amini Glove. +1",waist="Chaac Belt"}
+sets.JA["Bounty Shot"] = {head={ name="Herculean Helm", augments={'"Store TP"+1','"Dbl.Atk."+2','"Treasure Hunter"+2','Accuracy+10 Attack+10','Mag. Acc.+3 "Mag.Atk.Bns."+3',}},hands="Amini Glove. +1",waist="Chaac Belt"}
 sets.JA["Double Shot"] = {head="Amini Gapette +1"}
-sets.JA["Eagle Eye Shot"] = {head="Orion Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Orion Jerkin +3",hands="Orion Bracers +3",ring1="Ilabrat Ring",ring2="Dingir Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},waist="Yemaya Belt",legs="Arcadian Braccae",feet="Meg. Jam. +2"}
+sets.JA["Eagle Eye Shot"] = {head="Orion Beret +3",neck="Iskur Gorget",ear1="Enervating Earring",ear2="Telos Earring",body="Orion Jerkin +3",hands="Orion Bracers +3",ring1="Ilabrat Ring",ring2="Dingir Ring",back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},waist="Yemaya Belt",legs="Arcadian Braccae +1",feet="Meg. Jam. +2"}
 sets.JA["Barrage"] = set_combine(sets.Midshot, 
-								{body="Orion Jerkin +3",hands="Orion Bracers +3",neck="Iskur Gorget",legs="Adhemar Kecks +1",feet="Mummu Gamash. +1",ring1="Regal Ring",ring2="Cacoethic Ring +1"})
+								{body="Orion Jerkin +2",hands="Orion Bracers +3",neck="Iskur Gorget",legs="Adhemar Kecks +1",feet="Mummu Gamash. +1",ring1="Regal Ring",ring2="Cacoethic Ring +1"})
 
 sets.During_Buff["Double Shot"] = {head="Oshosi Mask",legs="Oshosi Trousers",feet="Oshosi Leggings",lock="head"}
 
@@ -86,7 +86,6 @@ sets.TP.PDT_Mix = set_combine(sets.TP.PDT_Mix,{
 sets.Preshot = set_combine(sets.Preshot, {
   body="Amini Caban +1",
   hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- Snapshot +8
-  --legs="Adhemar Kecks",
   --back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},
 })
 
@@ -136,6 +135,7 @@ sets.Fast_Cast = set_combine(sets.Fast_Cast, {
 --- ===============================
 	
 sets.WS_All = set_combine(sets.WS_All,{
+  head="Orion Beret +2",
   back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 })
 
@@ -144,12 +144,12 @@ sets.WS_Weak = set_combine(sets.WS_Weak,{
 })
   
 sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
+  head="Orion Beret +2",
   back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 })
 	
 sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
-  --head="Orion Beret +3",
-  head="Meghanada Visor +2",
+  head="Orion Beret +2",
   neck="Fotia Gorget",
   --body="Herculean Vest with WSD/RATK/RACC",
   ear1="Ishvara Earring",
