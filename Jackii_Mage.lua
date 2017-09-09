@@ -325,7 +325,7 @@ sets.Stun = set_combine(sets.Magic_Acc,{
   --head="Nahtirah Hat",
   neck="Orunmila's Torque",
   body={ name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','"Fast Cast"+7','DEX+10',}},
-  ring2="Prolix Ring",
+  ring1="Kishar Ring",
   back="Swith cape +1",
   waist="Ninurta's Sash"
 })

@@ -95,7 +95,7 @@ function get_job_sets()
   }
   sets.Death.precast = {
 	ammo="Strobilus",
-	head={ name="Merlinic Hood", augments={'"Fast Cast"+6','CHR+6','Mag. Acc.+14','"Mag.Atk.Bns."+14',}},
+	head={ name="Merlinic Hood", augments={'"Fast Cast"+7','Mag. Acc.+12',}},
 	neck="Orunmila's Torque",
 	ear2="Loquac. Earring",
 	hands="Otomi Gloves",
@@ -172,7 +172,7 @@ function get_job_sets()
     feet="Amalric Nails +1"
   }
   sets.Death.Enhancing = {
-    head={ name="Telchine Cap", augments={'Accuracy+18','Haste+3','Enh. Mag. eff. dur. +9',}},
+    head={ name="Telchine Cap", augments={'Accuracy+18','Haste+3','Enh. Mag. eff. dur. +10',}},
     body={ name="Telchine Chas.", augments={'Pet: Mag. Evasion+15','Pet: "Regen"+3','Enh. Mag. eff. dur. +10',}},
     hands={ name="Telchine Gloves", augments={'Pet: Mag. Evasion+20','Pet: "Regen"+3','Enh. Mag. eff. dur. +10',}},
     legs={ name="Telchine Braconi", augments={'Pet: Mag. Evasion+17','Pet: "Regen"+3','Enh. Mag. eff. dur. +10',}},

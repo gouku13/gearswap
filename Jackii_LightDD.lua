@@ -14,12 +14,12 @@ MDT_Ring1 = Hybrid_DT_Ring1
 MDT_Ring2 = Hybrid_DT_Ring2
 
 --- Full -DT%. For TP/PDT and idle sets.
-sets.DT = { --- PDT: 56%, MDT: 44%, BDT: 31%
+sets.DT = { --- PDT: 54%, MDT: 44%, BDT: 31%
     -- Note: While full DT set is over PDT cap, movement or Refresh gear will bring us under cap.
     ammo="Staunch Tathlum", -- DT -2%
     head="Iuitl Headgear +1", --- PDT -4%, MDT -4%
     neck="Loricate Torque +1", -- DT -6%
-    ear1="Genmei Earring", -- PDT -2%
+    ear1="Infused Earring", -- Regen
     ear2="Etiolation Earring", -- MDT -3%
     body="Meg. Cuirie +2", -- PDT -8%
     hands={ name="Herculean Gloves", augments={'Accuracy+20 Attack+20','Damage taken-2%','Accuracy+6','Attack+7',}}, -- PDT -2%, DT - 2%
@@ -128,7 +128,7 @@ sets.Full_Acc = set_combine(sets.Some_Acc, {
   ammo="Falcon Eye",
   head="Dampening Tam",
   ear1="Zennaroi Earring",
-  ear2="Digni. Earring",
+  ear2="Telos Earring",
   ring2="Cacoethic Ring +1",
   waist="Olseni Belt"
 })
@@ -144,6 +144,12 @@ if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_J
   sets.Full_Acc = set_combine(sets.Full_Acc, {
     head="Carmine Mask +1",
     legs="Carmine Cuisses +1"
+  })
+end
+
+if ((Main_Job == 'THF') or (Main_Job == 'NIN') or (Main_Job == 'RUN') or (Main_Job == 'DNC')) then
+  sets.Full_Acc = set_combine(sets.Full_Acc, {
+    ammo="Yamarang",
   })
 end
 
