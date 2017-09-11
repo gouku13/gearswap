@@ -26,7 +26,7 @@ sets.DT = { --- PDT: 54%, MDT: 44%, BDT: 31%
     ring1= Hybrid_DT_Ring1,
     ring2= Hybrid_DT_Ring2,
     back="Moonbeam Cape", -- DT -5%, HP+250
-    waist="Flume Belt", -- PDT -4%
+    waist="Flume Belt +1", -- PDT -4%
     legs="Mummu Kecks +1", -- DT -4%
     feet={ name="Herculean Boots", augments={'Accuracy+23 Attack+23','Damage taken-2%','DEX+5','Attack+6',}} -- PDT -2%, DT -2%
 }
@@ -199,7 +199,7 @@ sets.WS_All = {
   hands="Meg. Gloves +2",
   ring2="Hetairoi Ring",
   waist="Fotia Belt",
-  legs={ name="Herculean Trousers", augments={'Weapon skill damage +2%','DEX+9','Accuracy+12','Attack+10',}},
+  legs={ name="Herculean Trousers", augments={'Accuracy+28','Weapon skill damage +3%','STR+7','Attack+11',}},
   feet={ name="Herculean Boots", augments={'Accuracy+20 Attack+20','Weapon skill damage +3%','STR+5','Accuracy+13',}},
 }
 
@@ -263,12 +263,13 @@ sets.WS["Rudra's Storm"] = set_combine(sets.WS.All, { -- Deals quintuple damage 
 sets.WS.Ranged_All = set_combine(sets.Midshot,{ 
   neck="Fotia Gorget",
   ear2="Moonshade Earring",
+  body={ name="Herculean Vest", augments={'Rng.Acc.+15 Rng.Atk.+15','Weapon skill damage +3%','STR+5','Rng.Acc.+8','Rng.Atk.+6',}},
   hands="Meg. Gloves +2",
   ring1="Garuda Ring +1",
   ring2="Garuda Ring +1",
   waist="Fotia Belt",
-  legs={ name="Herculean Trousers", augments={'Rng.Acc.+23 Rng.Atk.+23','Enmity-3','DEX+4','Rng.Acc.+5','Rng.Atk.+7',}},
-  feet={ name="Herculean Boots", augments={'Rng.Acc.+21 Rng.Atk.+21','Enmity-2','STR+1','Rng.Acc.+9','Rng.Atk.+11',}},
+  legs={ name="Herculean Trousers", augments={'Rng.Acc.+28','Weapon skill damage +3%','Rng.Atk.+14',}},
+  feet={ name="Herculean Boots", augments={'Rng.Acc.+19 Rng.Atk.+19','Weapon skill damage +3%','Rng.Atk.+2',}},
 })
 
 --- ===============================

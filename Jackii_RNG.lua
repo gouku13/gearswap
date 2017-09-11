@@ -149,14 +149,10 @@ sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
 })
 	
 sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
-  head="Orion Beret +2",
-  neck="Fotia Gorget",
   --body="Herculean Vest with WSD/RATK/RACC",
   ear1="Ishvara Earring",
-  ear2="Moonshade Earring",
   ring1="Regal Ring",
   ring2="Dingir Ring",
-  waist="Fotia Belt",
   --legs="Herculean Trousers with WSD/RATK/RACC",
   --feet="Herculean Boots with WSD/RATK/RACC",
 })

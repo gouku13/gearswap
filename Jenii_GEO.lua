@@ -18,10 +18,10 @@ function get_job_sets()
 --- 	Job Abilities
 --- ===============================
 
-  sets.JA['Full Circle'] = {head="Azimuth hood +1",body="Geomancy Tunic +1",hands="Bagua mitaines +1"}
-  sets.JA['Radial Arcana'] = {feet="Bagua Sandals +1"}
-  sets.JA['Bolster'] = {body="Bagua Tunic +1"}
-  sets.JA['Life Cycle'] = {body="Geomancy Tunic +1",back="Nantosuelta's Cape"}
+  sets.JA['Full Circle'] = {head="Azimuth hood",body="Geomancy Tunic",hands="Bagua mitaines"}
+  sets.JA['Radial Arcana'] = {feet="Bagua Sandals"}
+  sets.JA['Bolster'] = {body="Bagua Tunic"}
+  sets.JA['Life Cycle'] = {body="Geomancy Tunic",back="Nantosuelta's Cape"}
 
 	
 --- ===============================
@@ -45,7 +45,7 @@ function get_job_sets()
 
 	--- Movement  For Running
 	sets.Movement = set_combine(sets.Refresh, {
-		feet="Geomancy Sandals +1" --- Movement speed +12%
+		feet="Geomancy Sandals" --- Movement speed +12%
     })	
 	
 --- ===============================
@@ -54,8 +54,8 @@ function get_job_sets()
 
 	--- REFRESH: 3 (base) + 2 MP/tic
 	sets.Refresh = set_combine(sets.Refresh, {
-		body="Amalric Doublet +1",
-		hands="Bagua Mitaines +1"
+		body="Geomancy Tunic",
+		hands="Bagua Mitaines"
     })
 
 --- ===============================
@@ -70,7 +70,7 @@ function get_job_sets()
 		ear1="Etiolation Earring",
         body={ name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','"Fast Cast"+7','DEX+10',}}, -- FC 13%
 		hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+12','"Fast Cast"+7','INT+1','Mag. Acc.+3',}}, -- FC +7%
-		legs="Geomancy Pants +1", --- +11%, Spell interupt down 20%
+		legs="Geomancy Pants", --- +11%, Spell interupt down 20%
 		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Fast Cast"+7','MND+4','"Mag.Atk.Bns."+7',}} -- FC 12%
 	})
 
@@ -118,7 +118,7 @@ function get_job_sets()
 		main="Idris",
 		sub="Ammurapi Shield",
 		ear1="Regal Earring",
-		hands="Geomancy Mitaines +2",
+		hands="Geomancy Mitaines",
 		legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}} --- Enfeebling +10
 	})
@@ -137,10 +137,10 @@ function get_job_sets()
 		main="Idris",
 		sub="Genmei Shield",
 		range="Dunna", --- Handbell +18, Geomancy +5
-		head="Azimuth hood +1", --- Geomancy +15
+		head="Azimuth hood", --- Geomancy +15
 		neck="Incanter's Torque", --- Magic Skills +10
-		body="Bagua Tunic +1", --- Geomancy +12
-		hands="Geo. Mitaines +2", --- Geomancy +15
+		body="Bagua Tunic", --- Geomancy +12
+		hands="Geo. Mitaines", --- Geomancy +15
 		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -1%',}}, --- Geomancy +5,+10 (Indi Duration +20)
 		feet="Medium's Sabots" -- Handbell +5
 	}
@@ -173,7 +173,7 @@ function get_job_sets()
 		main="Idris",
 		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="Azimuth Hood +1",
+		head="Azimuth Hood",
 		body={ name="Telchine Chas.", augments={'Mag. Evasion+24','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		hands={ name="Telchine Gloves", augments={'Mag. Evasion+24','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		legs={ name="Telchine Braconi", augments={'Mag. Evasion+23','Pet: "Regen"+3','Pet: Damage taken -4%',}},

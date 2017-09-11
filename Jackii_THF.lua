@@ -32,9 +32,9 @@ sets.JA['Hide'] = {body="Pillager's Vest +1"}
   sets.DT = set_combine(sets.DT, sets.weapons, {
   })
   
-  sets.Refresh = {
+ --[[ sets.Refresh = {
     body="Mekosu. Harness",
-  }
+  }--]]
   
   sets.Movement = {
     feet="Jute Boots +1"

@@ -123,7 +123,7 @@ function get_sets()
 			ear2="Etiolation Earring",
 			body="Vrikodara Jupon",
 			hands="Assim. Bazu. +2",
-			waist="Flume Belt",}
+			waist="Flume Belt +1",}
 	sets.Idle.Movement = set_combine(sets.Idle.Regen,{
 	        ammo="Staunch Tathlum",
 			head="Rawhide Mask",
@@ -144,7 +144,7 @@ function get_sets()
 			ear2="Etiolation Earring",
 			body="Vrikodara Jupon",
 			hands="Assim. Bazu. +2",
-			waist="Flume Belt",})
+			waist="Flume Belt +1",})
 	sets.Resting = set_combine(sets.Idle.Regen)
 
 	-- TP Sets --
@@ -214,7 +214,7 @@ function get_sets()
 			ring1="Defending Ring",
 			ring2="Gelatinous Ring +1",
 			back="Moonbeam Cape",
-			waist="Flume Belt"}
+			waist="Flume Belt +1"}
 
 	sets.MDT = set_combine(sets.PDT,{
 			ear1="Merman's Earring",
@@ -260,7 +260,7 @@ function get_sets()
 			ring2="Ifrit Ring +1",
 			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 			waist="Fotia Belt",
-			legs={ name="Herculean Trousers", augments={'Weapon skill damage +2%','DEX+9','Accuracy+12','Attack+10',}},
+			legs={ name="Herculean Trousers", augments={'Accuracy+28','Weapon skill damage +3%','STR+7','Attack+11',}},
 			feet={ name="Herculean Boots", augments={'Accuracy+20 Attack+20','Weapon skill damage +3%','STR+5','Accuracy+13',}},}
 	sets.WS.Requiescat.MidACC = set_combine(sets.WS.Requiescat,{})
 	sets.WS.Requiescat.HighACC = set_combine(sets.WS.Requiescat.MidACC,{
@@ -326,7 +326,7 @@ function get_sets()
 			ring2="Shukuyu Ring",
 			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 			waist="Fotia Belt",
-			legs={ name="Herculean Trousers", augments={'Weapon skill damage +2%','DEX+9','Accuracy+12','Attack+10',}},
+			legs={ name="Herculean Trousers", augments={'Accuracy+28','Weapon skill damage +3%','STR+7','Attack+11',}},
 			feet={ name="Herculean Boots", augments={'Accuracy+20 Attack+20','Weapon skill damage +3%','STR+5','Accuracy+13',}},}
 	sets.WS["Savage Blade"].MidACC = set_combine(sets.WS["Savage Blade"],{
 			ammo="Falcon Eye",
@@ -352,7 +352,7 @@ function get_sets()
 			ring2="Shukuyu Ring",
 			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 			waist="Fotia Belt",
-			legs={ name="Herculean Trousers", augments={'Weapon skill damage +2%','DEX+9','Accuracy+12','Attack+10',}},
+			legs={ name="Herculean Trousers", augments={'Accuracy+28','Weapon skill damage +3%','STR+7','Attack+11',}},
 			feet={ name="Herculean Boots", augments={'Accuracy+20 Attack+20','Weapon skill damage +3%','STR+5','Accuracy+13',}},}
 			
 			
@@ -384,7 +384,7 @@ function get_sets()
 			ring2="Shukuyu Ring",
 			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 			waist="Fotia Belt",
-			legs={ name="Herculean Trousers", augments={'Weapon skill damage +2%','DEX+9','Accuracy+12','Attack+10',}},
+			legs={ name="Herculean Trousers", augments={'Accuracy+28','Weapon skill damage +3%','STR+7','Attack+11',}},
 			feet={ name="Herculean Boots", augments={'Accuracy+20 Attack+20','Weapon skill damage +3%','STR+5','Accuracy+13',}},}
 	sets.WS.Expiacion.MidACC = set_combine(sets.WS.Expiacion,{
 	        ammo="Falcon Eye",
