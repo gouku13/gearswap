@@ -15,13 +15,13 @@ function get_job_sets()
 --- 	Job Abilities
 --- ===============================
 
-sets.JA['Conspirator'] = {body="Raider's Vest +2"}
-sets.JA['Accomplice'] = {head="Raid. Bonnet +2"}
-sets.JA['Collaborator'] = {head="Raid. Bonnet +2"}
+sets.JA['Conspirator'] = {body="Skulker's Vest +1"}
+sets.JA['Accomplice'] = {head="Skulker's Bonnet +1"}
+sets.JA['Collaborator'] = {head="Skulker's Bonnet +1"}
 sets.JA['Perfect Dodge'] = {hands="Plun. Armlets +1"}
 sets.JA['Steal'] = {hands="Pill. Armlets +1",legs="Pill. Culottes +1",feet="Pill. Poulaines +1",ring2="Gorney Ring"}
 sets.JA['Flee'] = {feet="Pill. Poulaines +1"}
-sets.JA['Despoil'] = {legs="Raid. Culottes +2",feet="Raid. Poulaines +2"}
+sets.JA['Despoil'] = {legs="Skulker's Culottes +1",feet="Skulker's Poulaines +1"}
 sets.JA['Mug'] = {head="Plun. Bonnet +1"}
 sets.JA['Hide'] = {body="Pillager's Vest +1"}
 

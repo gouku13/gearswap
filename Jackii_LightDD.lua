@@ -334,10 +334,20 @@ sets.MAB = {
   feet={ name="Herculean Boots", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Weapon skill damage +2%','INT+9','Mag. Acc.+11','"Mag.Atk.Bns."+11',}},
 }
 
-if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_Job == 'RNG')) then
+if ((Main_Job == 'COR') or (Main_Job == 'RUN') or (Main_Job == 'RNG')) then
   sets.MAB = set_combine(sets.MAB, {
     body="Carm. Sc. Mail +1",
     hands="Carmine Fin. Ga. +1",
+  })
+end
+
+if (Main_Job == 'BLU') then
+  sets.MAB = set_combine(sets.MAB, {
+    head="Jhakri Coronal +2",
+    body="Amalric Doublet +1",
+    hands="Amalric Gages +1",
+	legs="Amalric Slops +1",
+	feet="Amalric Nails +1"
   })
 end
 

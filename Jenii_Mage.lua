@@ -132,11 +132,11 @@ end
 
 if (Dark_Mage) then
   sets.Fast_Cast = set_combine(sets.Fast_Cast,{ -- FC 68%
-    head={ name="Merlinic Hood", augments={'"Fast Cast"+7','Mag. Acc.+12',}}, -- FC 15%
+    head={ name="Merlinic Hood", augments={'Mag. Acc.+9 "Mag.Atk.Bns."+9','"Fast Cast"+7','CHR+3',}}, -- FC 15%
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','"Fast Cast"+7','DEX+10',}}, -- FC 13%
     hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+12','"Fast Cast"+7','INT+1','Mag. Acc.+3',}}, -- FC +7%
     legs="Psycloth lappas",	-- FC 7%
-    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Fast Cast"+7','MND+4','"Mag.Atk.Bns."+7',}} -- FC 12%
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','"Fast Cast"+6','MND+9','Mag. Acc.+9','"Mag.Atk.Bns."+4',}}, -- FC 11%
   })
 end
 
@@ -158,7 +158,6 @@ sets.MND = {
 sets.Healing_Skill = {
   neck="Incanter's Torque", -- Healing +7
   --ear2="Beatific Earring", -- Healing +4
-  --ring1="Janniston Ring", -- Cure Potenct II + 5%, Enmity -7
   ring2="Sirona's Ring", -- MND: 3, Healing +10
   --back="Altruistic Cape" -- Healing +5, Enfeebling +5
   --waist="Bishop's Sash"
@@ -183,7 +182,6 @@ sets.Cursna = {
 sets.Enmity = {
   ammo="Esper Stone +1", -- Enmity -5
   --neck="Lasaia Pendant", -- Enmity -8
-  --ring1="Janniston Ring" -- Cure Potenct II + 5%, Enmity -7
 }
 
 sets.Cure_Extras = {
@@ -262,14 +260,11 @@ sets.Magic_Acc = {
 }
 
 sets.Some_MAcc = { -- Hybrid set between MAB/M.Acc. For resistant mobs.
-  body={ name="Merlinic Jubbah", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','INT+10',}},
-  legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
-  feet={ name="Merlinic Crackows", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Fast Cast"+7','MND+4','"Mag.Atk.Bns."+7',}}
 }
 
 sets.MAB = {
   ammo="Pemphredo tathlum",
-  head={ name="Merlinic Hood", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Drain" and "Aspir" potency +8','MND+5','Mag. Acc.+9','"Mag.Atk.Bns."+13',}},
+  head={ name="Merlinic Hood", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Magic Damage +6','Mag. Acc.+15','"Mag.Atk.Bns."+13',}},
   neck="Sanctity Necklace",
   ear1="Barkarole Earring",
   ear2="Friomisi Earring",
@@ -285,7 +280,7 @@ sets.MAB = {
 
 sets.MB = {
   ammo="Pemphredo tathlum",
-  head={ name="Merlinic Hood", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','Magic burst dmg.+9%','INT+9','"Mag.Atk.Bns."+7',}}, -- +9%
+  head={ name="Merlinic Hood", augments={'"Mag.Atk.Bns."+25','Magic burst dmg.+10%','CHR+5','Mag. Acc.+12',}}, -- +10%
   neck="Mizu. Kubikazari", -- +10%
   ear1="Barkarole Earring",
   ear2="Friomisi Earring",
@@ -346,8 +341,8 @@ sets.Drain = {
 
 if (Dark_Mage) then
   sets.Drain = set_combine(sets.Drain,{ 
-	hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Drain" and "Aspir" potency +11','Mag. Acc.+8','"Mag.Atk.Bns."+13',}},
-	feet={ name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +11','CHR+6','Mag. Acc.+15',}}
+	hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+23','"Drain" and "Aspir" potency +9','"Mag.Atk.Bns."+1',}},
+	feet={ name="Merlinic Crackows", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Drain" and "Aspir" potency +4','MND+2','Mag. Acc.+12','"Mag.Atk.Bns."+14',}},
   })
 end
 

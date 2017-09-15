@@ -135,7 +135,7 @@ function get_sets()
 			ring1="Defending Ring",
 			ring2="Dark Ring",
 			back="Moonbeam Cape",
-			waist="Fucho-no-Obi",
+			waist="Flume Belt +1",
 			legs="Carmine Cuisses +1",
 			feet="Hippomenes Socks +1"})
 	sets.Idle.Refresh = set_combine(sets.Idle.Regen,{

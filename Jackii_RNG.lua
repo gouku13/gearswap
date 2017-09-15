@@ -86,7 +86,7 @@ sets.TP.PDT_Mix = set_combine(sets.TP.PDT_Mix,{
 sets.Preshot = set_combine(sets.Preshot, {
   body="Amini Caban +1",
   hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- Snapshot +8
-  --back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},
+  back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},
 })
 
 sets.Midshot = set_combine(sets.Midshot, {
@@ -95,7 +95,7 @@ sets.Midshot = set_combine(sets.Midshot, {
   ear1="Dedition Earring",
   --body="Orion Jerkin +3",
   body="Oshosi Vest",
-  hands="Amini Glove. +1",
+  --hands="Amini Glove. +1",
   ring1="Ilabrat Ring",
   ring2="Dingir Ring",
   back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},
