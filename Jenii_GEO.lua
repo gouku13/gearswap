@@ -12,7 +12,7 @@ function get_job_sets()
 	---	  ['Bolster'] = 180
 	--- }
 
-	sets.weapons = {main="Idris",sub="Genmei Shield",range="Dunna"}
+	sets.weapons = {main="Solstice",sub="Genmei Shield",range="Dunna"}
 
 --- ===============================
 --- 	Job Abilities
@@ -66,12 +66,7 @@ function get_job_sets()
 		main="Sucellus",
 		sub="Chanter's Shield",
 		range="Dunna",
-		head={ name="Merlinic Hood", augments={'"Fast Cast"+7','Mag. Acc.+12',}}, -- FC 15%
-		ear1="Etiolation Earring",
-        body={ name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','"Fast Cast"+7','DEX+10',}}, -- FC 13%
-		hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+12','"Fast Cast"+7','INT+1','Mag. Acc.+3',}}, -- FC +7%
 		legs="Geomancy Pants", --- +11%, Spell interupt down 20%
-		feet={ name="Merlinic Crackows", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Fast Cast"+7','MND+4','"Mag.Atk.Bns."+7',}} -- FC 12%
 	})
 
 --- ===============================
@@ -98,14 +93,14 @@ function get_job_sets()
 --- ===============================
 
     sets.Some_MAcc = set_combine(sets.Some_MAcc,{
-		main="Idris",
+		main="Solstice",
 		sub="Ammurapi Shield",
 		legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
     })
 
 	sets.MAB = set_combine(sets.MAB,{
-		main={ name="Grioavolr", augments={'Magic burst dmg.+5%','INT+11','Mag. Acc.+25','"Mag.Atk.Bns."+26','Magic Damage +3',}},
+		main={ name="Grioavolr", augments={'INT+14','Mag. Acc.+29','"Mag.Atk.Bns."+26',}},
 		sub="Niobid Strap",
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
 	})
@@ -115,12 +110,12 @@ function get_job_sets()
 	})
 
 	sets.Enfeeble_Skill = set_combine(sets.Enfeeble_Skill,{
-		main="Idris",
+		main="Solstice",
 		sub="Ammurapi Shield",
 		ear1="Regal Earring",
 		hands="Geomancy Mitaines",
 		legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
-		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}} --- Enfeebling +10
+		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}} 
 	})
 	
 	sets.Drain = set_combine(sets.Drain, {
@@ -134,7 +129,7 @@ function get_job_sets()
 --- ===============================
 	
 	sets.Geomancy_Skill = { --- Inate Skill: 394 + 394 = 788
-		main="Idris",
+		main="Solstice",
 		sub="Genmei Shield",
 		range="Dunna", --- Handbell +18, Geomancy +5
 		head="Azimuth hood", --- Geomancy +15
@@ -146,7 +141,7 @@ function get_job_sets()
 	}
 	
 	sets.Indi = {
-		main="Idris",
+		main="Solstice",
 		sub="Genmei Shield",
 		range="Dunna",
 		legs="Bagua pants +1",
@@ -169,15 +164,15 @@ function get_job_sets()
 	sets.Utility = {}
 	sets.Utility[Utility_Title] = {}
 	
-	sets.Utility["Luopan-PDT"]["On"] = {  --Luopan: DT -(Dunna/Hands/Idris cap DT)
-		main="Idris",
+	sets.Utility["Luopan-PDT"]["On"] = {  --Luopan: DT -(Dunna/Hands/Solstice cap DT)
+		main="Solstice",
 		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="Azimuth Hood",
-		body={ name="Telchine Chas.", augments={'Mag. Evasion+24','Pet: "Regen"+3','Pet: Damage taken -4%',}},
-		hands={ name="Telchine Gloves", augments={'Pet: "Regen"+3','Pet: Damage taken -4%',}},
-		legs={ name="Telchine Braconi", augments={'Mag. Evasion+23','Pet: "Regen"+3','Pet: Damage taken -4%',}},
-		feet={ name="Telchine Pigaches", augments={'Pet: "Regen"+3','Pet: Damage taken -4%',}},
+		head={ name="Telchine Cap", augments={'Mag. Evasion+8','Pet: "Regen"+2','Pet: Damage taken -4%',}},
+		body={ name="Telchine Chas.", augments={'Mag. Evasion+10','Pet: "Regen"+3','Pet: Damage taken -4%',}},
+		hands={ name="Telchine Gloves", augments={'Mag. Evasion+9','Pet: "Regen"+3','Pet: Damage taken -4%',}},
+		legs={ name="Telchine Braconi", augments={'Mag. Evasion+9','Pet: "Regen"+3','Pet: Damage taken -4%',}},
+		feet={ name="Telchine Pigaches", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		neck="Loricate Torque +1",
 		waist="Isa Belt",
 		ear1="Etiolation Earring",
@@ -197,7 +192,7 @@ end
 
 function job_specific_precast(spell)
   if (string.find(spell.english,'Indi-') or string.find(spell.english,'Geo-')) then
-    equip(set_combine(sets.Fast_Cast, sets.Quick_Magic, {main="Idris", ammo=empty, range="Dunna"}))
+    equip(set_combine(sets.Fast_Cast, sets.Quick_Magic, {main="Solstice", ammo=empty, range="Dunna"}))
     return true
   else
     return false

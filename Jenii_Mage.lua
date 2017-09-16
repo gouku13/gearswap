@@ -111,7 +111,7 @@ sets.Fast_Cast = { -- Currently FC 42%, QM 10%
   ear1="Loquacious Earring", -- FC 2%
   --body="Anhur Robe", -- FC 10%
   ring1="Kishar Ring", -- FC 4%
-  ring2="Rahab Ring",
+  ring2="Weatherspoon Ring",
   back="Swith Cape +1",
   waist="Witful Belt", -- FC 3%, QM 3%
   legs="Artsieq Hose", -- FC 5%
@@ -134,7 +134,7 @@ if (Dark_Mage) then
   sets.Fast_Cast = set_combine(sets.Fast_Cast,{ -- FC 68%
     head={ name="Merlinic Hood", augments={'Mag. Acc.+9 "Mag.Atk.Bns."+9','"Fast Cast"+7','CHR+3',}}, -- FC 15%
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','"Fast Cast"+7','DEX+10',}}, -- FC 13%
-    hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+12','"Fast Cast"+7','INT+1','Mag. Acc.+3',}}, -- FC +7%
+    hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+19','"Fast Cast"+6','"Mag.Atk.Bns."+5',}}, -- FC +6%
     legs="Psycloth lappas",	-- FC 7%
     feet={ name="Merlinic Crackows", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','"Fast Cast"+6','MND+9','Mag. Acc.+9','"Mag.Atk.Bns."+4',}}, -- FC 11%
   })
@@ -164,12 +164,12 @@ sets.Healing_Skill = {
 }
 
 sets.Cure_Potency = { --- Caps at 50%, currently 49 + ?%
-  head="Vanya hood", -- 10%
+  head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}}, -- 10%
   body="Vrikodara Jupon", -- 13%
-  hands="Telchine Gloves", -- 10%
+  hands="Telchine Gloves", -- 10%  hands={ name="Vanya Cuffs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
   ring2="Lebeche Ring", -- 3%
   legs="Vanya Slops", --4%
-  feet="Vanya Clogs" -- 12% 
+  feet={ name="Vanya Clogs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 12% 
 }
 
 sets.Cursna = {
