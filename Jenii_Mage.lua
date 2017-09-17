@@ -49,7 +49,7 @@ else
   -- Without head/pants: PDT: 25 + ?%, MDT: 21 + ?%, BDT: 15 + ?%
   sets.DT = set_combine(sets.DT, {
     head="Hagondes Hat +1", -- PDT: ?%, MDT: ?%
-	body="Hagondes Coat +1",
+	--body="Hagondes Coat +1",
     hands="Hagondes Cuffs +1", -- PDT: ?%, MDT: ?%
     back="Moonbeam Cape",
     legs="Hagondes Pants +1", -- PDT: ?%, MDT: ?%

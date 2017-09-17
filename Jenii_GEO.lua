@@ -12,7 +12,7 @@ function get_job_sets()
 	---	  ['Bolster'] = 180
 	--- }
 
-	sets.weapons = {main="Solstice",sub="Genmei Shield",range="Dunna"}
+	sets.weapons = {main="Solstice",sub="Genmei Shield",range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},}
 
 --- ===============================
 --- 	Job Abilities
@@ -30,7 +30,7 @@ function get_job_sets()
 
 	--- Full -DT%. For TP/PDT and idle sets.
     sets.DT = set_combine(sets.DT, {
-		range="Dunna", --- Luopan DT -5%
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}}, --- Luopan DT -5%
 		--head="Hagondes Hat +1",
 		--body="Onca Suit",
 		--body="Hagondes Coat +1",
@@ -40,15 +40,6 @@ function get_job_sets()
 	})
 
 --- ===============================
---- 	Movement Sets
---- ===============================	
-
-	--- Movement  For Running
-	sets.Movement = set_combine(sets.Refresh, {
-		feet="Geomancy Sandals" --- Movement speed +12%
-    })	
-	
---- ===============================
 --- 	Refresh Sets
 --- ===============================	
 
@@ -56,6 +47,15 @@ function get_job_sets()
 	sets.Refresh = set_combine(sets.Refresh, {
 		body="Geomancy Tunic",
 		hands="Bagua Mitaines"
+    })	
+
+--- ===============================
+--- 	Movement Sets
+--- ===============================	
+
+	--- Movement  For Running
+	sets.Movement = set_combine(sets.Refresh, {
+		feet="Geomancy Sandals" --- Movement speed +12%
     })
 
 --- ===============================
@@ -65,7 +65,7 @@ function get_job_sets()
 	sets.Fast_Cast = set_combine(sets.Fast_Cast,{ --- Current: 32 (Base) + 10
 		main="Sucellus",
 		sub="Chanter's Shield",
-		range="Dunna",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		legs="Geomancy Pants", --- +11%, Spell interupt down 20%
 	})
 
@@ -95,7 +95,7 @@ function get_job_sets()
     sets.Some_MAcc = set_combine(sets.Some_MAcc,{
 		main="Solstice",
 		sub="Ammurapi Shield",
-		legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
     })
 
@@ -112,9 +112,9 @@ function get_job_sets()
 	sets.Enfeeble_Skill = set_combine(sets.Enfeeble_Skill,{
 		main="Solstice",
 		sub="Ammurapi Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		ear1="Regal Earring",
 		hands="Geomancy Mitaines",
-		legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}} 
 	})
 	
@@ -131,19 +131,20 @@ function get_job_sets()
 	sets.Geomancy_Skill = { --- Inate Skill: 394 + 394 = 788
 		main="Solstice",
 		sub="Genmei Shield",
-		range="Dunna", --- Handbell +18, Geomancy +5
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}}, --- Handbell +18, Geomancy +5
 		head="Azimuth hood", --- Geomancy +15
 		neck="Incanter's Torque", --- Magic Skills +10
 		body="Bagua Tunic", --- Geomancy +12
 		hands="Geo. Mitaines", --- Geomancy +15
-		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -1%',}}, --- Geomancy +5,+10 (Indi Duration +20)
+		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -2%',}}, --- Geomancy +5,+10 (Indi Duration +20)
 		feet="Medium's Sabots" -- Handbell +5
 	}
 	
 	sets.Indi = {
 		main="Solstice",
 		sub="Genmei Shield",
-		range="Dunna",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -2%',}},
 		legs="Bagua pants +1",
 		feet="Azimuth Gaiters +1"
 	}
@@ -151,7 +152,7 @@ function get_job_sets()
 	sets.Geo = {}
 	
   -- Combining pants for spell interuption down.
-	sets.midcast["Geomancy"] = set_combine(sets.Geomancy_Skill, {range="Dunna",legs="Geomancy Pants +1"})
+	sets.midcast["Geomancy"] = set_combine(sets.Geomancy_Skill, {range="Dunna",legs="Geomancy Pants"})
 
 --- ===============================
 --- 	Utility Modes
@@ -168,7 +169,7 @@ function get_job_sets()
 		main="Solstice",
 		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head={ name="Telchine Cap", augments={'Mag. Evasion+8','Pet: "Regen"+2','Pet: Damage taken -4%',}},
+		head={ name="Telchine Cap", augments={'Mag. Evasion+8','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		body={ name="Telchine Chas.", augments={'Mag. Evasion+10','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		hands={ name="Telchine Gloves", augments={'Mag. Evasion+9','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		legs={ name="Telchine Braconi", augments={'Mag. Evasion+9','Pet: "Regen"+3','Pet: Damage taken -4%',}},
