@@ -54,7 +54,7 @@ function get_job_sets()
 --- ===============================	
 
 	--- Movement  For Running
-	sets.Movement = set_combine(sets.Refresh, {
+	sets.Movement = set_combine(sets.Movement, {
 		feet="Geomancy Sandals" --- Movement speed +12%
     })
 
