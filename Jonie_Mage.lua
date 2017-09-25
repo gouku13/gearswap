@@ -40,6 +40,15 @@ sets.Movement = {
 	feet="Herald's Gaiters"
 }
 
+sets.craft={
+      sub="Beveler's Shield",
+	  neck="Tanner's Torque",
+      body="Tanner's Apron",
+      hands="Tanner's Gloves",
+      ring1="Orvail Ring",
+      ring2="Craftmaster's Ring",
+    }
+
 if (Dark_Mage or (Main_Job == 'BLU')) then
   -- Without head/pants: PDT: 29%, MDT: 19%, BDT: 18%
   sets.DT = set_combine(sets.DT, {

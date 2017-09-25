@@ -24,14 +24,6 @@ function get_job_sets()
 	sets.DT = set_combine(sets.DT,{
       sub="Genmei Shield" 
     })
-	
-	sets.craft={
-	  neck="Tanner's Torque",
-      body="Tanner's Apron",
-      hands="Tanner's Gloves",
-      ring1="Orvail Ring",
-      ring2="Craftmaster's Ring",
-    }
 
 --- ===============================
 --- 	Refresh Sets

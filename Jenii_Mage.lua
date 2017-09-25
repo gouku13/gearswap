@@ -32,7 +32,7 @@ sets.DT = { -- PDT: 25%, MDT: 21%, BDT: 15%
   ring2={ name="Dark Ring", augments={'Phys. dmg. taken -4%','Magic dmg. taken -6%',}},
   ear1="Colossus's Earring",
   ear2="Genmei Earring",
-  back="Moonbeam Cape", -- PDT +6%
+  back="Solemnity Cape", -- PDT +6%
 }
 
 if (Light_Mage) then
@@ -41,7 +41,7 @@ if (Light_Mage) then
     head="Gende. Caubeen +1", -- PDT: ?%, MDT: ?%
     body={ name="Gende. Bilaut +1", augments={'Phys. dmg. taken -4%','Song spellcasting time -5%',}}, -- PDT: ?%, MDT: ?%
     hands="Gende. Gages +1", -- PDT: ?%, MDT: ?%
-    back="Moonbeam Cape",
+    back="Solemnity Cape",
     legs="Gende. Spats +1", -- PDT: ?%, MDT: ?%
     feet="Gende. Galoshes +1" -- PDT: ?%, MDT: ?%
 	})
@@ -51,7 +51,7 @@ else
     head="Hagondes Hat +1", -- PDT: ?%, MDT: ?%
 	--body="Hagondes Coat +1",
     hands="Hagondes Cuffs +1", -- PDT: ?%, MDT: ?%
-    back="Moonbeam Cape",
+    back="Solemnity Cape",
     legs="Hagondes Pants +1", -- PDT: ?%, MDT: ?%
     feet="Hag. Sabots +1" -- PDT: ?%, MDT: ?%
 	})
@@ -76,7 +76,7 @@ sets.Refresh = {
   head="Befouled Crown", -- 1 MP/tic
   ear2="Infused Earring",
   ear1="Etiolation Earring",
-  body="Amalric Doublet +1", -- PDT: ?%, MDT: ?%
+  body="Amalric Doublet", -- PDT: ?%, MDT: ?%
   waist="Fucho-no-Obi", -- 1 MP/tic when < 50% MP
   legs="Assiduity Pants +1" -- 1 MP/tic
 }
@@ -134,9 +134,9 @@ if (Dark_Mage) then
   sets.Fast_Cast = set_combine(sets.Fast_Cast,{ -- FC 68%
     head={ name="Merlinic Hood", augments={'Mag. Acc.+9 "Mag.Atk.Bns."+9','"Fast Cast"+7','CHR+3',}}, -- FC 15%
     body={ name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','"Fast Cast"+7','DEX+10',}}, -- FC 13%
-    hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+19','"Fast Cast"+6','"Mag.Atk.Bns."+5',}}, -- FC +6%
+    hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+14','"Fast Cast"+7','INT+3','"Mag.Atk.Bns."+7',}}, -- FC +7%
     legs="Psycloth lappas",	-- FC 7%
-    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','"Fast Cast"+6','MND+9','Mag. Acc.+9','"Mag.Atk.Bns."+4',}}, -- FC 11%
+    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+15','"Fast Cast"+7','Mag. Acc.+9',}}, -- FC 12%
   })
 end
 
@@ -165,8 +165,9 @@ sets.Healing_Skill = {
 
 sets.Cure_Potency = { --- Caps at 50%, currently 49 + ?%
   head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}}, -- 10%
+  ear1="Mendi. Earring",
   body="Vrikodara Jupon", -- 13%
-  hands="Telchine Gloves", -- 10%  hands={ name="Vanya Cuffs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
+  hands={ name="Vanya Cuffs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},
   ring2="Lebeche Ring", -- 3%
   legs="Vanya Slops", --4%
   feet={ name="Vanya Clogs", augments={'MP+50','"Cure" potency +7%','Enmity-6',}}, -- 12% 
@@ -211,10 +212,10 @@ sets.Enhancing_Skill = { --- Total: +57~
 
 sets.Enhancing_Duration = {
   head={ name="Telchine Cap", augments={'Accuracy+18','Haste+3','Enh. Mag. eff. dur. +10',}},
-  body={ name="Telchine Chas.", augments={'Pet: Mag. Evasion+15','Pet: "Regen"+3','Enh. Mag. eff. dur. +10',}},
-  hands={ name="Telchine Gloves", augments={'Pet: Mag. Evasion+20','Pet: "Regen"+3','Enh. Mag. eff. dur. +10',}},
-  legs={ name="Telchine Braconi", augments={'Pet: Mag. Evasion+17','Pet: "Regen"+3','Enh. Mag. eff. dur. +10',}},
-  feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+  body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +7',}},
+  hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +7',}},
+  legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +7',}},
+  feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +7',}},
 }
 
 sets.Enhancing_Bonus["Regen"] = {
@@ -268,14 +269,14 @@ sets.MAB = {
   neck="Sanctity Necklace",
   ear1="Barkarole Earring",
   ear2="Friomisi Earring",
-  body="Amalric Doublet +1",
-  hands="Amalric Gages +1",
+  body="Amalric Doublet",
+  hands="Amalric Gages",
   ring1="Shiva Ring +1",
   ring2="Shiva Ring +1",
   back="Toro Cape",
   waist="Refoccilation Stone",
-  legs="Amalric Slops +1",
-  feet="Amalric Nails +1"
+  legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Conserve MP"+1','INT+7','Mag. Acc.+12',}},
+  feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Magic Damage +2','INT+13','"Mag.Atk.Bns."+6',}},
 }
 
 sets.MB = {
@@ -284,12 +285,10 @@ sets.MB = {
   neck="Mizu. Kubikazari", -- +10%
   ear1="Barkarole Earring",
   ear2="Friomisi Earring",
-  hands="Amalric Gages +1", -- (+5%)
+  hands="Amalric Gages", -- (+5%)
   ring1="Mujin Band", -- (+5%)
   ring2="Shiva Ring +1",
   back="Seshaw Cape +1", -- +6%
-  legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Magic burst dmg.+6%','Mag. Acc.+6','"Mag.Atk.Bns."+15',}}, -- +6%
-  feet={ name="Merlinic Crackows", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic burst dmg.+10%','Mag. Acc.+15','"Mag.Atk.Bns."+7',}},  -- +10%
 }
 
 sets.Weather = {
@@ -342,7 +341,7 @@ sets.Drain = {
 if (Dark_Mage) then
   sets.Drain = set_combine(sets.Drain,{ 
 	hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+23','"Drain" and "Aspir" potency +9','"Mag.Atk.Bns."+1',}},
-	feet={ name="Merlinic Crackows", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Drain" and "Aspir" potency +4','MND+2','Mag. Acc.+12','"Mag.Atk.Bns."+14',}},
+	feet={ name="Merlinic Crackows", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Drain" and "Aspir" potency +11','CHR+9','Mag. Acc.+14','"Mag.Atk.Bns."+5',}},
   })
 end
 
