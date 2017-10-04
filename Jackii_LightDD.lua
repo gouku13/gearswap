@@ -34,6 +34,19 @@ sets.DT = { --- PDT: 54%, MDT: 44%, BDT: 31%
 sets.PDT = set_combine(sets.DT, {ring1=PDT_Ring1, ring2=PDT_Ring2})
 sets.MDT = set_combine(sets.DT, {ring1=MDT_Ring1, ring2=MDT_Ring2})
 
+sets.fish= {
+    range="Ebisu Fishing Rod",
+    head="Tlahtlamah Glasses",
+    body="Angler's Tunica",
+    hands="Angler's Gloves",
+    legs="Angler's Hose",
+    feet="Waders",
+    neck="Fisher's Torque",
+    waist="Fisher's Rope",
+    ring1="Noddy Ring",
+    ring2="Puffin Ring",
+}
+
 --- ===============================
 --- 	Job Abilities
 --- ===============================
@@ -317,6 +330,19 @@ if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_J
     legs="Carmine Cuisses +1"
   })
 end
+
+sets.Magic_Acc = {
+  ammo="Yamarang",
+  neck="Sanctity Necklace",
+  ear1="Gwati Earring",
+  ear2="Digni. Earring",
+  body="Mummu Jacket +1",
+  hands="Mummu Wrists +1",
+  ring1="Stikini Ring",
+  ring2="Stikini Ring +1",
+  waist="Eschan Stone",
+  legs="Mummu Kecks +1",
+}
 
 sets.MAB = {
   ammo="Pemphredo Tathlum",
