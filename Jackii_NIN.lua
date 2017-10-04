@@ -1,275 +1,227 @@
-include('organizer-lib.lua')
-function get_sets()
-	send_command('bind f9 gs c toggle tp set')
+require('Jackii_LightDD')
 
-    TP_Index = 1
-    Idle_Index = 1
-	MDT = false
-    sets.weapons = {}
-    sets.weapons[1]={main="Taming Sari"}
-	sets.weapons[2] = {main="Shijo"}
-	
+--- Build Sets
+function get_job_sets()
+	get_base_sets()
+
+	Macro_Book = 11
+	Macro_Set = 2
+
+	sets.weapons = {}
+	set.proc_weapons = {}
+
+
+--- ===============================
+--- 	Job Abilities
+--- ===============================
+
+
+--- ===============================
+--- 	DT Sets
+--- ===============================
+
+  sets.DT = set_combine(sets.DT, sets.weapons, {
+  })
   
-    
-    sets.JA = {}
-	sets.JA.Steal = {ammo="Barathrum", hands="Pillager's Armlets +1", legs="Pillager's Culottes +1", feet="Pillager's Poulaines +1"}
-    sets.JA.Conspirator = {body="Skulker's Vest +1"}
-	sets.JA.Accomplice = {head="Skulker's Bonnet +1"}
-    sets.JA.Collaborator = {head="Skulker's Bonnet +1"}
-    sets.JA['Perfect Dodge'] = {hands="Plun. Armlets +1"}
-    sets.JA.Flee = {feet="Pillager's Poulaines +1"}
-    sets.JA.Despoil = {ammo="Barathrum",legs="Skulker's Culottes +1",feet="Skulker's Poulaines +1"}
---    sets.JA.Mug = {head="Assassin's Bonnet +2"}
+ --[[ sets.Refresh = {
+    body="Mekosu. Harness",
+  }--]]
+  
+  sets.Movement = {
+    feet="Danzo Sune-Ate"
+  }
 
-    
-    sets.WS = {}
-    sets.WS.SA = {}
-    sets.WS.TA = {}
-    sets.WS.SATA = {}
-	
-	sets.ninjutsu = {head="Herculean Helm",neck="Voltsurge Torque",ear1="Loquacious Earring",ear2="Etiolation Earring",body="Dread Jupon",hands="Leyline Gloves",
-	ring2="Weatherspoon Ring",ring1="Lebeche Ring",legs="Enif Cosciales"}
-	
-	sets.trust = {head="Herculean Helm",neck="Voltsurge Torque",ear1="Loquacious Earring",ear2="Etiolation Earring",body="Dread Jupon",hands="Leyline Gloves",
-	ring2="Weatherspoon Ring",ring1="Lebeche Ring"}
-	
-	sets.JA["Sneack Attack"] = {ammo="Yetshila",
-		head="Pillager's Bonnet +1",neck="Caro Necklace",ear1="Dominance Earring",ear2="Dominance Earring +1",
-        body="Pillager's vest +1",hands="Skulker's Armlets +1",ring2="Apate Ring",ring1="Ramuh Ring",
-        back="Toutatis's Cape",waist="Wanion Belt",legs="Samnuha Tights",feet="Taeon Boots"}
-	
-	sets.WS.Evisceration = {ammo="Yetshila",
-		head="Taeon Chapeau",neck="Nefarious Collar",ear1="Dominance Earring",ear2="Dominance Earring +1",
-        body="Pillager's vest +1",hands="Taeon Gloves",ring2="Hetairoi Ring",ring1="Ramuh Ring",
-        back="Toutatis's Cape",waist="Wanion Belt",legs="Pillager's culottes +1",feet="Taeon Boots"}
-        
-    sets.WS.SA.Evisceration = set_combine(sets.WS.Evisceration,{hands="Skulker's Armlets +1"})
+--- ===============================
+--- 	TP Sets
+--- ===============================
 
-    sets.WS["Rudra's Storm"] = {ammo="Yetshila",
-			head="Pillager's Bonnet +1",neck="Caro Necklace",ear1="Ishvara Earring",ear2="Dominance Earring +1",
-        body="Pillager's vest +1",hands="Taeon Gloves",ring2="Apate Ring",ring1="Ramuh Ring",
-        back="Toutatis's Cape",waist="Wanion Belt",legs="Samnuha Tights",feet="Taeon Boots"}
-        
-    sets.WS.SA["Rudra's Storm"] = set_combine(sets.WS["Rudra's Storm"],{hands="Skulker's Armlets +1",legs="Pillager's Culottes +1"})
-        
-    sets.WS.TA["Rudra's Storm"] = set_combine(sets.WS["Rudra's Storm"],{hands="Pillager's Armlets +1",legs="Pillager's Culottes +1"})
-    
-	sets.WS.SATA["Rudra's Storm"] = sets.WS.SA["Rudra's Storm"]
-    
-        
-	sets.WS['Aeolian Edge'] = {head="Highwing Helm",neck="Sanctity Necklace",ear1="Crematio Earring",ear2="Hecate's Earring",
-        body="Rawhide Vest",hands="Leyline Gloves",ring1="Ramuh Ring",ring2="Epona's Ring",
-        back="Izdubar mantle",waist="Wanion Belt",legs="Limbo Trousers",feet="Herculean Boots"}
-	
-    sets.WS.Exenterator = {head="Herculean Helm",neck="Houyi's Gorget",ear1="Steelflash Earring",ear2="Bladeborn Earring",
-        body="Dread Jupon",hands="Taeon Gloves",ring1="Stormsoul Ring",ring2="Apate Ring",
-        back="Vespid Mantle",waist="Prosilio Belt",legs="Herculean Trousers",feet="Herculean Boots"}
+  sets.DW['7'] = {
+    waist="Reiki Yotai", -- DW +7
+  }
 
-    sets.WS.TA.Exenterator = {head="Herculean Helm",neck="Houyi's Gorget",ear1="Steelflash Earring",ear2="Bladeborn Earring",
-        body="Pillager's vest +1",hands="Pillager's Armlets +1",ring1="Stormsoul Ring",ring2="Apate Ring",
-        back="Vespid Mantle",waist="Prosilio Belt",legs="Pillager's Culottes +1",feet="Herculean Boots"}
-        
-    sets.WS.SATA.Exenterator = sets.WS.TA.Exenterator
-    
-    sets.WS['Mercy Stroke'] = {ammo="Yetshila",
-		head="Whirlpool Mask",neck="Caro Necklace",ear1="Brutal Earring",ear2="Ishvara Earring",
-        body="Skulker's Vest +1",hands="Taeon Gloves",ring1="Pyrosoul Ring",ring2="Apate Ring",
-        back="Toutatis's Cape",waist="Prosilio Belt",legs="Samnuha Tights",feet="Taeon Boots"}
-    
-    sets.WS.SA['Mercy Stroke'] = set_combine(sets.WS["Mercy Stroke"],{head="Pillager's Bonnet +1", body="Plunderer's vest +1",
-		hands="Skulker's Armlets +1",legs="Pillager's Culottes +1"})
-    
-    sets.WS.TA['Mercy Stroke'] = set_combine(sets.WS["Mercy Stroke"],{head="Pillager's Bonnet +1", body="Plunderer's vest +1",
-		hands="Pillager's Armlets +1",legs="Pillager's Culottes +1"})
-	
-	sets.WS.SATA['Mercy Stroke'] = sets.WS.SA['Mercy Stroke']
-	
-	sets.WS["Mandalic Stab"] = {ammo="Yetshila",
-		head="Pillager's Bonnet +1",neck="Caro Necklace",ear1="Ishvara Earring",ear2="Dominance Earring +1",
-        body="Pillager's vest +1",hands="Taeon Gloves",ring2="Apate Ring",ring1="Ramuh Ring",
-        back="Toutatis's Cape",waist="Wanion Belt",legs="Samnuha Tights",feet="Taeon Boots"}
-		
-	 sets.WS.SA["Mandalic Stab"] = set_combine(sets.WS["Mandalic Stab"],{hands="Skulker's Armlets +1",legs="Pillager's Culottes +1"})
-        
-    sets.WS.TA["Mandalic Stab"] = set_combine(sets.WS["Mandalic Stab"],{hands="Pillager's Armlets +1",legs="Pillager's Culottes +1"})
-    
-	sets.WS.SATA["Mandalic Stab"] = sets.WS.SA["Mandalic Stab"]
-    
-    TP_Set_Names = {"Low Man","TH","TH2","Acc","Acc+1","Acc+2"}
-    sets.TP = {}
-	sets.TP.MDT = {}
-	sets.TP.Special = {}
-	
-    sets.TP['Low Man'] = {ammo="Yetshila",
-        head="Skulker's Bonnet +1",neck="Nefarious Collar",ear1="Suppanomimi",ear2="Eabani Earring",
-        body="Skulker's Vest +1",hands="Skulker's Armlets +1",ring1="Hetairoi Ring",ring2="Epona's Ring",
-        back="Toutatis's Cape",waist="Windbuffet Belt +1",legs="Skulker's Culottes +1",feet="Plunderer's Poulaines +1"}
-        
-    sets.TP['TH'] = {ammo="Yetshila",
-        head="Skulker's Bonnet +1",neck="Nefarious Collar",ear1="Suppanomimi",ear2="Eabani Earring",
-        body="Skulker's Vest +1",hands="Plun. Armlets +1",ring1="Hetairoi Ring",ring2="Epona's Ring",
-        back="Toutatis's Cape",waist="Windbuffet Belt +1",legs="Skulker's Culottes +1",feet="Skulker's Poulaines +1"}
-		
-	sets.TP['TH2'] = {Ammo="Falcon Eye",
-        head="Herculean Helm",neck="Combatant's Torque",ear2="Zennaroi earring",ear1="Dignitary's Earring",
-        body="Herculean Vest",hands="Plun. Armlets +1",ring1="Patricius Ring",ring2="Fortified Ring",
-        back="Toutatis's Cape",waist="Olseni Belt",legs="Herculean Trousers",feet="Skulker's Poulaines +1"}
-    
-	sets.TP['Acc'] = {Ammo="Falcon Eye",
-        head="Skulker's Bonnet +1",neck="Combatant's Torque",ear2="Bladeborn earring",ear1="Steelflash Earring",
-        body="Skulker's Vest +1",hands="Floral Gauntlets",ring1="Hetairoi Ring",ring2="Epona's Ring",
-        back="Toutatis's Cape",waist="Olseni Belt",legs="Samnuha Tights",feet="Taeon Boots"}
-	
-	sets.TP['Acc+1'] = {Ammo="Falcon Eye",
-        head="Adhemar Bonnet",neck="Combatant's Torque",ear2="Cessance earring",ear1="Brutal Earring",
-        body={ name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},hands="Adhemar Wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
-        back="Toutatis's Cape",waist="Kentarch Belt +1",legs="Samnuha Tights",feet={ name="Herculean Boots", augments={'"Triple Atk."+4','STR+10','Accuracy+9','Attack+8',}},}
-    
-	sets.TP['Acc+2'] = {ammo="Ginsen",
-		head="Adhemar Bonnet",neck="Combatant's Torque",ear2="Cessance earring",ear1="Brutal Earring",
-        body={ name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},hands="Adhemar Wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
-        back="Toutatis's Cape",waist="Kentarch Belt +1",legs="Samnuha Tights",feet={ name="Herculean Boots", augments={'"Triple Atk."+4','STR+10','Accuracy+9','Attack+8',}},}
-	
-	sets.TP.Special = set_combine(sets.TP[TP_Set_Names[TP_Index]],
-	{feet="Herculean Boots"})
-	
-	sets.TP.MDT = set_combine(sets.TP[TP_Set_Names[TP_Index]],
-	{head="Herculean Helm", ear2="Etiolation Earring", ring2="Fortified Ring", back="Xucau Mantle"})
-	
-        
-    --sets.TP['Delay Cap'] = {range="Raider's Bmrng.",
-    --    head="Uk'uxkaj Cap",neck="Asperity Necklace",ear1="Steelflash Earring",ear2="Bladeborn Earring",
-    --    body="Pillager's vest +1",hands="Pill. Armlets +1",ring1="Rajas Ring",ring2="Epona's Ring",
-    --    back="Rancorous Mantle",waist="Windbuffet Belt +1",legs="Pill. Culottes +1",feet="Plunderer's Poulaines +1"}
-        
-    --sets.TP.Evasion = {
-    --    head="Uk'uxkaj Cap",neck="Ej Necklace +1",ear1="Novia Earring",ear2="Phawaylla Earring",
-    --    body="Pillager's vest +1",hands="Pill. Armlets +1",ring1="Beeline Ring",ring2="Epona's Ring",
-    --    back="Fugacity Mantle +1",waist="Kasiri Belt",legs="Pill. Culottes +1",feet="Plunderer's Poulaines +1"}
-    
-    Idle_Set_Names = {'Normal','MDT'}
-    sets.Idle = {}
-    sets.Idle.Normal = {head="Uk'uxkaj Cap",neck="Loricate Torque +1",ear1="Infused Earring",ear2="Etiolation Earring",
-        body="Kheper Jacket",hands="Herculean Gloves",ring2={ name="Dark Ring", augments={'Phys. dmg. taken -4%','Magic dmg. taken -6%',}},ring1="Defending Ring",
-       back="Xucau Mantle",waist="Flume Belt",legs="Taeon Tights",feet="Pillager's Poulaines +1"}
-                
-    --sets.Idle.MDT = {head="Uk'uxkaj Cap",neck="Twilight Torque",ear1="Merman's Earring",ear2="Bladeborn Earring",
-    --    body="Avalon Breastplate",hands="Iuitl Wristbands +1",ring1="Defending Ring",ring2="Dark Ring",
-    --    back="Mollusca Mantle",waist="Wanion Belt",legs="Nahtirah Trousers",feet="Skadi's Jambeaux +1"}
+  sets.TP.Max = set_combine(sets.TP.Max,{
+    ammo="Yamarang",
+    neck="Erudition Necklace",
+  })
 
-    send_command('input /macro book 8;wait .1;input /macro set 1')
-    
+-- Adding more damage gear if we have higher magic haste.
+-- Native DWs, assuming 1200 JP: (THF 30%) (NIN & DNC 35%) (COR/DNC 15%) (BLU 25%)
+  sets.TP.Haste['150'] = { -- Either Haste I OR Mighty Guard. Need 67% total DW
+    -- Each job needs: (THF 37%) (NIN & DNC 32%) (COR/DNC 52%) (BLU 42%)
+  }
+  sets.TP.Haste['300'] = set_combine(sets.TP.Haste['150'],{ -- Both Haste I AND Mighty Guard. Need 57% total DW
+    -- Each job needs: (THF 27%) (NIN & DNC 22%) (COR/DNC 42%) (BLU 32%)
+  })
+  sets.TP.Haste['307'] = sets.TP.Haste['300']; -- Geo Haste at 900 skill. Only 1 DW difference from 300 MH.
+  sets.TP.Haste['320'] = sets.TP.Haste['307'], { -- Both Marches at +5. Only 1 DW difference from 307 MH.
+	body={ name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},
+	feet={ name="Herculean Boots", augments={'Accuracy+15 Attack+15','"Triple Atk."+4','DEX+7','Attack+3',}},
+  }
+  sets.TP.Haste['448'] = set_combine(sets.TP.Haste['320'],{ -- Capped magic haste. Need 36% total DW.
+    -- Each job needs: (THF 6%) (NIN & DNC 1%) (COR/DNC 21%) (BLU 11%)
+  })
+  
+  sets.Some_Acc = set_combine(sets.Some_Acc,{
+    --head="Skulker's Bonnet +1",
+    neck="Erudition Necklace",
+	--body="Pillager's Vest +2"
+	--ring1="Regal Ring",
+	--legs="Pill. Culottes +3",
+  })
+  
+  sets.Full_Acc = set_combine(sets.Some_Acc,sets.Full_Acc,{
+  })
+
+--- ===============================
+--- 	Defense Modes
+--- ===============================
+
+	--- Sacrifice some tiny DPS for some PDT
+  sets.TP.PDT_Mix = set_combine(sets.TP.PDT_Mix,{
+  })
+
+--- ===============================
+--- 	Ranged Attacks
+--- ===============================
+
+sets.Preshot = set_combine(sets.Preshot, {
+})
+
+sets.Midshot = set_combine(sets.Midshot, {
+})
+
+sets.Some_Ranged_Acc = set_combine(sets.Some_Ranged_Acc, {
+})
+
+sets.Full_Ranged_Acc = set_combine(sets.Full_Ranged_Acc, {
+  ring1="Regal Ring",
+  ring2="Cacoethic Ring +1",
+})
+
+--- ===============================
+--- 	Magic
+--- ===============================
+
+sets.Magic_Acc = set_combine(sets.Magic_Acc, {
+  --head="Hachiya Hatsu. +3",
+  --back="Andartia's Mantle",  INT  macc   FC? maybe
+  --feet="Hachiya Kyahan +3"
+})
+
+sets.MAB = set_combine(sets.MAB, {
+})
+
+sets.Quick_Magic = set_combine(sets.Quick_Magic, {
+})
+
+sets.Fast_Cast = set_combine(sets.Fast_Cast, {
+})
+
+--- ===============================
+--- 	Weaponskills
+--- ===============================
+	
+sets.WS_All = set_combine(sets.WS_All,{
+  --head="Hachiya Hatsu. +3",
+  ring1="Ilabrat Ring",
+  ring2="Regal Ring",
+  --legs="Hiza. Hizayoroi +2",
+})
+
+sets.WS_Weak = set_combine(sets.WS_Weak,{
+})
+
+sets.WS["Blade: Ten"] = set_combine(sets.WS_All,{
+  ammo="Seething Bomblet +1"
+  neck="Caro Necklace",
+  waist="Grunfeld Rope",
+  --back="Andartia's Mantle",    STR or DEX acc/atk  WSD
+})
+
+sets.WS["Blade: Metsu"] = set_combine(sets.WS_All,{
+  --ammo="Jukukik Feather",
+  --back="Andartia's Mantle",    DEX acc/atk  WSD
+  --legs="Jokushu Haidate",
+})
+
+sets.WS["Blade: Hi"] = set_combine(sets.WS_All,{
+  ammo="Yetshila",
+  --body="Ken. Samue +1",
+  --hands="Ryuo Tekko +1",
+  --ring1="Begrudging Ring",
+  --back="Andartia's Mantle",  AGI acc/atk  WSD
+  waist="Windbuffet Belt +1",
+  --legs="Ken. Hakama +1",
+  --feet="Ken. Sune-Ate +1"
+})
+
+sets.WS["Blade: Shun"] = set_combine(sets.WS_All,{
+  --ammo="Jukukik Feather",
+  --head="Ken. Jinpachi +1",
+  body="Adhemar Jacket",
+  --hands="Ken. Tekko +1",
+  --back="Andartia's Mantle",   DEX or STR acc/atk  Double attack
+  --legs="Jokushu Haidate",
+  --feet="Ken. Sune-Ate +1"
+})
+
+sets.WS["Blade: Kamu"] = set_combine(sets.WS_All,{
+  ammo="Seething Bomblet +1"
+  --back="Andartia's Mantle",
+})
+
+sets.WS["Blade: Chi"] = set_combine(sets.WS_All, sets.MAB, {
+})
+
+sets.WS["Blade: Yu"] = set_combine(sets.WS_All, sets.MAB,{
+})
+  
+--- ===============================
+--- 	Utility Modes
+--- ===============================
+--[[	Utility_Title = "Luzaf"
+  Utility_Type = "Special"
+  Utility_Set_Names = {"Off","On"}
+
+	sets.Utility = {}
+	sets.Utility[Utility_Title] = {}
+	
+	sets.Utility["Luzaf"]["On"] = {
+    ring1="Luzaf's Ring"
+	}
+
 end
+--]]
 
-function precast(spell)
-    if sets.JA[spell.english] then
-        equip(sets.JA[spell.english])
-	elseif spell.type=="Ninjutsu" then
-		equip(sets.ninjutsu)
-	elseif spell.type=="Trust" then
-		equip(sets.trust)
-    elseif spell.type=="WeaponSkill" then
-        if buffactive['sneak attack'] and buffactive['trick attack'] and sets.WS.SATA[spell.english] then equip(sets.WS.SATA[spell.english])
-        elseif buffactive['sneak attack'] and sets.WS.SA[spell.english] then equip(sets.WS.SA[spell.english])
-        elseif buffactive['trick attack'] and sets.WS.TA[spell.english] then equip(sets.WS.TA[spell.english])
-		elseif sets.WS[spell.english] then equip(sets.WS[spell.english]) end
-    elseif string.find(spell.english,'Waltz') then
-        equip(sets.JA.Waltz)
-    end
-end
+--- ===============================
+--- 	Status Change Functions
+--- ===============================
 
-function aftercast(spell)
-    if player.status=='Engaged' then
-		if MDT == false then
-        equip(sets.TP[TP_Set_Names[TP_Index]])
-		else
-		equip(sets.TP.MDT)
-		sets.TP.Special = sets.TP.MDT
-		end
-		if buffactive['sneak attack'] then equip(sets.JA["Sneack Attack"]) end
+function job_specific_precast(spell)
+    
+    --[[if (Utility_Index > 1) then
+      roll_set = set_combine(roll_set, sets.Utility[Utility_Title]["On"])
+    end--]]
+  if (spell.english == 'Aeolian Edge') then
+    if ((spell.element == world.day_element) or (spell.element == world.weather_element)) then
+      if (sets.Weather) then
+        weather = sets.Weather
+      elseif (sets.Obis) then
+        weather = sets.Obis[spell.element]
+      end
+      
+      if (sets.WS[spell.english]) then
+        equip(set_combine(sets.WS[spell.english], weather))
+      else
+        equip(set_combine(sets.WS.Ranged_All, sets.MAB, weather))
+      end
+      
+      return true
     else
-        equip(sets.Idle[Idle_Set_Names[Idle_Index]])
+      return false
     end
-end
-
-function status_change(new,old)
-    if T{'Idle','Resting'}:contains(new) then
-        equip(sets.Idle[Idle_Set_Names[Idle_Index]])
-    elseif new == 'Engaged' then
-		if MDT == false then
-        equip(sets.TP[TP_Set_Names[TP_Index]])
-		sets.TP.Special = set_combine(sets.TP[TP_Set_Names[TP_Index]],
-	{feet="Herculean Boots"})
-		else
-		equip(sets.TP.MDT)
-		sets.TP.Special = sets.TP.MDT
-		end
-		if  string.find(player.equipment.main,'Taming Sari') and string.find(player.equipment.sub,'Sandung') then
-			equip(sets.TP.Special)
-		end
-		if buffactive['sneak attack'] then equip(sets.JA["Sneack Attack"]) end
+  else
+    return false
 	end
 end
-
-function buff_change(buff,gain)
-    if buff=="Sneak Attack" then
-        soloSA = gain
-		if soloSA == true then
-			equip(sets.JA["Sneack Attack"])
-		else
-			if player.status=='Engaged' then
-				if MDT == false then
-				equip(sets.TP[TP_Set_Names[TP_Index]])
-				else
-				equip(sets.TP.MDT)
-				sets.TP.Special = sets.TP.MDT
-				end
-				if  string.find(player.equipment.main,'Taming Sari') and string.find(player.equipment.sub,'Sandung') then
-					equip(sets.TP.Special)
-				end
-				else
-				equip(sets.Idle[Idle_Set_Names[Idle_Index]])
-			end
-		end
-    elseif buff=="Trick Attack" then
-        soloTA = gain_or_loss
-    end
-end
-
-function self_command(command)
-    if command == 'toggle tp set' then
-        TP_Index = TP_Index +1
-        if TP_Index > #TP_Set_Names then TP_Index = 1 end
-        send_command('@input /echo ----- TP Set changed to '..TP_Set_Names[TP_Index]..' -----')
-		sets.TP.MDT = set_combine(sets.TP[TP_Set_Names[TP_Index]],{head="Herculean Helm",ear2="Etiolation Earring", ring2="Fortified Ring", back="Xucau Mantle"})
-        if MDT == false then
-		equip(sets.TP[TP_Set_Names[TP_Index]])
-		sets.TP.Special = set_combine(sets.TP[TP_Set_Names[TP_Index]],
-	{feet="Herculean Boots"})
-		else
-		equip(sets.TP.MDT)
-		sets.TP.Special = sets.TP.MDT
-		end
-		elseif command == 'toggle Idle set' then
-        Idle_Index = Idle_Index +1
-        if Idle_Index > #Idle_Set_Names then Idle_Index = 1 end
-        send_command('@input /echo ----- Idle Set changed to '..Idle_Set_Names[Idle_Index]..' -----')
-        equip(sets.Idle[Idle_Set_Names[Idle_Index]])
-	end
-	
-	if command == 'toggle mdt' then
-		if MDT == false then
-		send_command('@input /echo MDT ON')
-		equip(sets.TP.MDT)
-		sets.TP.Special = sets.TP.MDT
-		MDT = true
-		else
-		send_command('@input /echo MDT OFF')
-		send_command('@input /echo ----- TP Set changed to '..TP_Set_Names[TP_Index]..' -----')
-        equip(sets.TP[TP_Set_Names[TP_Index]])
-		sets.TP.Special = set_combine(sets.TP[TP_Set_Names[TP_Index]],
-	{feet="Herculean Boots"})
-		MDT = false
-		end
-    end
 end
