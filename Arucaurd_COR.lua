@@ -1,4 +1,4 @@
-require('Jackii_LightDD')
+require('Arucaurd_LightDD')
 
 --- Build Sets
 function get_job_sets()
@@ -7,7 +7,7 @@ function get_job_sets()
 	Macro_Book = 11
 	Macro_Set = 2
 
-	sets.weapons = {main="Fettering Blade",sub="Blurred Knife +1",ammo="Eminent Bullet",}
+	sets.weapons = {main="Fettering Blade",sub="Blurred Knife +1",range="Nibiru Gun",ammo="Eminent Bullet",}
 	set.proc_weapons = {}
 
 
