@@ -822,9 +822,11 @@ function midcast(spell,action)
       elseif (NIN_Nukes[spell.english]) then
         equip(sets.MAB)
       elseif (NIN_Enfeebles[spell.english]) then
-        equip(sets.Magic_Acc)
-      elseif (NIN_Buffs[spell.english] and sets.Ninjutsu) then
-        equip(sets.Ninjutsu)
+        if (sets.Ninjutsu_Enfeebles) then
+          equip(sets.Ninjutsu_Enfeebles)
+        else
+          equip(sets.Magic_Acc)
+        end
       end
     elseif (spell.action_type == 'Ranged Attack') then
       if (Accuracy_Index > 2) then
