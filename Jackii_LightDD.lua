@@ -332,17 +332,27 @@ if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_J
 end
 
 sets.Magic_Acc = {
-  ammo="Yamarang",
   neck="Sanctity Necklace",
   ear1="Gwati Earring",
   ear2="Digni. Earring",
-  body="Mummu Jacket +1",
-  hands="Mummu Wrists +1",
   ring1="Stikini Ring",
   ring2="Stikini Ring +1",
   waist="Eschan Stone",
-  legs="Mummu Kecks +1",
 }
+
+if ((Main_Job == 'COR') or (Main_Job == 'NIN') or (Main_Job == 'RNG') or (Main_Job == 'DNC') or (Main_Job == 'THF')) then
+  sets.Magic_Acc = set_combine(sets.Magic_Acc, {
+    body="Mummu Jacket +1",
+    hands="Mummu Wrists +1",
+    legs="Mummu Kecks +1",
+  })
+end
+
+if ((Main_Job == 'THF') or (Main_Job == 'NIN') or (Main_Job == 'RUN') or (Main_Job == 'DNC')) then
+  sets.Magic_Acc = set_combine(sets.Magic_Acc {
+    ammo="Yamarang",
+  })
+end
 
 sets.MAB = {
   ammo="Pemphredo Tathlum",
