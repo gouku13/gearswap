@@ -44,9 +44,29 @@ sets.JA['Hide'] = {body="Pillager's Vest +1"}
 --- 	TP Sets
 --- ===============================
 
-  sets.DW[7] = {
+  sets.DW['7'] = {
     waist="Reiki Yotai", -- DW +7
   }
+  
+  sets.DW['12'] = set_combine(sets.DW['7'], {
+    body="Adhemar Jacket" -- DW +5
+  })
+
+  sets.DW['17'] = set_combine(sets.DW['12'], {
+    ear1="Suppanomimi", -- DW +5
+  })
+  
+  sets.DW['22'] = set_combine(sets.DW['17'], {
+    legs={name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}}, -- DW +5
+  })
+  
+  sets.DW['26'] = set_combine(sets.DW['22'], {
+    ear2="Eabani Earring", -- DW +4
+  })
+  
+  sets.DW['31'] = set_combine(sets.DW['26'], {
+    feet={name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}} -- DW +9
+  })
 
   sets.TP.Max = set_combine(sets.TP.Max,{
     ammo="Yamarang",
