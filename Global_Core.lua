@@ -68,6 +68,8 @@ function initialize_sets()
   sets.Some_Ranged_Acc = {}
   sets.Full_Ranged_Acc = {}
 
+  sets.DW = {}
+  
   sets.WS = {}
   sets.WS.Accuracy = {}
   sets.WS.Restrained = {
