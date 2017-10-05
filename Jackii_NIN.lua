@@ -132,7 +132,7 @@ sets.WS_Weak = set_combine(sets.WS_Weak,{
 })
 
 sets.WS["Blade: Ten"] = set_combine(sets.WS_All,{
-  ammo="Seething Bomblet +1"
+  ammo="Seething Bomblet +1",
   neck="Caro Necklace",
   waist="Grunfeld Rope",
   --back="Andartia's Mantle",    STR or DEX acc/atk  WSD

@@ -349,7 +349,7 @@ if ((Main_Job == 'COR') or (Main_Job == 'NIN') or (Main_Job == 'RNG') or (Main_J
 end
 
 if ((Main_Job == 'THF') or (Main_Job == 'NIN') or (Main_Job == 'RUN') or (Main_Job == 'DNC')) then
-  sets.Magic_Acc = set_combine(sets.Magic_Acc {
+  sets.Magic_Acc = set_combine(sets.Magic_Acc, {
     ammo="Yamarang",
   })
 end
