@@ -164,17 +164,17 @@ function compile_sets()
     sets.Pet.TP = nil
   end
 
-  sets.TP_All = set_combine(sets.TP.Base, sets.TP_All)
+  sets.TP.Max = set_combine(sets.TP.Base, sets.TP.Max)
 
   if (HeavyDD[Main_Job]) then
-    sets.TP_All = set_combine(sets.TP_All, sets.TP.Heavy)
+    sets.TP.Max = set_combine(sets.TP.Max, sets.TP.Heavy)
   else
     sets.TP.Heavy = nil
   end
   
   if (DW_Jobs[Main_Job]) then
     if (not (HeavyDD[Main_Job] and (Main_Job ~= 'BST'))) then
-      sets.TP_All = set_combine(sets.TP_All, sets.TP.DW)
+      sets.TP.Max = set_combine(sets.TP.Max, sets.TP.DW)
     else
       sets.TP.DW = nil
     end
@@ -183,7 +183,7 @@ function compile_sets()
   end
   
   if (TA_Jobs[Main_Job] or (LightDD[Main_Job] and (not (DW_Jobs[Main_Job] or DW_Jobs[Sub_Job])))) then
-    sets.TP_All = set_combine(sets.TP_All, sets.TP.TA)
+    sets.TP.Max = set_combine(sets.TP.Max, sets.TP.TA)
   else
     sets.TP.TA = nil
   end
@@ -197,12 +197,12 @@ function post_job_sets()
   sets.PDT = set_combine(sets.DT, sets.PDT, {ring1=PDT_Ring1, ring2=PDT_Ring2})
   sets.MDT = set_combine(sets.DT, sets.MDT, {ring1=MDT_Ring1, ring2=MDT_Ring2})
   
-  sets.TP_All = set_combine(sets.TP_All, sets.weapons)
+  sets.TP.Max = set_combine(sets.TP.Max, sets.weapons)
   
-  sets.TP.Defense["Attack"] = set_combine(sets.TP_All)
-  sets.TP.Defense["Standard"] = set_combine(sets.TP_All, sets.TP.PDT_Mix)
-  sets.TP.Defense["PDT"] = set_combine(sets.TP_All, sets.DT)
-  sets.TP.Accuracy["Low"] = sets.TP_All
+  sets.TP.Defense["Attack"] = set_combine(sets.TP.Max)
+  sets.TP.Defense["Standard"] = set_combine(sets.TP.Max, sets.TP.PDT_Mix)
+  sets.TP.Defense["PDT"] = set_combine(sets.TP.Max, sets.DT)
+  sets.TP.Accuracy["Low"] = sets.TP.Max
   sets.TP.Accuracy["Some"] = set_combine(sets.TP.Accuracy["Low"], sets.Some_Acc)
   sets.TP.Accuracy["Full"] = set_combine(sets.TP.Accuracy["Some"], sets.Full_Acc)
   sets.RA.Accuracy["Low"] = sets.Midshot
@@ -300,7 +300,7 @@ end
 
 --- Puts together the engaged set based on current defense, accuracy, and Utility settings
 function build_engaged_set()
-  engaged_set = sets.TP_All
+  engaged_set = sets.TP.Max
   
   if Accuracy_Index > 1 then
     engaged_set = set_combine(engaged_set, sets.Some_Acc)
