@@ -40,36 +40,17 @@ function get_job_sets()
   }
 
   sets.TP.Max = set_combine(sets.TP.Max,{
-    ammo="Yamarang",
+    ammo="Seki Shuriken",
     neck="Erudition Necklace",
-  })
-
--- Adding more damage gear if we have higher magic haste.
--- Native DWs, assuming 1200 JP: (THF 30%) (NIN & DNC 35%) (COR/DNC 15%) (BLU 25%)
-  sets.TP.Haste['150'] = { -- Either Haste I OR Mighty Guard. Need 67% total DW
-    -- Each job needs: (THF 37%) (NIN & DNC 32%) (COR/DNC 52%) (BLU 42%)
-  }
-  sets.TP.Haste['300'] = set_combine(sets.TP.Haste['150'],{ -- Both Haste I AND Mighty Guard. Need 57% total DW
-    -- Each job needs: (THF 27%) (NIN & DNC 22%) (COR/DNC 42%) (BLU 32%)
-  })
-  sets.TP.Haste['307'] = sets.TP.Haste['300']; -- Geo Haste at 900 skill. Only 1 DW difference from 300 MH.
-  sets.TP.Haste['320'] = sets.TP.Haste['307'], { -- Both Marches at +5. Only 1 DW difference from 307 MH.
-	body={ name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},
-	feet={ name="Herculean Boots", augments={'Accuracy+15 Attack+15','"Triple Atk."+4','DEX+7','Attack+3',}},
-  }
-  sets.TP.Haste['448'] = set_combine(sets.TP.Haste['320'],{ -- Capped magic haste. Need 36% total DW.
-    -- Each job needs: (THF 6%) (NIN & DNC 1%) (COR/DNC 21%) (BLU 11%)
   })
   
   sets.Some_Acc = set_combine(sets.Some_Acc,{
-    --head="Skulker's Bonnet +1",
     neck="Erudition Necklace",
-	--body="Pillager's Vest +2"
 	--ring1="Regal Ring",
-	--legs="Pill. Culottes +3",
   })
   
   sets.Full_Acc = set_combine(sets.Some_Acc,sets.Full_Acc,{
+    ammo="Yamarang",
   })
 
 --- ===============================
