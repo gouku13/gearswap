@@ -64,7 +64,7 @@ sets.JA['Hide'] = {body="Pillager's Vest +1"}
     ear2="Eabani Earring", -- DW +4
   })
   
-  sets.DW[31] = set_combine(sets.DW[26], {
+  sets.DW[35] = set_combine(sets.DW[26], {
     feet={name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}} -- DW +9
   })
 

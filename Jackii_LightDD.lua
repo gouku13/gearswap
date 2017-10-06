@@ -68,32 +68,21 @@ end
 --- 	TP Sets
 --- ===============================
 
--- This assumes you need all DW pieces you own. Bigger damage pieces are added later.
 sets.TP.Max = {
   ammo="Ginsen",
   head="Adhemar Bonnet",
   neck="Ainia Collar",
   ear1="Dedition Earring",
-  ear2="Eabani Earring", -- DW: 4%
+  ear2="Telos Earring", 
   body={name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},
   hands="Adhemar Wristbands",
   ring1="Epona's Ring",
   ring2="Hetairoi Ring",
   back="Bleating Mantle",
-  waist="Reiki Yotai", -- DW: 7%
+  waist="Windbuffet Belt +1",
   legs="Samnuha Tights",
   feet={name="Herculean Boots", augments={'Accuracy+15 Attack+15','"Triple Atk."+4','DEX+7','Attack+3',}}
 }
-
---[[sets.DW = {  -- Total DW: 35%
-  ear1="Suppanomimi", -- DW: 5%
-  ear2="Eabani Earring", -- DW: 4%
-  body="Adhemar Jacket", -- DW: 5%
-  waist="Reiki Yotai", -- DW: 7%
-  legs={name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}}, -- DW: 5%
-  feet={name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}} -- DW: 9%
-}
---]]
 
 if (Main_Job ~= 'RUN') then
   sets.TP.Max = set_combine(sets.TP.Max)

@@ -18,10 +18,10 @@ function get_job_sets()
 --- 	Job Abilities
 --- ===============================
 
-  sets.JA['Full Circle'] = {head="Azimuth hood",body="Geomancy Tunic",hands="Bagua mitaines"}
+  sets.JA['Full Circle'] = {head="Azimuth hood",body="Geomancy Tunic +1",hands="Bagua mitaines"}
   sets.JA['Radial Arcana'] = {feet="Bagua Sandals"}
   sets.JA['Bolster'] = {body="Bagua Tunic"}
-  sets.JA['Life Cycle'] = {body="Geomancy Tunic",back="Nantosuelta's Cape"}
+  sets.JA['Life Cycle'] = {body="Geomancy Tunic +1",back="Nantosuelta's Cape"}
 
 	
 --- ===============================
