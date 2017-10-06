@@ -19,7 +19,7 @@ end
 --- ===============================	
 
 Hybrid_DT_Ring1 = {name="Defending Ring"}
-Hybrid_DT_Ring2 = { name="Dark Ring", augments={'Phys. dmg. taken -4%','Magic dmg. taken -6%',}}
+Hybrid_DT_Ring2 = {name="Dark Ring"}
 PDT_Ring1 = Hybrid_DT_Ring1
 PDT_Ring2 = Hybrid_DT_Ring2
 MDT_Ring1 = Hybrid_DT_Ring1
@@ -29,7 +29,7 @@ MDT_Ring2 = Hybrid_DT_Ring2
 sets.DT = { -- PDT: 25%, MDT: 21%, BDT: 15%
   neck="Loricate Torque +1", --- DT: 5%
   ring1=Hybrid_DT_Ring1,
-  ring2={ name="Dark Ring", augments={'Phys. dmg. taken -4%','Magic dmg. taken -6%',}},
+  ring2="Dark Ring",
   ear1="Colossus's Earring",
   ear2="Genmei Earring",
   back="Solemnity Cape", -- PDT +6%
@@ -100,7 +100,7 @@ sets.resting = set_combine(sets.resting, sets.Refresh)
 
 sets.Quick_Magic = {
   ammo="Impatiens", -- QM 2%
-  ring2="Lebeche Ring", -- QM 2%
+  ring1="Lebeche Ring", -- QM 2%
   back="Perimede cape", -- QM 4%
 }
 

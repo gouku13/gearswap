@@ -18,10 +18,10 @@ function get_job_sets()
 --- 	Job Abilities
 --- ===============================
 
-  sets.JA['Full Circle'] = {head="Azimuth hood",body="Geomancy Tunic +1",hands="Bagua mitaines"}
+  sets.JA['Full Circle'] = {head="Azimuth hood",body="Geomancy Tunic +3",hands="Bagua mitaines +1"}
   sets.JA['Radial Arcana'] = {feet="Bagua Sandals"}
-  sets.JA['Bolster'] = {body="Bagua Tunic"}
-  sets.JA['Life Cycle'] = {body="Geomancy Tunic +1",back="Nantosuelta's Cape"}
+  sets.JA['Bolster'] = {body="Bagua Tunic +1"}
+  sets.JA['Life Cycle'] = {body="Geomancy Tunic +3",back="Nantosuelta's Cape"}
 
 	
 --- ===============================
@@ -45,8 +45,8 @@ function get_job_sets()
 
 	--- REFRESH: 3 (base) + 2 MP/tic
 	sets.Refresh = set_combine(sets.Refresh, {
-		body="Amalric Doublet",
-		hands="Bagua Mitaines"
+		body="Geomancy Tunic +3",
+		hands="Bagua Mitaines +1"
     })	
 
 --- ===============================
@@ -55,7 +55,7 @@ function get_job_sets()
 
 	--- Movement  For Running
 	sets.Movement = set_combine(sets.Movement, {
-		feet="Geomancy Sandals" --- Movement speed +12%
+		feet="Geomancy Sandals +3" --- Movement speed +12%
     })
 
 --- ===============================
@@ -66,7 +66,7 @@ function get_job_sets()
 		main="Sucellus",
 		sub="Chanter's Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		legs="Geomancy Pants", --- +11%, Spell interupt down 20%
+		legs="Geomancy Pants +3", --- +11%, Spell interupt down 20%
 	})
 
 --- ===============================
@@ -115,7 +115,7 @@ function get_job_sets()
 		sub="Ammurapi Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		ear1="Regal Earring",
-		hands="Geomancy Mitaines",
+		hands="Geomancy Mitaines +2",
 		--back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}} 
 	})
 	
@@ -135,8 +135,8 @@ function get_job_sets()
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}}, --- Handbell +18, Geomancy +5
 		head="Azimuth hood", --- Geomancy +15
 		neck="Incanter's Torque", --- Magic Skills +10
-		body="Bagua Tunic", --- Geomancy +12
-		hands="Geo. Mitaines", --- Geomancy +15
+		body="Bagua Tunic +1", --- Geomancy +12
+		hands="Geo. Mitaines +2", --- Geomancy +15
 		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -2%',}}, --- Geomancy +5,+10 (Indi Duration +20)
 		feet="Medium's Sabots" -- Handbell +5
 	}
@@ -146,14 +146,14 @@ function get_job_sets()
 		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -2%',}},
-		legs="Bagua pants +1",
-		feet="Azimuth Gaiters +1"
+		legs="Bagua pants",
+		feet="Azimuth Gaiters"
 	}
 	
 	sets.Geo = {}
 	
   -- Combining pants for spell interuption down.
-	sets.midcast["Geomancy"] = set_combine(sets.Geomancy_Skill, {range="Dunna",legs="Geomancy Pants"})
+	sets.midcast["Geomancy"] = set_combine(sets.Geomancy_Skill, {range="Dunna",legs="Geomancy Pants +3"})
 
 --- ===============================
 --- 	Utility Modes
