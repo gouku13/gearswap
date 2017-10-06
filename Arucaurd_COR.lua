@@ -40,6 +40,7 @@ Last_Roll = ''
 -- Quick Draw
 sets.QDraw = {}
 sets.QDraw.All = set_combine(sets.MAB,{
+  range="Nibiru Gun",ammo="Eminent Bullet",
   --ammo="Animikii Bullet",
   --head="Blood Mask",
   --ring1="Fenrir Ring +1",
