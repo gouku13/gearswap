@@ -98,22 +98,6 @@ sets.TP.Max = {
 if (Main_Job ~= 'RUN') then
   sets.TP.Max = set_combine(sets.TP.Max)
 end
-
--- Adding more damage gear if we have higher magic haste.
--- Unless you utterly despise yourself, do this in each job's individual file.
--- Don't try to do it all here.
--- Native DWs, assuming 1200 JP: (THF 30%) (NIN & DNC 35%) (COR/DNC 15%) (BLU 25%)
-  sets.TP.Haste['150'] = { -- Either Haste I OR Mighty Guard. Need 67% total DW
-    -- Each job needs: (THF 37%) (NIN & DNC 32%) (COR/DNC 52%) (BLU 42%)
-  }
-  sets.TP.Haste['300'] = set_combine(sets.TP.Haste['150'],{ -- Both Haste I AND Mighty Guard. Need 57% total DW
-    -- Each job needs: (THF 27%) (NIN & DNC 22%) (COR/DNC 42%) (BLU 32%)
-  })
-  sets.TP.Haste['307'] = sets.TP.Haste['300']; -- Geo Haste at 900 skill. Only 1 DW difference from 300 MH.
-  sets.TP.Haste['320'] = sets.TP.Haste['307']; -- Both Marches at +5. Only 1 DW difference from 307 MH.
-  sets.TP.Haste['448'] = set_combine(sets.TP.Haste['320'],{ -- Capped magic haste. Need 36% total DW.
-    -- Each job needs: (THF 6%) (NIN & DNC 1%) (COR/DNC 21%) (BLU 11%)
-  })
   
 --- ===============================
 --- 	Defense Modes
