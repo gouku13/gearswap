@@ -49,7 +49,7 @@ sets.JA['Hide'] = {body="Pillager's Vest +1"}
   }
   
   sets.DW[12] = set_combine(sets.DW[7], {
-    body="Adhemar Jacket" -- DW +5
+    body="Adhemar Jacket +1" -- DW +5
   })
 
   sets.DW[17] = set_combine(sets.DW[12], {

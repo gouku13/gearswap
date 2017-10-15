@@ -81,7 +81,7 @@ sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], 
   }
   
   sets.DW['15'] = set_combine(sets.DW['10'], {
-    body="Adhemar Jacket" -- DW +5
+    body="Adhemar Jacket +1" -- DW +5
   })
 
   sets.DW['20'] = set_combine(sets.DW['15'], {

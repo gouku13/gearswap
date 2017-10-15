@@ -154,7 +154,7 @@ function get_sets()
 			neck="Ainia Collar",
 			ear1="Suppanomimi",
 			ear2="Eabani Earring",
-			body="Adhemar Jacket",
+			body="Adhemar Jacket +1",
 			hands="Adhemar wristbands",
 			ring1="Epona's Ring",
 			ring2="Hetairoi Ring",
@@ -245,7 +245,7 @@ function get_sets()
 	sets.WS["Chant du Cygne"].MidACC = set_combine(sets.WS["Chant du Cygne"],{})
 	sets.WS["Chant du Cygne"].HighACC = set_combine(sets.WS["Chant du Cygne"].MidACC,{
 			head="Carmine Mask +1",
-			body="Adhemar Jacket",
+			body="Adhemar Jacket +1",
 			ring2="Ramuh Ring +1"})
 
 	sets.WS.Requiescat = {
@@ -303,7 +303,7 @@ function get_sets()
 			neck="Fotia Gorget",
 			ear1="Mache Earring",
 			ear2="Cessance Earring",
-			body="Adhemar Jacket",
+			body="Adhemar Jacket +1",
 			hands="Adhemar wristbands",
 			ring1="Ifrit Ring +1",
 			ring2="Shukuyu Ring",
@@ -320,7 +320,7 @@ function get_sets()
 			neck="Fotia Gorget",
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
+			body={ name="Herculean Vest", augments={'Rng.Atk.+2','Pet: "Store TP"+1','Weapon skill damage +9%','Accuracy+11 Attack+11',}},
 			hands="Jhakri Cuffs +2",
 			ring1="Epona's Ring",
 			ring2="Shukuyu Ring",
@@ -378,7 +378,7 @@ function get_sets()
 			neck="Fotia Gorget",
 			ear1="Ishvara Earring",
 			ear2="Moonshade Earring",
-			body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
+			body={ name="Herculean Vest", augments={'Rng.Atk.+2','Pet: "Store TP"+1','Weapon skill damage +9%','Accuracy+11 Attack+11',}},
 			hands="Jhakri Cuffs +2",
 			ring1="Epona's Ring",
 			ring2="Shukuyu Ring",
@@ -593,7 +593,7 @@ function get_sets()
 			head="Adhemar Bonnet",
 			ear1="Vulcan's Pearl",
 			ear2="Zennaroi Earring",
-			body="Adhemar Jacket",
+			body="Adhemar Jacket +1",
 			hands="Rawhide Gloves",
 			ring1="Ifrit Ring +1",
 			ring2="Shukuyu Ring",

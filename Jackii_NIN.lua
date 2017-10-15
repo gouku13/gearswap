@@ -40,7 +40,7 @@ function get_job_sets()
   }
   
   sets.DW[12] = set_combine(sets.DW[7], {
-    body="Adhemar Jacket" -- DW +5
+    body="Adhemar Jacket +1" -- DW +5
   })
 
   sets.DW[17] = set_combine(sets.DW[12], {
@@ -159,7 +159,7 @@ sets.WS["Blade: Hi"] = set_combine(sets.WS_All,{
 sets.WS["Blade: Shun"] = set_combine(sets.WS_All,{
   --ammo="Jukukik Feather",
   --head="Ken. Jinpachi +1",
-  body="Adhemar Jacket",
+  body="Adhemar Jacket +1",
   --hands="Ken. Tekko +1",
   --back="Andartia's Mantle",   DEX or STR acc/atk  Double attack
   --legs="Jokushu Haidate",

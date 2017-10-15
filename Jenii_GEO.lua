@@ -19,7 +19,7 @@ function get_job_sets()
 --- ===============================
 
   sets.JA['Full Circle'] = {head="Azimuth hood",body="Geomancy Tunic +3",hands="Bagua mitaines +1"}
-  sets.JA['Radial Arcana'] = {feet="Bagua Sandals"}
+  sets.JA['Radial Arcana'] = {feet="Bagua Sandals +1"}
   sets.JA['Bolster'] = {body="Bagua Tunic +1"}
   sets.JA['Life Cycle'] = {body="Geomancy Tunic +3",back="Nantosuelta's Cape"}
 
@@ -45,6 +45,7 @@ function get_job_sets()
 
 	--- REFRESH: 3 (base) + 2 MP/tic
 	sets.Refresh = set_combine(sets.Refresh, {
+	    head={ name="Merlinic Hood", augments={'Attack+3','Accuracy+2','"Refresh"+1','Accuracy+13 Attack+13',}},
 		body="Geomancy Tunic +3",
 		hands="Bagua Mitaines +1"
     })	
@@ -83,7 +84,7 @@ function get_job_sets()
 	}
 	
   sets.Enhancing_Duration = set_combine(sets.Enhancing_Duration,{
-		main={ name="Gada", augments={'Enh. Mag. eff. dur. +6','STR+6','Mag. Acc.+18','"Mag.Atk.Bns."+7','DMG:+19',}},
+		main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','"Mag.Atk.Bns."+19',}},
 		sub="Ammurapi Shield"
 	})
 
@@ -93,7 +94,7 @@ function get_job_sets()
 --- ===============================
 
     sets.Some_MAcc = set_combine(sets.Some_MAcc,{
-		main="Solstice",
+		main={ name="Gada", augments={'"Fast Cast"+2','MND+11','Mag. Acc.+19','"Mag.Atk.Bns."+2',}},
 		sub="Ammurapi Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		--back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
@@ -111,7 +112,7 @@ function get_job_sets()
 	})
 
 	sets.Enfeeble_Skill = set_combine(sets.Enfeeble_Skill,{
-		main="Solstice",
+		main={ name="Gada", augments={'"Fast Cast"+2','MND+11','Mag. Acc.+19','"Mag.Atk.Bns."+2',}},
 		sub="Ammurapi Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		ear1="Regal Earring",
@@ -146,7 +147,7 @@ function get_job_sets()
 		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +20','Pet: Damage taken -2%',}},
-		legs="Bagua pants",
+		legs="Bagua pants +1",
 		feet="Azimuth Gaiters"
 	}
 	
@@ -167,7 +168,7 @@ function get_job_sets()
 	sets.Utility[Utility_Title] = {}
 	
 	sets.Utility["Luopan-PDT"]["On"] = {  --Luopan: DT -(Dunna/Hands/Solstice cap DT)
-		main="Solstice",
+		main="Sucellus",
 		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head={ name="Telchine Cap", augments={'Mag. Evasion+8','Pet: "Regen"+3','Pet: Damage taken -4%',}},
@@ -180,7 +181,7 @@ function get_job_sets()
 		ear1="Etiolation Earring",
 		ear2="Genmei Earring",
 		left_ring="Defending Ring",
-		right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -4%','Magic dmg. taken -6%',}},
+		right_ring="Dark Ring",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10',}},
 	}
 

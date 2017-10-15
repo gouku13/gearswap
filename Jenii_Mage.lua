@@ -106,7 +106,8 @@ sets.Quick_Magic = {
 
 sets.Fast_Cast = { -- Currently FC 42%, QM 10%
   head="Vanya Hood", -- FC 10%
-  neck="Orunmila's Torque", -- FC 5%
+  --neck="Orunmila's Torque", -- FC 5%
+  neck="Voltsurge Torque", -- FC 4%
   ear2="Enchntr. Earring +1", -- FC 2%
   ear1="Loquacious Earring", -- FC 2%
   --body="Anhur Robe", -- FC 10%

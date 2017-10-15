@@ -181,7 +181,7 @@ sets.WS_All = {
   neck="Fotia Gorget",
   ear1="Brutal Earring",
   ear2="Moonshade Earring",
-  body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
+  body={ name="Herculean Vest", augments={'Rng.Atk.+2','Pet: "Store TP"+1','Weapon skill damage +9%','Accuracy+11 Attack+11',}},
   hands="Meg. Gloves +2",
   ring2="Hetairoi Ring",
   waist="Fotia Belt",
@@ -191,7 +191,7 @@ sets.WS_All = {
 
 sets.WS_Weak = {
   head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
-  body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
+  body={ name="Adhemar Jacket +1", augments={'DEX+10','AGI+10','Accuracy+15',}},
   hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
   legs={ name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}},
   feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}},
