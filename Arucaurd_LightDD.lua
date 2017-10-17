@@ -77,7 +77,7 @@ sets.TP.Max = {
 --[[sets.DW = {  -- Total DW: 35%
   ear1="Suppanomimi", -- DW: 5%
   ear2="Eabani Earring", -- DW: 4%
-  body="Adhemar Jacket", -- DW: 5%
+  body="Adhemar Jacket +1", -- DW: 5%
   waist="Reiki Yotai", -- DW: 7%
   legs={name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}}, -- DW: 5%
   feet={name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}} -- DW: 9%
@@ -207,7 +207,7 @@ sets.WS_All = {
 
 sets.WS_Weak = {
   head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
-  body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
+  body={ name="Adhemar Jacket +1", augments={'DEX+10','AGI+10','Accuracy+15',}},
   hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
   --legs={ name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}},
   --feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}},
