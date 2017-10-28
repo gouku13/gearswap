@@ -899,38 +899,15 @@ function midcast(spell,action)
       if (Elemental_Debuffs[spell]) then
         equip(sets.midcast['Full_MAcc'])
       else
-        local nuke_set
-        if (Accuracy_Index > 1) then
-          nuke_set = sets.midcast['Some_MAcc']
-        elseif (Accuracy_Index > 2) then
-          nuke_set = sets.midcast['Full_MAcc']
-        else
-          nuke_set = sets.midcast['Full_MAB']
-        end
-        
-        local mob = windower.ffxi.get_mob_by_target("<t>")
-        if (mob) then
-          casting_nuke = {}
-          casting_nuke[1] = mob.id
-          casting_nuke[2] = spell.element
-          can_MB = check_MB_elements(mob.id, spell.element)
-          if (can_MB) then
-            add_to_chat(207, "Can MB. Putting on MB gear.")
-            nuke_set = set_combine(nuke_set, sets.MB)
-          end
-        end
-        
-        if (Utility_Type == "Nuke") then
-          equip(set_combine(nuke_set, sets.Utility[Utility_Title][Utility_Name]))
-        else
-          equip(nuke_set)
-        end
+		local nuke_set = build_nuke_set()
+        equip(nuke_set)
       end
     elseif (spell.skill == 'Ninjutsu') then
       if ((spell.english == 'Utsusemi: Ichi') or (spell.english == 'Utsusemi: Ni') or (spell.english == 'Utsusemi: San')) then
         equip(sets.Utsusemi)
       elseif (NIN_Nukes[spell.english]) then
-        equip(sets.MAB)
+		local nuke_set = build_nuke_set()
+        equip(nuke_set)
       elseif (NIN_Enfeebles[spell.english]) then
         if (sets.Ninjutsu_Enfeebles) then
           equip(sets.Ninjutsu_Enfeebles)
@@ -970,6 +947,40 @@ function midcast(spell,action)
   end
 end
 
+-- Helper function to build and returns a set for nukes, regardless of spell type.
+--------------------------------------------
+function build_nuke_set()
+	local nuke_set
+	if (Accuracy_Index > 1) then
+		nuke_set = sets.midcast['Some_MAcc']
+	elseif (Accuracy_Index > 2) then
+		nuke_set = sets.midcast['Full_MAcc']
+	else
+		nuke_set = sets.midcast['Full_MAB']
+	end
+        
+	local mob = windower.ffxi.get_mob_by_target("<t>")
+	if (mob) then
+		casting_nuke = {}
+		casting_nuke[1] = mob.id
+		casting_nuke[2] = spell.element
+		can_MB = check_MB_elements(mob.id, spell.element)
+		if (can_MB) then
+			add_to_chat(207, "Can MB. Putting on MB gear.")
+			nuke_set = set_combine(nuke_set, sets.MB)
+		end
+	end
+
+	if (Utility_Type == "Nuke") then
+        nuke_set = set_combine(nuke_set, sets.Utility[Utility_Title][Utility_Name])
+    else
+
+	return nuke_set
+end
+
+-- ============================
+-- PET STATUS CHANGES
+-- ============================
 function pet_status_change()
   if (pet.isvalid and pet.status =='Engaged') then
     if (pet_engaged ~= true) then

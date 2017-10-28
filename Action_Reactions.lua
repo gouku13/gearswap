@@ -16,25 +16,11 @@ function sc_prop(mob_id, skillchain_id)
   coroutine.schedule(function() clear_prop(mob_id, time) end, 9)
   if (casting_nuke) then
     if (casting_nuke[1] == mob_id) then
-      local nuke_set
-      if (Accuracy_Index > 1) then
-        nuke_set = sets.midcast['Some_MAcc']
-      elseif (Accuracy_Index > 2) then
-        nuke_set = sets.midcast['Full_MAcc']
-      else
-        nuke_set = sets.midcast['Full_MAB']
-      end
-      
       can_MB = check_MB_elements(mob_id, casting_nuke[2])
       if (can_MB) then
-        --add_to_chat(207, "A MB window has opened. Switching to MB set.")
-        nuke_set = set_combine(nuke_set, sets.MB)
-      end
-      
-      if (Utility_Type == "Nuke") then
-        equip(set_combine(nuke_set, sets.Utility[Utility_Title][Utility_Name]))
-      else
-        equip(nuke_set)
+        add_to_chat(207, "A MB window has opened. Switching to MB set.")
+		local nuke_set = build_nuke_set()
+		equip(nuke_set)
       end
     end
   end
