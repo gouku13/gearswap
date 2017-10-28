@@ -166,7 +166,7 @@ sets.Full_Ranged_Acc = set_combine(sets.Full_Ranged_Acc, {
 
 sets.Double_Shot = set_combine(sets.Midshot, {
 	-- Double Shot pieces.
-}
+})
 
 --- ===============================
 --- 	Magic
