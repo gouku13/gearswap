@@ -973,7 +973,7 @@ function build_nuke_set()
 
 	if (Utility_Type == "Nuke") then
         nuke_set = set_combine(nuke_set, sets.Utility[Utility_Title][Utility_Name])
-    else
+    end
 
 	return nuke_set
 end
