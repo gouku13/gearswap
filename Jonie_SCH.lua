@@ -27,7 +27,7 @@ function get_job_sets()
 
 	-- Fast cast sets for spells
     sets.Fast_Cast = set_combine(sets.Fast_Cast,{
-      feet="Acad. Loafers +1"
+      feet="Acad. Loafers +2"
     })
 
 --- ===============================
@@ -81,14 +81,14 @@ function get_job_sets()
     sets.Drain = set_combine(sets.Drain,{
       hands="Gende. Gages +1",
       hands={ name="Chironic Gloves", augments={'Pet: "Dbl. Atk."+1','"Mag.Atk.Bns."+22','Accuracy+8 Attack+8','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
-      feet="Acad. Loafers +1"
+      feet="Acad. Loafers +2"
     })
   
 	sets.Aspir = sets.Drain
 
     sets.Stun = set_combine(sets.Stun,{
       hands="Gende. Gages +1",
-      feet="Acad. Loafers +1"
+      feet="Acad. Loafers +2"
     -- Pedagogy are locked in when Alacrity is active
     })
   
