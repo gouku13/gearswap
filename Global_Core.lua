@@ -497,6 +497,12 @@ function buff_change(name, gain)
 	build_idle_set()
 	build_engaged_set()
   end
+
+	if (player.status == 'Engaged') then
+		equip(engaged_set)
+	elseif (player.status == 'Idle') then
+		equip(idle_set)
+	end
 end
 
 --- Calculates our current magic haste value
