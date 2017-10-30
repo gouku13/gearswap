@@ -30,7 +30,8 @@ function get_job_sets()
 
 	--- Full -DT%. For TP/PDT and idle sets.
     sets.DT = set_combine(sets.DT, {
-		range="Dunna", --- Luopan DT -5%
+		main="Idris",
+	    range="Dunna", --- Luopan DT -5%
 		--head="Hagondes Hat +1",
 		--body="Onca Suit",
 		--body="Hagondes Coat +1",
@@ -45,6 +46,8 @@ function get_job_sets()
 
 	--- Movement  For Running
 	sets.Movement = set_combine(sets.Movement, {
+	    main="Idris",
+	    range="Dunna",
 		feet="Geomancy Sandals +1" --- Movement speed +12%
     })	
 	
@@ -54,6 +57,8 @@ function get_job_sets()
 
 	--- REFRESH: 3 (base) + 2 MP/tic
 	sets.Refresh = set_combine(sets.Refresh, {
+	    main="Idris",
+	    range="Dunna",
 		body="Amalric Doublet +1",
 		hands="Bagua Mitaines +1"
     })

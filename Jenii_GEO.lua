@@ -45,7 +45,8 @@ function get_job_sets()
 
 	--- REFRESH: 3 (base) + 2 MP/tic
 	sets.Refresh = set_combine(sets.Refresh, {
-	    head={ name="Merlinic Hood", augments={'Attack+3','Accuracy+2','"Refresh"+1','Accuracy+13 Attack+13',}},
+	    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+	    head={ name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Spell interruption rate down -4%','"Refresh"+1',}},
 		body="Geomancy Tunic +3",
 		hands="Bagua Mitaines +1"
     })	
@@ -97,7 +98,14 @@ function get_job_sets()
 		main={ name="Gada", augments={'"Fast Cast"+2','MND+11','Mag. Acc.+19','"Mag.Atk.Bns."+2',}},
 		sub="Ammurapi Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Geo. Galero +3",
+		neck="Erra Pendant",
+		ear1="Regal Earring",
+		body="Geomancy Tunic +3",
+		hands="Geo. Mitaines +3",
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+		legs="Geomancy Pants +3",
+		feet="Geomancy Sandals +3"
     })
 
 	sets.MAB = set_combine(sets.MAB,{
@@ -115,9 +123,16 @@ function get_job_sets()
 		main={ name="Gada", augments={'"Fast Cast"+2','MND+11','Mag. Acc.+19','"Mag.Atk.Bns."+2',}},
 		sub="Ammurapi Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Geo. Galero +3",
+		neck="Erra Pendant",
 		ear1="Regal Earring",
-		hands="Geomancy Mitaines +2",
+		body="Geomancy Tunic +3",
+		hands="Geo. Mitaines +3",
+		ring1="Kishar Ring",
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+		waist="Luminary Sash",
+		legs="Geomancy Pants +3",
+		feet="Geomancy Sandals +3",
 	})
 	
 	sets.Drain = set_combine(sets.Drain, {

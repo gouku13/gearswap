@@ -27,15 +27,15 @@ function get_sets()
 	sets.Idle.Regen = {
 		head="Valorous Mask",
 		ammo="Staunch tathlum",
-		body="Sulevia's Plate. +1",
-		hands="Sulev. Gauntlets +1",
-		legs="Sulevia's Cuisses +1",
-		feet="Sulevia's leggings +1",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulevia's Cuisses +2",
+		feet="Sulevia's leggings +2",
 		ear1="Etiolation Earring",
 		ear2="Infused Earring",
 		neck="Loricate Torque +1",
 		back="Moonbeam Cape",
-		waist="Flume Belt",
+		waist="Flume Belt +1",
 		ring1="Defending Ring",
 		ring2="Dark Ring"}
 	sets.Idle.Regen.Conqueror = set_combine(sets.Idle.Regen,{
@@ -1065,12 +1065,12 @@ function get_sets()
 
 	-- PDT/MDT Sets --
 	sets.PDT = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Staunch tathlum",
-		body="Sulevia's Plate. +1",
-		hands="Sulev. Gauntlets +1",
-		legs="Sulevia's Cuisses +1",
-		feet="Sulevia's leggings +1",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulevia's Cuisses +2",
+		feet="Sulevia's leggings +2",
 		ear1="Genmei Earring",
 		ear2="Cessance Earring",
 		neck="Loricate Torque +1",
@@ -1083,12 +1083,12 @@ function get_sets()
 
 	-- Hybrid/Kiting Sets --
 	sets.TP.Hybrid = set_combine(sets.PDT,{
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Staunch tathlum",
-		body="Sulevia's Plate. +1",
-		hands="Sulev. Gauntlets +1",
-		legs="Sulevia's Cuisses +1",
-		feet="Sulevia's leggings +1",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulevia's Cuisses +2",
+		feet="Sulevia's leggings +2",
 		ear1="Genmei Earring",
 		ear2="Cessance Earring",
 		neck="Loricate Torque +1",
@@ -1100,16 +1100,19 @@ function get_sets()
 	sets.TP.Hybrid.HighACC = set_combine(sets.TP.Hybrid.MidACC,{})
 	sets.TP.Hybrid.MaxACC = set_combine(sets.TP.Hybrid.HighACC,{})
 
-	sets.Kiting = set_combine(sets.PDT,{feet="Hermes' Sandals +1"})
+	sets.Kiting = set_combine(sets.PDT,{feet="Hermes' Sandals"})
 
 	-- WS Base Set --
 	sets.WS = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
-		body="Argosy Hauberk",
-		hands="Argosy Mufflers",
-		legs="Argosy Breeches",
-		feet="Sulevia's leggings +1",
+		--body="Argosy Hauberk",
+		body="Sulevia's Plate. +2",
+		--hands="Argosy Mufflers",
+		hands="Sulev. Gauntlets +2",
+		--legs="Argosy Breeches",
+		legs="Sulevia's Cuisses +2",
+		feet="Sulevia's leggings +2",
 		ear1="Brutal Earring",
 		ear2="Moonshade Earring",
 		neck="Fotia Gorget",
@@ -1120,12 +1123,12 @@ function get_sets()
 
 	-- Upheaval Sets --
 	sets.WS.Upheaval = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
-		body="Sulevia's Plate. +1",
-		hands="Sulev. Gauntlets +1",
-		legs="Sulevia's Cuisses +1",
-		feet="Sulevia's leggings +1",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulevia's Cuisses +2",
+		feet="Sulevia's leggings +2",
 		ear1="Brutal Earring",
 		ear2="Moonshade Earring",
 		neck="Fotia Gorget",
@@ -1164,12 +1167,12 @@ function get_sets()
 
 	-- King's Justice Sets --
 	sets.WS["King's Justice"] = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
 		body="Argosy Hauberk",
 		hands="Argosy Mufflers",
 		legs="Argosy Breeches",
-		feet="Sulevia's leggings +1",
+		feet="Sulevia's leggings +2",
 		ear1="Brutal Earring",
 		ear2="Moonshade Earring",
 		neck="Fotia Gorget",
@@ -1184,12 +1187,12 @@ function get_sets()
 	
 	-- Resolution Sets --
 	sets.WS["Resolution"] = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
 		body="Argosy Hauberk",
 		hands="Argosy Mufflers",
 		legs="Argosy Breeches",
-		feet="Sulevia's leggings +1",
+		feet="Sulevia's leggings +2",
 		ear1="Brutal Earring",
 		ear2="Moonshade Earring",
 		neck="Fotia Gorget",
@@ -1203,12 +1206,12 @@ function get_sets()
 	
 	-- Savage Blade Sets --
 	sets.WS["Savage Blade"] = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
 		body="Odyss. Chestplate",
-		hands="Sulev. Gauntlets +1",
-		legs="Sulevia's Cuisses +1",
-		feet="Sulevia's leggings +1",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulevia's Cuisses +2",
+		feet="Sulevia's leggings +2",
 		ear1="Ishvara Earring",
 		ear2="Moonshade Earring",
 		neck="Fotia Gorget",
@@ -1222,12 +1225,12 @@ function get_sets()
 	
 	-- Black Halo Sets --
 	sets.WS["Black Halo"] = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
-		body="Sulevia's Plate. +1",
-		hands="Sulev. Gauntlets +1",
-		legs="Sulevia's Cuisses +1",
-		feet="Sulevia's leggings +1",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulevia's Cuisses +2",
+		feet="Sulevia's leggings +2",
 		ear1="Ishvara Earring",
 		ear2="Moonshade Earring",
 		neck="Fotia Gorget",
@@ -1245,8 +1248,8 @@ function get_sets()
 		ammo="Seething Bomblet +1",
 		ammo="Seething Bomblet +1",
 		body="Odyss. Chestplate",
-		hands="Sulev. Gauntlets +1",
-		legs="Sulevia's Cuisses +1",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulevia's Cuisses +2",
 		feet="Odyssean Greaves",
 		ear1="Friomisi Earring",
 		ear2="Moonshade Earring",
@@ -1261,12 +1264,12 @@ function get_sets()
 	
 	-- Ground Strike --
 	sets.WS["Ground Strike"] = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
 		body="Odyss. Chestplate",
 		hands="Argosy Mufflers",
 		legs="Argosy Breeches",
-		feet="Sulevia's leggings +1",
+		feet="Sulevia's leggings +2",
 		ear1="Brutal Earring",
 		ear2="Moonshade Earring",
 		neck="Fotia Gorget",
@@ -1281,12 +1284,12 @@ function get_sets()
 	
 	-- Scourge Sets --
 	sets.WS.Scourge = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
 		body="Argosy Hauberk",
 		hands="Argosy Mufflers",
 		legs="Argosy Breeches",
-		feet="Sulevia's leggings +1",
+		feet="Sulevia's leggings +2",
 		ear1="Brutal Earring",
 		ear2="Ishvara Earring",
 		neck="Fotia Gorget",
@@ -1300,12 +1303,12 @@ function get_sets()
 	
 	-- Judgment Sets --
 	sets.WS.Judgment = {
-		head="Sulevia's mask +1",
+		head="Sulevia's mask +2",
 		ammo="Seething Bomblet +1",
 		body="Argosy Hauberk",
 		hands="Argosy Mufflers",
 		legs="Argosy Breeches",
-		feet="Sulevia's leggings +1",
+		feet="Sulevia's leggings +2",
 		ear1="Isvara Earring",
 		ear2="Moonshade Earring",
 		neck="Fotia Gorget",

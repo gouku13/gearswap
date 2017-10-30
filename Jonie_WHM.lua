@@ -32,7 +32,7 @@ function get_job_sets()
 	--- REFRESH: 3 (base) + 2 MP/tic
 	sets.Refresh = set_combine(sets.Refresh, {
 	  ammo="Homiliary",
-    main="Queller Rod",
+      main="Queller Rod",
     })
   
 	sets.Fast_Cast = set_combine(sets.Fast_Cast,{
@@ -123,21 +123,22 @@ function get_job_sets()
 	})
 
 	sets.Enhancing_Duration = set_combine(sets.Enhancing_Duration,{
-    sub="Ammurapi Shield",
-    head="Telchine Cap", -- Enhancing Duration +7  
+      main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','MND+4','Mag. Acc.+17','DMG:+2',}},
+      sub="Ammurapi Shield",
+      head="Telchine Cap", -- Enhancing Duration +7  
 	  body="Telchine Chas.",  -- Enhancing Duration +10
-    hands="Telchine Gloves", -- Enhancing Duration +10
+      hands="Telchine Gloves", -- Enhancing Duration +10
 	  legs="Telchine Braconi", -- Enhancing Duration +10
 	  feet="Theo. Duckbills +3"
 	})
   
-  sets.Enhancing_Bonus["Regen"] = set_combine(sets.Enhancing_Duration,{
-    main="Bolelabunga",
-    head="Inyanga Tiara +1",
-    body="Piety Briault +1",
-    hands="Ebers Mitts +1",
-    legs="Theo. Pant. +3"
-  })
+    sets.Enhancing_Bonus["Regen"] = set_combine(sets.Enhancing_Duration,{
+      main="Bolelabunga",
+      head="Inyanga Tiara +1",
+      body="Piety Briault +1",
+      hands="Ebers Mitts +1",
+      legs="Theo. Pant. +3"
+    })
 
 	sets.midcast["ProtectraV"] = set_combine(sets.midcast["Enhancing_Skill"], {
 	  sub="Ammurapi Shield",

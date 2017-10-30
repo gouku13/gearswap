@@ -248,7 +248,7 @@ end
 sets.Magic_Acc = {
   ammo="Pemphredo tathlum", -- M.Acc: 8
   head="Befouled Crown", -- M.Acc: 20
-  neck="Sanctity Necklace", --- M.Acc: 5
+  neck="Erra Pendant", --- M.Acc: 5
   body="Vanya Robe", -- M.Acc: 20, Enfeebling +20
   hands="Lurid Mitts", -- M.Acc: 23, Enfeebling +18
   ear1="Gwati Earring", -- M.Acc: +8
