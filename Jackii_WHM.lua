@@ -83,7 +83,7 @@ function get_sets()
 	sets.Precast = {}
 	-- Fastcast Set --
 	sets.Precast.FastCast = { -- FC 66% 
-			main={ name="Gada", augments={'"Fast Cast"+5','MND+2','DMG:+6',}}, -- FC 5%
+			main="Sucellus", -- FC 5%
 			sub="Chanter's Shield",  -- FC 3%
 			ammo="Impatiens", 
 			head="Vanya Hood", -- FC 10%

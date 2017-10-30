@@ -7,7 +7,7 @@ function get_job_sets()
 	Macro_Book = 20
 	Macro_Set = 10
 
-	sets.weapons = {main="Akademos",sub="Niobid Strap"}
+	sets.weapons = {main="Akademos",sub="Niobid Strap",ammo="Homiliary"}
 
 --- ===============================
 --- 	Job Abilities
@@ -18,8 +18,8 @@ function get_job_sets()
   -- Gear that needs to be worn to actively enhance a current player buff.
   sets.During_Buff['Ebullience'] = {head="Arbatel Bonnet",lock="head"}
   sets.During_Buff['Rapture'] = {head="Arbatel Bonnet",lock="head"}
-  sets.During_Buff['Perpetuance'] = {hands="Arbatel Bracers",lock="hands"}
-  sets.During_Buff['Immanence'] = {hands="Arbatel Bracers",lock="hands"}
+  sets.During_Buff['Perpetuance'] = {hands="Arbatel Bracers +1",lock="hands"}
+  sets.During_Buff['Immanence'] = {hands="Arbatel Bracers +1",lock="hands"}
   sets.During_Buff['Penury'] = {legs="Arbatel Pants",lock="legs"}
   sets.During_Buff['Parsimony'] = {legs="Arbatel Pants",lock="legs"}
   sets.During_Buff['Celerity'] = {feet="Pedagogy Loafers +1",lock="feet"}
@@ -40,6 +40,11 @@ function get_job_sets()
   
     sets.Cure_Extras = set_combine(sets.Cure_Extras,{
 	})
+	
+	sets.Enhancing_Duration = set_combine(sets.Enhancing_Duration,{
+	  main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','MND+4','Mag. Acc.+17','DMG:+2',}},
+      sub="Ammurapi Shield",  
+    })
 
     sets.Enhancing_Bonus["Regen"] = set_combine(sets.Enhancing_Bonus["Regen"],{
       head="Arbatel Bonnet", -- Regen +10
