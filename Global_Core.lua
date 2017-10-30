@@ -760,6 +760,7 @@ function precast(spell)
       precast = sets.During_Buff[spell.english]
       local to_lock = sets.During_Buff[spell.english].lock
       Buff_Locks[spell.english] = to_lock
+	  equip(precast)
       disable(to_lock)
     end
     
