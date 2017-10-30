@@ -7,6 +7,8 @@ function get_job_sets()
 	Macro_Book = 20
 	Macro_Set = 10
 
+	Gear_Changing_Buffs = S{"Sublimation: Activated"}
+
 	sets.weapons = {main="Akademos",sub="Niobid Strap",ammo="Homiliary"}
 
 --- ===============================

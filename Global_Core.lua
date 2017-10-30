@@ -18,6 +18,7 @@ Pet = S{'BST','PUP'}
 
 Buff_Timers = T{}
 Buff_Locks = T{}
+Gear_Changing_Buffs = S{}
 Main_Job = windower.ffxi.get_player().main_job
 Sub_Job = windower.ffxi.get_player().sub_job
 pet_engaged = false
@@ -490,6 +491,11 @@ function buff_change(name, gain)
     if (gain == false) then
       enable(Buff_Locks[name])
     end
+  end
+
+  if (Gear_Changing_Buffs[name]) then
+	build_idle_set()
+	build_engaged_set()
   end
 end
 
