@@ -16,7 +16,7 @@ function get_job_sets()
 --- ===============================
 	
     Custom_Timers = {
-      ['Dia II'] = {132, nil},
+      ['Dia II'] = {156, nil},
     }
   
 --- ===============================
@@ -310,13 +310,18 @@ function get_job_sets()
 --- 	Offensive Magic
 --- ===============================
 
-  sets.Magic_Acc = set_combine(sets.Magic_Acc,{
-    legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
-    ring1="Kishar Ring",
-  })
-  sets.Some_MAcc = set_combine(sets.Some_MAcc,{
-    legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}}
-  })
+    sets.Magic_Acc = set_combine(sets.Magic_Acc,{
+      legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
+      ring1="Kishar Ring",
+    })
+    sets.Some_MAcc = set_combine(sets.Some_MAcc,{
+      legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}}
+    })
+  
+    sets.midcast["Dia II"] = set_combine(sets.Magic_Acc,{
+	  hands="Regal Cuffs",
+      ring1="Kishar Ring",
+	})
 
 	sets.MAB = set_combine(sets.MAB,{
 	  main={ name="Grioavolr", augments={'Magic burst dmg.+5%','INT+11','Mag. Acc.+25','"Mag.Atk.Bns."+26','Magic Damage +3',}},

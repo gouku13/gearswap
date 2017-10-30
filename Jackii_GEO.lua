@@ -19,7 +19,7 @@ function get_job_sets()
 --- ===============================
 	
     Custom_Timers = {
-      ['Dia II'] = {132, nil},
+      ['Dia II'] = {156, nil},
     }	
 	
 --- ===============================
@@ -118,6 +118,7 @@ function get_job_sets()
     })
 	
 	sets.midcast["Dia II"] = set_combine(sets.Magic_Acc,{
+	    hands="Regal Cuffs",
         ring1="Kishar Ring",
 	})
 
