@@ -116,6 +116,10 @@ function get_job_sets()
 		legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+9','MND+6','Mag. Acc.+7','"Mag.Atk.Bns."+15',}},
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
     })
+	
+	sets.midcast["Dia II"] = set_combine(sets.Magic_Acc,{
+        ring1="Kishar Ring",
+	})
 
 	sets.MAB = set_combine(sets.MAB,{
 		main={ name="Grioavolr", augments={'Magic burst dmg.+5%','INT+11','Mag. Acc.+25','"Mag.Atk.Bns."+26','Magic Damage +3',}},
