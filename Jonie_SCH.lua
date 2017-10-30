@@ -16,12 +16,12 @@ function get_job_sets()
 	sets.JA['Tabula Rasa'] = {legs="Pedagogy Pants +1"}
 
   -- Gear that needs to be worn to actively enhance a current player buff.
-  sets.During_Buff['Ebullience'] = {head="Arbatel Bonnet",lock="head"}
-  sets.During_Buff['Rapture'] = {head="Arbatel Bonnet",lock="head"}
+  sets.During_Buff['Ebullience'] = {head="Arbatel Bonnet +1",lock="head"}
+  sets.During_Buff['Rapture'] = {head="Arbatel Bonnet +1",lock="head"}
   sets.During_Buff['Perpetuance'] = {hands="Arbatel Bracers +1",lock="hands"}
   sets.During_Buff['Immanence'] = {hands="Arbatel Bracers +1",lock="hands"}
-  sets.During_Buff['Penury'] = {legs="Arbatel Pants",lock="legs"}
-  sets.During_Buff['Parsimony'] = {legs="Arbatel Pants",lock="legs"}
+  sets.During_Buff['Penury'] = {legs="Arbatel Pants +1",lock="legs"}
+  sets.During_Buff['Parsimony'] = {legs="Arbatel Pants +1",lock="legs"}
   sets.During_Buff['Celerity'] = {feet="Pedagogy Loafers +1",lock="feet"}
   sets.During_Buff['Alacrity'] = {feet="Pedagogy Loafers +1",lock="feet"}
 
@@ -47,7 +47,7 @@ function get_job_sets()
     })
 
     sets.Enhancing_Bonus["Regen"] = set_combine(sets.Enhancing_Bonus["Regen"],{
-      head="Arbatel Bonnet", -- Regen +10
+      head="Arbatel Bonnet +1", -- Regen +10
       back={ name="Bookworm's Cape", augments={'INT+3','MND+1','Helix eff. dur. +18','"Regen" potency+10',}} -- Regen +10
     })
 
@@ -56,7 +56,7 @@ function get_job_sets()
 	
     sets.Enhancing_Skill = set_combine(sets.Enhancing_Skill,{ 
 	  ammo="Savant's Treatise", -- Enhancing +4
-      head="Arbatel Bonnet", -- Enhancing +12
+      head="Arbatel Bonnet +1", -- Enhancing +12
       hands="Chironic Gloves" -- Enhancing +15
 	})
   
@@ -64,7 +64,7 @@ function get_job_sets()
 	  feet="Pedagogy Loafers +1"
 	}
   
-    sets.Klimaform = {feet="Arbatel Loafers"}
+    sets.Klimaform = {feet="Arbatel Loafers +1"}
 
 --- ===============================
 --- 	Offensive Magic
