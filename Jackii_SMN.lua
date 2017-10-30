@@ -431,7 +431,7 @@ end
 
 function job_specific_build_idle(set)
   if (buffactive["Avatar's Favor"]) then
-    set = set_combine(idle_set, {head="Beckoner's Horn +1"})
+    set = set_combine(set, {head="Beckoner's Horn +1"})
   end
   return set
 end
