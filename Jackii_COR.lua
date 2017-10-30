@@ -164,6 +164,10 @@ sets.Full_Ranged_Acc = set_combine(sets.Full_Ranged_Acc, {
   ring2="Cacoethic Ring +1",
 })
 
+sets.Double_Shot = set_combine(sets.Midshot, {
+	-- Double Shot pieces.
+})
+
 --- ===============================
 --- 	Magic
 --- ===============================
@@ -311,4 +315,15 @@ function job_specific_precast(spell)
   else
     return false
 	end
+end
+
+function job_specific_midcast(spell)
+	if (spell.action_type == 'Ranged Attack') then
+		if (buffactive['Double Shot']) then
+			equip(sets.Double_Shot)
+			return true
+		end
+	end
+
+	return false
 end
