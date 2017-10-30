@@ -16,8 +16,8 @@ function get_job_sets()
 --- ===============================
 	
     Custom_Timers = {
-    ['Dia II'] = {137, nil},
-  }
+      ['Dia II'] = {132, nil},
+    }
   
 --- ===============================
 --- 	Job Abilities

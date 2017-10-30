@@ -30,7 +30,7 @@ sets.DT = { --- PDT: 15%, MDT: 13%
   ear1="Colossus's Earring",
   ring1=Hybrid_DT_Ring1,
   ring2=Hybrid_DT_Ring2,
-  back="Umbra Cape"
+  back="Moonbeam Cape"
 }
 
 sets.PDT = set_combine(sets.DT, {ring1=PDT_Ring1, ring2=PDT_Ring2})

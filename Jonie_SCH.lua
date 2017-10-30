@@ -31,7 +31,13 @@ function get_job_sets()
     sets.Fast_Cast = set_combine(sets.Fast_Cast,{
       feet="Acad. Loafers +2"
     })
-
+	
+	sets.Sublimation = set_combine(sets.Refresh,{
+      head="Acad. Mortar. +3",
+	  body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},
+	  ear1="Savant's Earring",
+	})
+	
 --- ===============================
 --- 	Support Magic
 --- ===============================
@@ -125,6 +131,13 @@ end
 --- ===============================
 --- 	Class Specific Functions
 --- ===============================
+
+function job_specific_build_idle(set)
+  if (buffactive["Sublimation: Activated"]) then
+    set = set_combine(set, sets.Sublimation)
+  end
+  return set
+end
 
 function job_specific_midcast(spell)
   if (Storm_Spells:contains(spell.name)) then

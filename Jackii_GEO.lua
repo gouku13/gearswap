@@ -15,6 +15,14 @@ function get_job_sets()
 	sets.weapons = {main="Idris",sub="Genmei Shield",range="Dunna"}
 
 --- ===============================
+--- 	Custom Timers
+--- ===============================
+	
+    Custom_Timers = {
+      ['Dia II'] = {132, nil},
+    }	
+	
+--- ===============================
 --- 	Job Abilities
 --- ===============================
 
