@@ -16,6 +16,7 @@ function get_job_sets()
 --- ===============================
 
 	sets.JA['Tabula Rasa'] = {legs="Pedagogy Pants +1"}
+	sets.JA['Enlightenment'] = {body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},}
 
   -- Gear that needs to be worn to actively enhance a current player buff.
   sets.During_Buff['Ebullience'] = {head="Arbatel Bonnet +1",lock="head"}
@@ -65,7 +66,7 @@ function get_job_sets()
     sets.Enhancing_Skill = set_combine(sets.Enhancing_Skill,{ 
 	  ammo="Savant's Treatise", -- Enhancing +4
       head="Arbatel Bonnet +1", -- Enhancing +12
-      hands="Chironic Gloves" -- Enhancing +15
+      hands="Chironic Gloves", -- Enhancing +15
 	})
   
     sets.Storm = { 
@@ -84,6 +85,7 @@ function get_job_sets()
 
 	sets.MAB = set_combine(sets.MAB,{
 	  sub="Niobid strap",
+	  back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	})
   
     sets.Drain = set_combine(sets.Drain,{
@@ -101,7 +103,7 @@ function get_job_sets()
     })
   
     sets.Helix = set_combine(sets.MAB,{
-      back={ name="Bookworm's Cape", augments={'INT+3','MND+1','Helix eff. dur. +18','"Regen" potency+10',}}
+      back={ name="Bookworm's Cape", augments={'INT+5','MND+3','Helix eff. dur. +20',}},
     })
 
 --- ===============================
