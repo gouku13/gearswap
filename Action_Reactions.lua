@@ -18,8 +18,8 @@ function sc_prop(mob_id, skillchain_id)
     if (casting_nuke[1] == mob_id) then
       can_MB = check_MB_elements(mob_id, casting_nuke[2])
       if (can_MB) then
-        add_to_chat(207, "A MB window has opened. Switching to MB set.")
-		local nuke_set = build_nuke_set()
+        --add_to_chat(207, "A MB window has opened. Switching to MB set.")
+		local nuke_set = build_nuke_set(casting_nuke[2])
 		equip(nuke_set)
       end
     end
