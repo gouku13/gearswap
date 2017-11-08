@@ -269,7 +269,7 @@ sets.MAB = {
   ammo="Pemphredo tathlum",
   head={ name="Merlinic Hood", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Enmity-4','Mag. Acc.+6','"Mag.Atk.Bns."+15',}},
   neck="Sanctity Necklace", --- MAB: 10
-  ear1="Friomisi Earring", -- MAB: 10
+  ear1="Regal Earring", -- MAB: 10
   ear2="Barkarole Earring", -- MAB: 8
   body="Amalric Doublet",
   hands="Amalric Gages",
@@ -283,8 +283,8 @@ sets.MB = {
   head={ name="Merlinic Hood", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Magic burst dmg.+9%','MND+5','Mag. Acc.+5','"Mag.Atk.Bns."+12',}}, -- 9%
   neck="Mizu. Kubikazari", -- +10%
   body="Amalric Doublet",
-  ear1="Barkarole Earring",
-  ear2="Friomisi Earring",
+  ear1="Regal Earring",
+  ear2="Barkarole Earring",
   hands="Amalric Gages", -- (+5%)
   back="Seshaw Cape",
   ring1="Mujin Band", -- (+5%)
