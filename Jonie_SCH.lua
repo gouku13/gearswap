@@ -30,7 +30,7 @@ function get_job_sets()
 
 	-- Fast cast sets for spells
     sets.Fast_Cast = set_combine(sets.Fast_Cast,{
-      feet="Acad. Loafers +2"
+      --feet="Acad. Loafers +2"
     })
 	
 	sets.Sublimation = set_combine(sets.Refresh,{
