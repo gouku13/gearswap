@@ -116,9 +116,9 @@ sets.Fast_Cast = { --- Current: FC 48-50% QM 4%
   feet="Regal Pumps +1" -- FC 5~7%
 }
 
-if ((Main_Job == 'WHM') or (Main_Job == 'BRD')) then
+if ((Main_Job == 'WHM') or (Main_Job == 'BRD') or (Main_Job == 'SMN')) then
   sets.Fast_Cast = set_combine(sets.Fast_Cast,{ -- 45% FC
-    body="Inyanga Jubbah +1", -- FC 13%
+    body="Inyanga Jubbah +2", -- FC 13%
   })
 end
 
