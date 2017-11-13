@@ -130,8 +130,9 @@ end
 
 if (Dark_Mage) then
   sets.Fast_Cast = set_combine(sets.Fast_Cast,{ -- FC 
-	head={ name="Merlinic Hood", augments={'"Mag.Atk.Bns."+20','"Fast Cast"+6','INT+5',}}, -- FC 14%
-	--hands="Merlinic Dastanas",
+	head={ name="Merlinic Hood", augments={'"Fast Cast"+7','MND+6','Mag. Acc.+9',}}, -- FC 15%
+	body={ name="Merlinic Jubbah", augments={'Accuracy+19','"Fast Cast"+6','"Mag.Atk.Bns."+15',}}, -- FC 12%
+	hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+13','"Fast Cast"+7','MND+7',}}, -- FC 7%
     legs="Psycloth lappas",	-- FC 7%
 	feet={ name="Merlinic Crackows", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','"Fast Cast"+5','CHR+6','"Mag.Atk.Bns."+6',}} -- FC 11%
   })

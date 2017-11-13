@@ -82,7 +82,7 @@ function get_job_sets()
   
     sets.Some_MAcc = set_combine(sets.Some_MAcc,{
 	  back={ name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
-	  legs="Chironic Hose"
+	  legs={ name="Chironic Hose", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+5','MND+12','Mag. Acc.+6',}},
     })
 
 	sets.MAB = set_combine(sets.MAB,{
