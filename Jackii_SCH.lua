@@ -156,6 +156,13 @@ function job_specific_midcast(spell)
   elseif string.find(spell.english,'helix') then
     equip(sets.Helix)
 	return true
+  elseif ((spell.skill == 'Enfeebling Magic') and (buffactive['Light Arts'] or buffactive['Dark Arts'])) then
+    if (buffactive['Light Arts']) then
+		equip(set_combine(sets.Enfeebling, sets.Light_Stuff))
+	elseif (buffactive['Dark Arts']) then
+		equip(set_combine(sets.Enfeebling, sets.Dark_Stuff))
+	end
+	return true
   end
   return false
 end
