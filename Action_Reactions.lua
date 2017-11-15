@@ -124,8 +124,15 @@ windower.register_event("action", function(action)
       -- Skillchain: <skillchain>. <target> takes <number> points of damage.
       if ((add_effect_message >= 288) and (add_effect_message <= 301)) then
         sc_prop(target_id, add_effect_message - 287)
+	  -- Skillchain: <skillchain>. <target> recovers <number> points of damage.
+      elseif ((add_effect_message >= 385) and (add_effect_message <= 398)) then
+        sc_prop(target_id, add_effect_message - 384)
+	  -- Skillchain: <skillchain>. <target> takes <number> points of damage. (Umbra/Radiance)
       elseif ((add_effect_message == 767) or (add_effect_message == 768)) then
         sc_prop(target_id, add_effect_message - 752)
+	  -- Skillchain: <skillchain>. <target> heals <number> points of damage. (Umbra/Radiance)
+      elseif ((add_effect_message == 769) or (add_effect_message == 770)) then
+        sc_prop(target_id, add_effect_message - 754)
       end
     end
   end
