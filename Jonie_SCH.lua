@@ -16,7 +16,7 @@ function get_job_sets()
 --- ===============================
 
 	sets.JA['Tabula Rasa'] = {legs="Pedagogy Pants +1"}
-	sets.JA['Enlightenment'] = {body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},}
+	sets.JA['Enlightenment'] = {body="Peda. Gown +1"}
 
   -- Gear that needs to be worn to actively enhance a current player buff.
   sets.During_Buff['Ebullience'] = {head="Arbatel Bonnet +1",lock="head"}
@@ -31,12 +31,12 @@ function get_job_sets()
 	-- Fast cast sets for spells
     sets.Fast_Cast = set_combine(sets.Fast_Cast,{
 	  back={ name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
-      --feet="Acad. Loafers +2"
+      --feet="Acad. Loafers +3"
     })
 	
 	sets.Sublimation = set_combine(sets.Refresh,{
       head="Acad. Mortar. +3",
-	  body={ name="Peda. Gown +1", augments={'Enhances "Enlightenment" effect',}},
+	  body="Peda. Gown +1", 
 	  ear1="Savant's Earring",
 	})
 	
@@ -66,7 +66,6 @@ function get_job_sets()
 	
     sets.Enhancing_Skill = set_combine(sets.Enhancing_Skill,{ 
 	  ammo="Savant's Treatise", -- Enhancing +4
-      head="Arbatel Bonnet +1", -- Enhancing +12
       hands="Chironic Gloves", -- Enhancing +15
 	})
   
@@ -79,33 +78,58 @@ function get_job_sets()
 --- ===============================
 --- 	Offensive Magic
 --- ===============================
+
+    sets.Light_Stuff = {legs="Acad. Pants +2",}
+	sets.Dark_Stuff = {body="Acad. Gown +2",}
+	
   
-    sets.Some_MAcc = set_combine(sets.Some_MAcc,{
+    sets.Magic_Acc = set_combine(sets.Magic_Acc,{
+	  main={ name="Gada", augments={'MND+7','Mag. Acc.+25',}},
+	  sub="Ammurapi Shield",
+	  head="Acad. Mortar. +3",
+	  neck="Erra Pendant",
+	  ear1="Regal Earring",
+	  ear2="Gwati Earring",
+	  --ear2="Dignitary's Earring",
+	  body="Acad. Gown +2",
 	  back={ name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
 	  legs={ name="Chironic Hose", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+5','MND+12','Mag. Acc.+6',}},
+	  feet="Acad. Loafers +3",
     })
+	
+	sets.Enfeeble_Skill = set_combine(sets.Magic_Acc,{
+	  ring1="Kishar Ring",
+	})
 
 	sets.MAB = set_combine(sets.MAB,{
+	  main="Akademos",
 	  sub="Niobid strap",
 	  back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	})
   
     sets.Drain = set_combine(sets.Drain,{
+	  main="Akademos",
+	  sub="Niobid Strap",
+	  ear2="Hirudinea Earring",
       hands="Gende. Gages +1",
-      hands={ name="Chironic Gloves", augments={'Pet: "Dbl. Atk."+1','"Mag.Atk.Bns."+22','Accuracy+8 Attack+8','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
-      feet="Acad. Loafers +2"
+	  legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Drain" and "Aspir" potency +6','"Mag.Atk.Bns."+13',}},
+      feet="Acad. Loafers +3"
     })
   
 	sets.Aspir = sets.Drain
 
     sets.Stun = set_combine(sets.Stun,{
       hands="Gende. Gages +1",
-      feet="Acad. Loafers +2"
+      feet="Acad. Loafers +3"
     -- Pedagogy are locked in when Alacrity is active
     })
   
     sets.Helix = set_combine(sets.MAB,{
+	  main="Akademos",
+	  sub="Niobid strap",
       back={ name="Bookworm's Cape", augments={'INT+5','MND+3','Helix eff. dur. +20',}},
+	  --waist="Acuity Belt +1",
+	  legs="Mallquis Trews +2",
     })
 
 --- ===============================
@@ -150,6 +174,13 @@ function job_specific_midcast(spell)
   elseif string.find(spell.english,'helix') then
     equip(sets.Helix)
 	return true
+  elseif ((spell.skill == 'Enfeebling Magic') and (buffactive['Light Arts'] or buffactive['Dark Arts'])) then
+    if (buffactive['Light Arts']) then
+		equip(set_combine(sets.Enfeeble_Skill, sets.Light_Stuff))
+	elseif (buffactive['Dark Arts']) then
+		equip(set_combine(sets.Enfeeble_Skill, sets.Dark_Stuff))
+	end
+	return true	
   end
   return false
 end

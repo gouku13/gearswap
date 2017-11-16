@@ -52,7 +52,7 @@ sets.craft={
 if (Dark_Mage or (Main_Job == 'BLU')) then
   -- Without head/pants: PDT: 29%, MDT: 19%, BDT: 18%
   sets.DT = set_combine(sets.DT, {
-		head="Hagondes Hat", --- PDT: 1%
+	head="Hagondes Hat", --- PDT: 1%
     body="Hagondes Coat", --- PDT: 1%
     hands="Hagondes Cuffs", --- PDT: 4%
     legs="Hagondes Pants", --- PDT: 2%
@@ -76,12 +76,9 @@ end
 
 sets.Refresh = {
   head="Befouled Crown", --- 1 MP/tic
-  
   ear2="Moonshade Earring", --- 
-  --hands="Serpentes Cuffs", --- 1 HP/tic day, 1 MP/tic night
   waist="Fucho-no-Obi", --- 1 MP/tic when < 50% MP
   legs="Assiduity Pants +1", --- 1 MP/tic
-  --feet="Serpentes Sabots" --- 1 MP/tic day, 1 HP/tic night
 }
 
 if (Light_Mage) then
@@ -179,7 +176,6 @@ if (Light_Mage) then
 end
 
 sets.Enmity = {
-  -- -5 from Serenity
   ammo="Esper Stone +1", -- Enmity -5
   ear1="Novia Earring", -- Enmity -7
   -- ring2="Kuchekula Ring", -- Enmity -7
@@ -217,13 +213,16 @@ sets.Enhancing_Duration = {
 }
 
 sets.Enhancing_Skill = { --- Total: +86
-  --main="Serenity", -- Enhancing +9
-  head="Umuthi Hat", -- Enhancing +13
-  body="Telchine Chas.", -- Enhancing +12
+  head="Befouled Crown", -- Enhancing +16
   neck="Incanter's Torque", -- Enhancing +10
+  ear1="Augmenting Earring", -- Enhancing +3
+  ear2="Andoaa Earring", -- Enhancing +5
+  body="Telchine Chas.", -- Enhancing +12
   hands="Chironic Gloves", -- Enhancing +15
+  --ring1="Stikini Ring", -- Enhancing +5
+  --ring2="Stikini Ring", -- Enhancing +5
+  back="Fi Follet Cape", --- Enhancing +8, Unity: MND+1~5
   waist="Olympus Sash", --- Enhancing +5
-  back="Merciful Cape" --Enhancing +5 --back="Fi Follet Cape +1" --- Enhancing +9, Unity: MND+1~5
 }
 
 --- ===============================
@@ -238,16 +237,10 @@ sets.precast["Healing"] = set_combine(sets.Fast_Cast,{
 --- ===============================
 
 sets.Magic_Acc = {
-  -- main="Exemplar", -- M.Acc: 25
   ammo="Pemphredo Tathlum",
-  -- ranged="Aureole", -- M.Acc: 8
-  -- head="Nahtirah Hat", -- M.Acc: 10
   neck="Erra Pendant", -- M.Acc: 17
-  ear1="Lifestorm Earring", --- Set: M.Acc +12
-  ear2="Psystorm Earring", --- Set: M.Acc +12
-  body="Vanya Robe", -- M.Acc +21, Enfeebling +20
+  --ring2="Stikini Ring",
   back="Ogapepo Cape", -- M.Acc +10
-  legs="Vanya Slops" -- M.Acc +20
 }
 
 if ((Main_Job == 'WHM') or (Main_Job == 'BRD')) then
@@ -266,7 +259,6 @@ sets.Some_MAcc = {
 }
 
 sets.MAB = {
-  -- main="Exemplar", -- MAB: 28
   ammo="Pemphredo tathlum",
   head={ name="Merlinic Hood", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Enmity-4','Mag. Acc.+6','"Mag.Atk.Bns."+15',}},
   neck="Sanctity Necklace", --- MAB: 10
@@ -299,14 +291,26 @@ waist="Hachirin-no-Obi"
 }
 
 sets.Enfeeble_Skill = {
-  neck="Incanter's Torque", -- Enfeebling +7
+  neck="Incanter's Torque", -- Enfeebling +10
   body="Vanya Robe" -- M.Acc +21, Enfeebling +20
+  --feet="Skaoi Boots", --M.Acc +37, Enfeebling +17
 }
 
 sets.Divine_Skill = {
 }
 
 sets.Dark_Skill = {
+}
+
+sets.Drain = {
+  ammo="Pemphredo Tathlum",
+  head="Pixie Hairpin +1",
+  --body="Shango Robe",
+  neck="Erra Pendant",
+  --ring1="Evanescence Ring",
+  ring1="Excelsis Ring",
+  ring2="Archon Ring",
+  waist="Fucho-no-obi",
 }
 
 sets.midcast["WarpII"] = set_combine(sets.Fast_Cast,{
