@@ -238,7 +238,7 @@ function get_job_sets()
     neck="Adad Amulet", -- Avatar: MAB +10
     ear1="Lugalbanda Earring", 
     ear2="Gelos earring",
-    body="Con. Doublet +3",
+    body="Apogee Dalmatica +1",
     hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+16 Pet: "Mag.Atk.Bns."+16','Blood Pact Dmg.+10','Pet: INT+5','Pet: Mag. Acc.+14','Pet: "Mag.Atk.Bns."+10',}},
     ring1="Varar Ring",
     ring2="Varar Ring",

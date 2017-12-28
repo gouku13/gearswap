@@ -68,6 +68,7 @@ function get_job_sets()
 		main="Sucellus",
 		sub="Chanter's Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		back={ name="Nantosuelta's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
 		legs="Geomancy Pants +3", --- +11%, Spell interupt down 20%
 	})
 
@@ -103,7 +104,7 @@ function get_job_sets()
 		ear1="Regal Earring",
 		body="Geomancy Tunic +3",
 		hands="Geo. Mitaines +3",
-		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+		back={ name="Nantosuelta's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
 		legs="Geomancy Pants +3",
 		feet="Geomancy Sandals +3"
     })
@@ -111,12 +112,15 @@ function get_job_sets()
 	sets.MAB = set_combine(sets.MAB,{
 		main="Solstice",
 		sub="Ammurapi Shield",
-		back="Toro Cape",
+		head="Ea Hat",
+		ear1="Regal Earring",
+		body="Ea Houppelande",
+		hands="Ea Cuffs",
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+		legs="Ea Slops",
 	})
 	
 	sets.MB = set_combine(sets.MB, {
-		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	})
 
 	sets.Enfeeble_Skill = set_combine(sets.Enfeeble_Skill,{
@@ -129,7 +133,7 @@ function get_job_sets()
 		body="Geomancy Tunic +3",
 		hands="Geo. Mitaines +3",
 		ring1="Kishar Ring",
-		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+		back={ name="Nantosuelta's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
 		waist="Luminary Sash",
 		legs="Geomancy Pants +3",
 		feet="Geomancy Sandals +3",

@@ -8,7 +8,7 @@ function get_job_sets()
 	Macro_Set = 1
 
 	sets.weapons = {main="Nirvana",sub="Elan Strap +1"}
-  sets.TP_Weapon = {}
+    sets.TP_Weapon = {}
 	sets.proc_weapons = {}
 
 --- ===============================
@@ -24,8 +24,24 @@ function get_job_sets()
 --- ===============================
 
 	sets.JA['Astral Flow'] = {head="Glyphic Horn +1"}
-	sets.JA['Elemental Siphon'] = set_combine(sets.Summoning_Skill, {main="Espiritus",ammo="Esper Stone +1",back={ name="Conveyance Cape", augments={'Summoning magic skill +5','Pet: Enmity+15','Blood Pact Dmg.+1','Blood Pact ab. del. II -3',}},feet="Beckoner's Pigaches +1"})
 	sets.JA['Mana Cede'] = {hands="Beckoner's Bracers +1"}
+	sets.JA['Elemental Siphon'] = set_combine(sets.Summoning_Skill, {
+	  main="Espiritus",
+	  sub="Vox Grip",
+	  ammo="Esper Stone +1",
+	  head="Baayami Hat", -- Summoning +26
+	  neck="Incanter's Torque", -- Summoning +10
+	  ear1="Andoaa Earring", -- Summoning +5
+	  ear2="Summoning Earring", -- Summoning +3
+	  body="Baayami Robe", -- Summoning +32
+      hands="Baayami Cuffs", -- Summoning +28
+	  ring1="Evoker's Ring", -- Summoning +10
+	  ring2="Zodiac Ring",
+	  back={ name="Conveyance Cape", augments={'Summoning magic skill +5','Pet: Enmity+12','Blood Pact Dmg.+1',}}, -- Summoning +13
+      waist="Kobo Obi", -- Summoning +8
+      legs="Baayami Slops", -- Summoning +30
+	  feet="Beckoner's Pigaches +1"
+	  })
 
 --- ===============================
 --- 	DT Sets
@@ -53,6 +69,8 @@ function get_job_sets()
 --- ===============================	
 
   sets.Fast_Cast = set_combine(sets.Fast_Cast,{ -- Currently FC 68%, QM 10%
+    body="Inyanga Jubbah +2",
+	back={ name="Campestres's Cape", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','"Fast Cast"+10',}},
   })
   
   sets.Cure_Cheat = {
@@ -64,9 +82,9 @@ function get_job_sets()
     ear2="Gelos earring",
     body="Apogee Dalmatica +1",
     hands={ name="Merlinic Dastanas", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Blood Pact Dmg.+9','Pet: DEX+4',}},
-    ring1="Varar Ring",
-    ring2="Varar Ring", 
-    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
+    ring1="Varar Ring +1",
+    ring2="Varar Ring +1", 
+    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
     waist="Incarnation Sash",
     legs="Apogee Slacks +1",
     feet="Apogee Pumps +1"
@@ -118,9 +136,9 @@ function get_job_sets()
     ear2="Domesticator's Earring", -- Pet: Enmity +5, Double Attack +3%
     --body="Shomonjijoe +1", -- Avatar: Enmity +14
     hands="Regimen Mittens", -- Pet: Acc +20, M.Acc +20, Haste +6%
-	ring1="Varar Ring",
-    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
-	ring2="Varar Ring",
+	ring1="Varar Ring +1",
+    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
+	ring2="Varar Ring +1",
     waist="Klouskap Sash", -- Pet: Haste +8%
     legs="Convoker's Spats +1", -- Avatar: Acc +20, Enmity +4
     feet="Psycloth Boots" -- Avatar: Acc +20, Atk +20, Double Attack +3%
@@ -140,19 +158,18 @@ function get_job_sets()
   sets.Summoning_Skill = {
 	--sub="Vox Grip",
     ammo="Sancus Sachet +1", -- Not skill, but Avatar lv.119
-    head="Convoker's Horn +3", -- Summoning +19
+    head="Baayami Hat", -- Summoning +26
     neck="Incanter's Torque", -- Summoning +10
-    ear1="Summoning Earring", -- Summoning +3
-    ear2="Andoaa Earring", -- Summoning +5
-    body="Apogee Dalmatica +1", -- Summoning +20
-    hands="Lamassu Mitts +1", -- Summoning +22
+	ear1="Andoaa Earring", -- Summoning +5
+    ear2="Summoning Earring", -- Summoning +3
+    body="Baayami Robe", -- Summoning +32
+    hands="Baayami Cuffs", -- Summoning +28
     ring2="Evoker's Ring", -- Summoning +10
-    ring1="Stikini Ring +1", -- All Magic Skills +8
-    back={ name="Conveyance Cape", augments={'Summoning magic skill +5','Pet: Enmity+15','Blood Pact Dmg.+1','Blood Pact ab. del. II -3',}}, -- Summoning +13
+    ring1="Stikini Ring", -- All Magic Skills +5
+    back={ name="Conveyance Cape", augments={'Summoning magic skill +5','Pet: Enmity+12','Blood Pact Dmg.+1',}}, -- Summoning +13
     waist="Kobo Obi", -- Summoning +8
-    legs="Beckoner's Spats +1", -- Summoning +20
-    feet="Rubeus Boots" -- Summoning +10
-	--feet="Apogee Pumps +1", -- Summoning +20
+    legs="Baayami Slops", -- Summoning +30
+    feet="Baayami Sabots", -- Summoning +24
   }
   
   sets.BP = {}
@@ -164,7 +181,7 @@ function get_job_sets()
     ear1="Evans Earring", -- BP Delay -2
     body="Apogee Dalmatica +1", -- BP Delay II -3
     hands="Glyphic Bracers +1", -- BP Delay -6
-    back={ name="Conveyance Cape", augments={'Summoning magic skill +5','Pet: Enmity+15','Blood Pact Dmg.+1','Blood Pact ab. del. II -3',}}, -- BP Delay II -3
+    back={ name="Conveyance Cape", augments={'Summoning magic skill +4','Pet: Enmity+5','Blood Pact Dmg.+2','Blood Pact ab. del. II -2',}}, -- BP Delay II -2
     legs="Glyphic Spats +1", -- BP Delay -6
     feet="Glyphic Pigaches +1" -- BP Delay II -1
   })
@@ -177,11 +194,11 @@ function get_job_sets()
     head="Apogee Crown +1",
     ear1="Lugalbanda Earring", 
     ear2="Gelos earring",
-    body="Con. Doublet +3",
-    hands={ name="Merlinic Dastanas", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Blood Pact Dmg.+9','Pet: DEX+4',}},
-    ring1="Varar Ring",
-    ring2="Varar Ring", 
-    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
+    body="Con. Doublet +2",
+    hands={ name="Merlinic Dastanas", augments={'Pet: Accuracy+30 Pet: Rng. Acc.+30','Blood Pact Dmg.+8','Pet: Mag. Acc.+12',}},
+    ring1="Varar Ring +1",
+    ring2="Varar Ring +1", 
+    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
     waist="Incarnation Sash",
     legs="Apogee Slacks +1",
     feet="Apogee Pumps +1"
@@ -197,14 +214,14 @@ function get_job_sets()
     neck="Shulmanu Collar",
     ear1="Lugalbanda Earring", 
     ear2="Gelos earring",
-    body="Con. Doublet +3",
-    hands={ name="Merlinic Dastanas", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Blood Pact Dmg.+9','Pet: DEX+4',}},
-    ring1="Varar Ring",
-    ring2="Varar Ring",
-    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
+    body="Con. Doublet +2",
+    hands={ name="Merlinic Dastanas", augments={'Pet: Accuracy+30 Pet: Rng. Acc.+30','Blood Pact Dmg.+8','Pet: Mag. Acc.+12',}},
+    ring1="Varar Ring +1",
+    ring2="Varar Ring +1",
+    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
     waist="Incarnation Sash",
     legs="Apogee Slacks +1",
-    feet="Apogee Pumps +1"
+    feet="Helios Boots"
   })
   
   sets.BP.Physical_SomeAcc = set_combine(sets.BP.Physical,{
@@ -218,18 +235,18 @@ function get_job_sets()
   --- Magical-based BP Rages. Switched into midcast to give extra bonuses to the rages 
   --- which correspond to magical-based skills (ie: MAB+ for Ramuh's Thunderspark)
   sets.BP.Magical = set_combine(sets.BP.Base,{
-    main={ name="Grioavolr", augments={'Blood Pact Dmg.+8','Pet: INT+8','Pet: Mag. Acc.+24','Pet: "Mag.Atk.Bns."+21',}},
+    main={ name="Grioavolr", augments={'Blood Pact Dmg.+9','Pet: VIT+6','Pet: Mag. Acc.+2','Pet: "Mag.Atk.Bns."+19','DMG:+9',}},
     sub="Elan Strap +1",
     ammo="Sancus Sachet +1",
     head={ name="Apogee Crown +1", augments={'MP+80','Pet: "Mag.Atk.Bns."+35','Blood Pact Dmg.+8',}},
     neck="Adad Amulet", -- Avatar: MAB +10
     ear1="Lugalbanda Earring", 
     ear2="Gelos earring",
-    body="Con. Doublet +3",
-    hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+16 Pet: "Mag.Atk.Bns."+16','Blood Pact Dmg.+10','Pet: INT+5','Pet: Mag. Acc.+14','Pet: "Mag.Atk.Bns."+10',}},
-    ring1="Varar Ring",
-    ring2="Varar Ring",
-    back={ name="Campestres's Cape", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10',}},
+    body="Apogee Dalmatica +1",
+    hands={ name="Merlinic Dastanas", augments={'Pet: Accuracy+16 Pet: Rng. Acc.+16','Blood Pact Dmg.+8','Pet: STR+2','Pet: "Mag.Atk.Bns."+12',}},
+    ring1="Varar Ring +1",
+    ring2="Varar Ring +1",
+    back={ name="Campestres's Cape", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','"Fast Cast"+10',}},
     waist="Regal Belt",
     legs="Enticer's Pants",
     feet="Apogee Pumps +1"
@@ -253,11 +270,11 @@ function get_job_sets()
     neck="Adad Amulet", -- Avatar: MAB +10
     ear1="Lugalbanda Earring", 
     ear2="Gelos earring",
-    body="Con. Doublet +3",
-    hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+16 Pet: "Mag.Atk.Bns."+16','Blood Pact Dmg.+10','Pet: INT+5','Pet: Mag. Acc.+14','Pet: "Mag.Atk.Bns."+10',}},
-    ring1="Varar Ring",
-    ring2="Varar Ring",
-    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
+    body="Con. Doublet +2",
+    hands={ name="Merlinic Dastanas", augments={'Pet: Accuracy+16 Pet: Rng. Acc.+16','Blood Pact Dmg.+8','Pet: STR+2','Pet: "Mag.Atk.Bns."+12',}},
+    ring1="Varar Ring +1",
+    ring2="Varar Ring +1",
+    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
     waist="Regal Belt",
     legs="Apogee Slacks +1",
     feet="Apogee Pumps +1"
@@ -368,6 +385,9 @@ function get_job_sets()
     waist="Hierarch Belt",
     legs="Nares Trews",
     feet="Chelona Boots +1"
+  })
+  
+  sets.WS['Garland of Bliss'] = set_combine(sets.WS_All,sets.MAB,{
   })
 
 --- ===============================

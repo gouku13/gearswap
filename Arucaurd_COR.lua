@@ -175,11 +175,11 @@ sets.MAB = set_combine(sets.MAB, {
 })
 
 sets.Quick_Magic = set_combine(sets.Quick_Magic, {
-  --ammo="Chrono Bullet",
+  ammo="Eminent Bullet",
 })
 
 sets.Fast_Cast = set_combine(sets.Fast_Cast, {
-  --ammo="Chrono Bullet",
+  ammo="Eminent Bullet",
 })
 
 --- ===============================

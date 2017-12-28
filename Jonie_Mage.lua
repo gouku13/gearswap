@@ -220,7 +220,7 @@ sets.Enhancing_Skill = { --- Total: +86
   body="Telchine Chas.", -- Enhancing +12
   hands="Chironic Gloves", -- Enhancing +15
   --ring1="Stikini Ring", -- Enhancing +5
-  --ring2="Stikini Ring", -- Enhancing +5
+  ring2="Stikini Ring", -- Enhancing +5
   back="Fi Follet Cape", --- Enhancing +8, Unity: MND+1~5
   waist="Olympus Sash", --- Enhancing +5
 }
@@ -239,8 +239,10 @@ sets.precast["Healing"] = set_combine(sets.Fast_Cast,{
 sets.Magic_Acc = {
   ammo="Pemphredo Tathlum",
   neck="Erra Pendant", -- M.Acc: 17
-  --ring2="Stikini Ring",
+  ear2="Dignitary's Earring",
+  ring2="Stikini Ring",
   back="Ogapepo Cape", -- M.Acc +10
+  waist="Luminary Sash",
 }
 
 if ((Main_Job == 'WHM') or (Main_Job == 'BRD')) then

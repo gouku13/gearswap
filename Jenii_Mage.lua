@@ -32,7 +32,7 @@ sets.DT = { -- PDT: 25%, MDT: 21%, BDT: 15%
   ring2="Dark Ring",
   ear1="Colossus's Earring",
   ear2="Genmei Earring",
-  back="Solemnity Cape", -- PDT +6%
+  back="Moonbeam Cape", -- PDT +6%
 }
 
 if (Light_Mage) then
@@ -41,7 +41,7 @@ if (Light_Mage) then
     head="Gende. Caubeen +1", -- PDT: ?%, MDT: ?%
     body={ name="Gende. Bilaut +1", augments={'Phys. dmg. taken -4%','Song spellcasting time -5%',}}, -- PDT: ?%, MDT: ?%
     hands="Gende. Gages +1", -- PDT: ?%, MDT: ?%
-    back="Solemnity Cape",
+    back="Moonbeam Cape",
     legs="Gende. Spats +1", -- PDT: ?%, MDT: ?%
     feet="Gende. Galoshes +1" -- PDT: ?%, MDT: ?%
 	})
@@ -51,7 +51,7 @@ else
     head="Hagondes Hat +1", -- PDT: ?%, MDT: ?%
 	--body="Hagondes Coat +1",
     hands="Hagondes Cuffs +1", -- PDT: ?%, MDT: ?%
-    back="Solemnity Cape",
+    back="Moonbeam Cape",
     legs="Hagondes Pants +1", -- PDT: ?%, MDT: ?%
     feet="Hag. Sabots +1" -- PDT: ?%, MDT: ?%
 	})
@@ -268,8 +268,8 @@ sets.MAB = {
   ammo="Pemphredo tathlum",
   head={ name="Merlinic Hood", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Magic Damage +6','Mag. Acc.+15','"Mag.Atk.Bns."+13',}},
   neck="Sanctity Necklace",
-  ear1="Barkarole Earring",
-  ear2="Friomisi Earring",
+  ear1="Friomisi Earring",
+  ear2="Barkarole Earring",
   body="Amalric Doublet",
   hands="Amalric Gages",
   ring1="Shiva Ring +1",
