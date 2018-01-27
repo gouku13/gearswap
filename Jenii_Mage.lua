@@ -212,11 +212,11 @@ sets.Enhancing_Skill = { --- Total: +57~
 }
 
 sets.Enhancing_Duration = {
-  head={ name="Telchine Cap", augments={'Accuracy+18','Haste+3','Enh. Mag. eff. dur. +10',}},
+  head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
   body={ name="Telchine Chas.", augments={'Evasion+15','Enh. Mag. eff. dur. +10',}},
-  hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +9',}},
-  legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +9',}},
-  feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +9',}},
+  hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
+  legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
+  feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
 }
 
 sets.Enhancing_Bonus["Regen"] = {

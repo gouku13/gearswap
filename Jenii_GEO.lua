@@ -46,7 +46,7 @@ function get_job_sets()
 	--- REFRESH: 3 (base) + 2 MP/tic
 	sets.Refresh = set_combine(sets.Refresh, {
 	    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-	    head={ name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Spell interruption rate down -4%','"Refresh"+1',}},
+	    head={ name="Merlinic Hood", augments={'STR+4','MND+6','"Refresh"+2','Mag. Acc.+7 "Mag.Atk.Bns."+7',}},
 		body="Geomancy Tunic +3",
 		hands="Bagua Mitaines +1"
     })	
@@ -112,9 +112,9 @@ function get_job_sets()
 	sets.MAB = set_combine(sets.MAB,{
 		main="Solstice",
 		sub="Ammurapi Shield",
-		head="Ea Hat",
+		head="Ea Hat +1",
 		ear1="Regal Earring",
-		body="Ea Houppelande",
+		body="Ea Houppelande +1",
 		hands="Ea Cuffs",
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 		legs="Ea Slops",
@@ -198,7 +198,8 @@ function get_job_sets()
 		neck="Loricate Torque +1",
 		waist="Isa Belt",
 		ear1="Etiolation Earring",
-		ear2="Genmei Earring",
+		ear2="Infused Earring",
+		--ear2="Genmei Earring",
 		left_ring="Defending Ring",
 		right_ring="Dark Ring",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10',}},

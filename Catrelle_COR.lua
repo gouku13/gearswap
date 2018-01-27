@@ -79,7 +79,7 @@ sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], 
 --- ===============================
 
   sets.DW['10'] = {
-	back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}, -- DW +10
+	back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}}, -- DW +10
   }
   
   sets.DW['15'] = set_combine(sets.DW['10'], {
@@ -108,7 +108,7 @@ sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], 
 
   sets.TP.Max = set_combine(sets.TP.Max,{
     neck="Iskur Gorget",
-    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}, -- DW +10
+    back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}}, -- DW +10
   })
 
 -- Adding more damage gear if we have higher magic haste.
@@ -192,7 +192,7 @@ sets.WS_All = set_combine(sets.WS_All,{
 })
 
 sets.WS_Weak = set_combine(sets.WS_Weak,{
-  --back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}},
+  back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}},
 })
 
 sets.WS["Savage Blade"] = set_combine(sets.WS_All,{
@@ -204,7 +204,7 @@ sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
 })
 	
 sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
-  --head="Meghanada Visor +2",
+  head="Meghanada Visor +1",
   neck="Fotia Gorget",
   ear1="Telos Earring",
   ear2="Moonshade Earring",
@@ -246,7 +246,7 @@ sets.WS["Wildfire"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
 	}
   
   sets.Movement = {
-    --legs="Carmine Cuisses +1",
+    legs="Carmine Cuisses +1",
   }
 
 end

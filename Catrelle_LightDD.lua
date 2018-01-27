@@ -21,7 +21,7 @@ sets.DT = { --- PDT: 54%, MDT: 44%, BDT: 31%
     neck="Loricate Torque +1", -- DT -6%
     ear1="Infused Earring", -- Regen
     ear2="Etiolation Earring", -- MDT -3%
-    --body="Meg. Cuirie +2", -- PDT -8%
+    body="Meg. Cuirie +2", -- PDT -8%
     --hands={ name="Herculean Gloves", augments={'Accuracy+20 Attack+20','Damage taken-2%','Accuracy+6','Attack+7',}}, -- PDT -2%, DT - 2%
     ring1= Hybrid_DT_Ring1,
     ring2= Hybrid_DT_Ring2,
@@ -59,19 +59,20 @@ end
 -- This assumes you need all DW pieces you own. Bigger damage pieces are added later.
 sets.TP.Max = {
   ammo="Ginsen",
-  head="Adhemar Bonnet",
+  head="Adhemar Bonnet +1",
   neck="Ainia Collar",
   --ear1="Dedition Earring",
   --ear2="Eabani Earring", -- DW: 4%
   --body={name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},
-  hands="Adhemar Wristbands",
+  hands="Adhemar Wristbands +1",
   ring1="Epona's Ring",
-  ring2="Hetairoi Ring",
+  ring2="Ilabrat Ring",
+  --ring2="Hetairoi Ring",
   --back="Bleating Mantle",
   waist="Reiki Yotai", -- DW: 7%
   --legs="Samnuha Tights",
   legs={ name="Herculean Trousers", augments={'Accuracy+25','"Triple Atk."+3',}},
-  feet={ name="Herculean Boots", augments={'Attack+30','"Triple Atk."+4','STR+10','Accuracy+14',}},
+  feet={ name="Herculean Boots", augments={'DEX+1','Attack+7','Quadruple Attack +2','Accuracy+15 Attack+15','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
 }
 
 --[[sets.DW = {  -- Total DW: 35%
@@ -110,9 +111,9 @@ end
 
   --- Sacrifice some tiny DPS for some PDT
   sets.TP.PDT_Mix = { -- PDT: 26%, MDT: 12%
-    --body="Meg. Cuirie +2", -- PDT -8%
+    body="Meg. Cuirie +2", -- PDT -8%
     ring1=Hybrid_DT_Ring1, -- DT -10%
-    --legs="Meg. Chausses +2", -- PDT -6%
+    legs="Meg. Chausses +1", -- PDT -6%
     --feet={ name="Herculean Boots", augments={'Accuracy+23 Attack+23','Damage taken-2%','DEX+5','Attack+6',}} -- PDT -2%, DT -2%
   }
 
@@ -137,15 +138,15 @@ sets.Full_Acc = set_combine(sets.Some_Acc, {
 
 if (Main_Job ~= 'BLU') then
   sets.Full_Acc = set_combine(sets.Full_Acc, {
-    --hands="Meg. Gloves +2",
-    --feet="Meg. Jam. +2",
+    hands="Meg. Gloves +2",
+    feet="Meg. Jam. +1",
   })
 end
 
 if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_Job == 'RNG')) then
   sets.Full_Acc = set_combine(sets.Full_Acc, {
     --head="Carmine Mask +1",
-    --legs="Carmine Cuisses +1"
+    legs="Carmine Cuisses +1"
   })
 end
 
@@ -164,25 +165,25 @@ sets.Preshot = {
   --body="Pursuer's Doublet", -- Snapshot +6
   waist="Impulse Belt", -- Snapshot +3
   --legs={ name="Adhemar Kecks", augments={'AGI+10','"Rapid Shot"+10','Enmity-5',}}, -- Snapshot +9
-  --feet="Meg. Jam. +2", -- Snapshot +10
+  feet="Meg. Jam. +1", -- Snapshot +10
 }
 
 sets.Midshot = {
-  --head="Meghanada Visor +2",
+  head="Meghanada Visor +1",
   neck="Iskur Gorget", 
   ear1="Enervating Earring", 
   ear2="Telos Earring",
-  --body="Meg. Cuirie +2",
-  hands="Adhemar Wristbands",
+  body="Meg. Cuirie +2",
+  hands="Adhemar Wristbands +1",
   ring1="Regal Ring",
   ring2="Ilabrat Ring",
   waist="Eschan Stone", 
-  --legs="Meg. Chausses +2",
-  --feet="Meg. Jam. +2",
+  legs="Meg. Chausses +1",
+  feet="Meg. Jam. +1",
 }
 
 sets.Some_Ranged_Acc = {
-  --hands="Meg. Gloves +2",
+  hands="Meg. Gloves +2",
 }
 
 sets.Full_Ranged_Acc = set_combine(sets.Some_Ranged_Acc,{
@@ -198,7 +199,7 @@ sets.WS_All = {
   ear1="Brutal Earring",
   ear2="Moonshade Earring",
   --body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
-  --hands="Meg. Gloves +2",
+  hands="Meg. Gloves +2",
   ring2="Hetairoi Ring",
   waist="Fotia Belt",
   --legs={ name="Herculean Trousers", augments={'Accuracy+28','Weapon skill damage +3%','STR+7','Attack+11',}},
@@ -206,9 +207,9 @@ sets.WS_All = {
 }
 
 sets.WS_Weak = {
-  head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
-  body={ name="Adhemar Jacket +1", augments={'DEX+10','AGI+10','Accuracy+15',}},
-  hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+  head="Adhemar Bonnet +1",
+  body="Adhemar Jacket +1",
+  hands="Adhemar Wristbands +1",
   --legs={ name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}},
   --feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}},
   neck="Iskur Gorget",
@@ -266,7 +267,7 @@ sets.WS.Ranged_All = set_combine(sets.Midshot,{
   neck="Fotia Gorget",
   ear2="Moonshade Earring",
   --body={ name="Herculean Vest", augments={'Rng.Acc.+15 Rng.Atk.+15','Weapon skill damage +3%','STR+5','Rng.Acc.+8','Rng.Atk.+6',}},
-  --hands="Meg. Gloves +2",
+  hands="Meg. Gloves +2",
   --ring1="Garuda Ring +1",
   --ring2="Garuda Ring +1",
   waist="Fotia Belt",
@@ -316,7 +317,7 @@ sets.Enhancing_Skill = {
 
 if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_Job == 'RNG')) then
   sets.Enhancing_Skill = set_combine(sets.Enhancing_Skill, {
-    --legs="Carmine Cuisses +1"
+    legs="Carmine Cuisses +1"
   })
 end
 

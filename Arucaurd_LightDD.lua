@@ -145,7 +145,7 @@ end
 if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_Job == 'RNG')) then
   sets.Full_Acc = set_combine(sets.Full_Acc, {
     --head="Carmine Mask +1",
-    --legs="Carmine Cuisses +1"
+    legs="Carmine Cuisses +1"
   })
 end
 
@@ -316,7 +316,7 @@ sets.Enhancing_Skill = {
 
 if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_Job == 'RNG')) then
   sets.Enhancing_Skill = set_combine(sets.Enhancing_Skill, {
-    --legs="Carmine Cuisses +1"
+    legs="Carmine Cuisses +1"
   })
 end
 

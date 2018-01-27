@@ -26,7 +26,7 @@ MDT_Ring2 = Hybrid_DT_Ring2
 
 --- Full -DT%. For TP/PDT and idle sets.
 sets.DT = { --- PDT: 15%, MDT: 13%
-  neck="Twilight Torque", --- DT: 5%
+  neck="Loricate Torque +1", --- DT: 5%
   ear1="Colossus's Earring",
   ring1=Hybrid_DT_Ring1,
   ring2=Hybrid_DT_Ring2,
@@ -204,7 +204,7 @@ sets.Enhancing_Precast = {
 }
 
 sets.Enhancing_Duration = {
-  head="Telchine Cap", -- Enhancing Duration +7  
+  head="Telchine Cap", -- Enhancing Duration +10
   body="Telchine Chas.",  -- Enhancing Duration +10
   hands="Telchine Gloves", -- Enhancing Duration +10
   legs="Telchine Braconi", -- Enhancing Duration +10

@@ -246,7 +246,7 @@ sets.WS["Wildfire"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
 	}
   
   sets.Movement = {
-    --legs="Carmine Cuisses +1",
+    legs="Carmine Cuisses +1",
   }
 
 end
