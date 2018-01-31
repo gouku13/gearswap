@@ -141,7 +141,7 @@ sets.WS_Weak = set_combine(sets.WS_Weak,{
 
 sets.WS["Evisceration"] = set_combine(sets.WS_All,{
   ammo="Yetshila",
-  --head="Adhemar Bonnet +1",
+  head="Adhemar Bonnet +1",
   body="Abnoba Kaftan",
   hands="Adhemar Wristbands +1",
   ring1="Ramuh Ring +1",
@@ -151,7 +151,7 @@ sets.WS["Evisceration"] = set_combine(sets.WS_All,{
 
 sets.WS["Exenterator"] = set_combine(sets.WS_All,{
   ammo="Seething Bomblet +1",
-  --head="Adhemar Bonnet +1",
+  head="Adhemar Bonnet +1",
   body={ name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},
   hands="Adhemar Wristbands +1",
   ring1="Epona's Ring",
@@ -167,7 +167,7 @@ sets.WS["Shark Bite"] = set_combine(sets.WS_All,{
 
 sets.WS["Mandalic Stab"] = set_combine(sets.WS_All,{
   ammo="Yetshila",
-  --head="Adhemar Bonnet +1",
+  head="Adhemar Bonnet +1",
   neck="Caro Necklace",
   ear1="Ishvara Earring",
   body="Meg. Cuirie +2",
@@ -180,7 +180,7 @@ sets.WS["Mandalic Stab"] = set_combine(sets.WS_All,{
 
 sets.WS["Rudra's Storm"] = set_combine(sets.WS_All,{
   ammo="Yetshila",
-  --head="Adhemar Bonnet +1",
+  head="Adhemar Bonnet +1",
   neck="Caro Necklace",
   ear1="Ishvara Earring",
   body="Meg. Cuirie +2",

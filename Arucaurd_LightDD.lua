@@ -59,12 +59,14 @@ end
 -- This assumes you need all DW pieces you own. Bigger damage pieces are added later.
 sets.TP.Max = {
   ammo="Ginsen",
-  head="Adhemar Bonnet",
+  head="Adhemar Bonnet +1",
   neck="Ainia Collar",
   --ear1="Dedition Earring",
+  ear1="Cessance Earring",
   --ear2="Eabani Earring", -- DW: 4%
-  --body={name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},
-  hands="Adhemar Wristbands",
+  ear2="Telos Earring",
+  body="Adhemar Jacket +1",
+  hands="Adhemar Wristbands +1",
   ring1="Epona's Ring",
   ring2="Hetairoi Ring",
   --back="Bleating Mantle",
@@ -173,7 +175,7 @@ sets.Midshot = {
   ear1="Enervating Earring", 
   ear2="Telos Earring",
   --body="Meg. Cuirie +2",
-  hands="Adhemar Wristbands",
+  hands="Adhemar Wristbands +1",
   ring1="Regal Ring",
   ring2="Ilabrat Ring",
   waist="Eschan Stone", 
@@ -206,9 +208,9 @@ sets.WS_All = {
 }
 
 sets.WS_Weak = {
-  head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
-  body={ name="Adhemar Jacket +1", augments={'DEX+10','AGI+10','Accuracy+15',}},
-  hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+  head="Adhemar Bonnet +1", 
+  body="Adhemar Jacket +1",
+  hands="Adhemar Wristbands +1", 
   --legs={ name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}},
   --feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}},
   neck="Iskur Gorget",

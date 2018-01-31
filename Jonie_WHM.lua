@@ -75,7 +75,7 @@ function get_job_sets()
       ear1="Glorious Earring",
       ear2="Novia Earring",
       body="Ebers Bliaud +1",
-      hands="Kaykaus Cuffs",
+      hands="Kaykaus Cuffs +1",
       ring1="Kuchekula Ring",
       ring2="Lebeche Ring",
       back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10',}},
@@ -181,7 +181,7 @@ function get_job_sets()
       main={ name="Queller Rod", augments={'MND+15','Mag. Acc.+15','"Cure" potency +15%',}},
       sub="Ammurapi Shield",
 	  body="Theo. Briault +3",
-	  hands="Kaykaus Cuffs",
+	  hands="Kaykaus Cuffs +1",
 	  back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
 	  feet="Theo. Duckbills +3",
 	})
@@ -189,7 +189,7 @@ function get_job_sets()
 	sets.Enfeeble_Skill = set_combine(sets.Enfeebling_Skill,{
 	  head="Befouled Crown",
 	  body="Theo. Briault +3",
-	  hands="Kaykaus Cuffs",
+	  hands="Kaykaus Cuffs +1",
 	  ring1="Kishar Ring",
 	  ring2="Sangoma Ring",
 	  waist="Rumination Sash",

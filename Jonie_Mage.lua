@@ -171,7 +171,7 @@ end
 
 if (Light_Mage) then
   sets.Cure_Potency = set_combine(sets.Cure_Potency,{ --46%
-    hands="Kaykaus Cuffs", -- Cure Potency +10%, Enmity-5, M.Acc+38, Enfeebling+15
+    hands="Kaykaus Cuffs +1", -- Cure Potency +10%, Enmity-5, M.Acc+38, Enfeebling+15
   })
 end
 
@@ -253,7 +253,7 @@ end
 
 if (Light_Mage) then
   sets.Magic_Acc = set_combine(sets.Magic_Acc,{
-    hands="Kaykaus Cuffs", -- M.Acc+38, Enfeebling+15
+    hands="Kaykaus Cuffs +1", -- M.Acc+38, Enfeebling+15
   })
 end
 

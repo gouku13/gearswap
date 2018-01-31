@@ -70,7 +70,7 @@ end
 
 sets.TP.Max = {
   ammo="Ginsen",
-  head="Adhemar Bonnet",
+  head="Adhemar Bonnet +1",
   neck="Ainia Collar",
   ear1="Dedition Earring",
   ear2="Telos Earring", 
@@ -190,9 +190,9 @@ sets.WS_All = {
 }
 
 sets.WS_Weak = {
-  head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
-  body={ name="Adhemar Jacket +1", augments={'DEX+10','AGI+10','Accuracy+15',}},
-  hands={ name="Adhemar Wristbands +1", augments={'DEX+10','AGI+10','Accuracy+15',}},
+  head="Adhemar Bonnet +1",
+  body="Adhemar Jacket +1", 
+  hands="Adhemar Wristbands +1", 
   legs={ name="Taeon Tights", augments={'Accuracy+25','"Dual Wield"+5','STR+5 AGI+5',}},
   feet={ name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+5','STR+7 DEX+7',}},
   neck="Iskur Gorget",

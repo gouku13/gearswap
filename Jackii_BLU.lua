@@ -150,12 +150,12 @@ function get_sets()
 	-- TP Sets --
 	sets.TP = {
 	        ammo="Ginsen",
-			head="Adhemar Bonnet",
+			head="Adhemar Bonnet +1",
 			neck="Ainia Collar",
 			ear1="Suppanomimi",
 			ear2="Eabani Earring",
 			body="Adhemar Jacket +1",
-			hands="Adhemar wristbands",
+			hands="Adhemar Wristbands +1",
 			ring1="Epona's Ring",
 			ring2="Hetairoi Ring",
 			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}},
@@ -230,7 +230,7 @@ function get_sets()
 	-- WS Sets --
 	sets.WS["Chant du Cygne"] = {
 			ammo="Falcon Eye",
-			head="Adhemar Bonnet",
+			head="Adhemar Bonnet +1",
 			neck="Fotia Gorget",
 			ear1="Brutal Earring",
 			ear2="Moonshade Earring",
@@ -299,12 +299,12 @@ function get_sets()
 			
 	sets.WS.Realmrazer = {
 			ammo="Falcon Eye",
-			head="Adhemar Bonnet",
+			head="Adhemar Bonnet +1",
 			neck="Fotia Gorget",
 			ear1="Mache Earring",
 			ear2="Cessance Earring",
 			body="Adhemar Jacket +1",
-			hands="Adhemar wristbands",
+			hands="Adhemar Wristbands +1",
 			ring1="Ifrit Ring +1",
 			ring2="Shukuyu Ring",
 			back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
@@ -358,12 +358,12 @@ function get_sets()
 			
 	sets.WS["Circle Blade"] = {
 			ammo="Falcon Eye",
-			head="Adhemar Bonnet",
+			head="Adhemar Bonnet +1",
 			neck="Fotia Gorget",
 			ear1="Brutal Earring",
 			ear2="Moonshade Earring",
 			body="Abnoba Kaftan",
-			hands="Adhemar wristbands",
+			hands="Adhemar Wristbands +1",
 			ring1="Epona's Ring",
 			ring2="Ifrit Ring +1",
 			back={ name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -590,7 +590,7 @@ function get_sets()
 	-- For The Listed Physical Type Blue Magic --
 	sets.Midcast.PhysicalBlueMagic = {
 			ammo="Floestone",
-			head="Adhemar Bonnet",
+			head="Adhemar Bonnet +1",
 			ear1="Vulcan's Pearl",
 			ear2="Zennaroi Earring",
 			body="Adhemar Jacket +1",
