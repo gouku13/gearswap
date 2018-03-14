@@ -219,7 +219,7 @@ sets.Enhancing_Skill = { --- Total: +86
   ear2="Andoaa Earring", -- Enhancing +5
   body="Telchine Chas.", -- Enhancing +12
   hands="Chironic Gloves", -- Enhancing +15
-  --ring1="Stikini Ring", -- Enhancing +5
+  ring1="Stikini Ring +1", -- Enhancing +8
   ring2="Stikini Ring", -- Enhancing +5
   back="Fi Follet Cape", --- Enhancing +8, Unity: MND+1~5
   waist="Olympus Sash", --- Enhancing +5
@@ -240,7 +240,7 @@ sets.Magic_Acc = {
   ammo="Pemphredo Tathlum",
   neck="Erra Pendant", -- M.Acc: 17
   ear2="Dignitary's Earring",
-  ring2="Stikini Ring",
+  ring2="Stikini Ring +1",
   back="Ogapepo Cape", -- M.Acc +10
   waist="Luminary Sash",
 }

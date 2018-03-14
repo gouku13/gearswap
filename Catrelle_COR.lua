@@ -7,7 +7,7 @@ function get_job_sets()
 	Macro_Book = 11
 	Macro_Set = 2
 
-	sets.weapons = {main="Fettering Blade",sub="Blurred Knife +1",ammo="Eminent Bullet",}
+	sets.weapons = {main="Fettering Blade",sub="Blurred Knife +1",ammo="Chrono Bullet",}
 	set.proc_weapons = {}
 
 
@@ -16,9 +16,9 @@ function get_job_sets()
 --- ===============================
 
 sets.JA['Random Deal'] = {body="Lanun Frac +1"}
-sets.JA['Wild Card'] = {feet="Lanun Bottes +1"}
+sets.JA['Wild Card'] = {feet="Lanun Bottes"}
 sets.JA['Snake Eye'] = {legs="Lanun Culottes +1"}
-sets.JA['Fold'] = {hands="Lanun Gants +1"}
+--sets.JA['Fold'] = {hands="Lanun Gants +1"}
 
 sets.During_Buff["Triple Shot"] = {body="Chasseur's Frac +1",lock="body"}
 
@@ -40,24 +40,24 @@ Last_Roll = ''
 -- Quick Draw
 sets.QDraw = {}
 sets.QDraw.All = set_combine(sets.MAB,{
-  ammo="Eminent Bullet",
+  ammo="Chrono Bullet",
   --ammo="Animikii Bullet",
   --head="Blood Mask",
-  --ring1="Fenrir Ring +1",
+  ring1="Fenrir Ring +1",
   ring2="Dingir Ring",
 })
 sets.QDraw["Light Shot"] = set_combine(sets.QDraw.All, {
-  --head="Laksa. Tricorne +3",
+  head="Laksa. Tricorne +3",
   neck="Sanctity Necklace",
   ear1="Gwati Earring",
   ear2="Digni. Earring",
   body="Mirke Wardecors",
   --hands="Laksa. Gants +3",
-  --ring1="Arvina Ringlet +1",
+  ring1="Arvina Ringlet +1",
   --ring2="Stikini Ring +1",
   --waist="Kwahu Kachina Belt",
-  --legs="Mummu Kecks +1",
-  --feet="Laksa. Boots +3"
+  legs="Mummu Kecks +2",
+  feet="Laksa. Boots +2"
 })
 sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], {})
 
@@ -69,9 +69,8 @@ sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], 
   })
   
   sets.Refresh = {
-    head="Rawhide Mask",
+    head={ name="Herculean Helm", augments={'CHR+5','"Repair" potency +3%','"Refresh"+1',}},
     --body="Mekosu. Harness",
-	body="Lanun Frac +1",
   }
 
 --- ===============================
@@ -83,7 +82,7 @@ sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], 
   }
   
   sets.DW['15'] = set_combine(sets.DW['10'], {
-    body="Adhemar Jacket +1" -- DW +5
+    body="Adhemar Jacket +1", -- DW +5
   })
 
   sets.DW['20'] = set_combine(sets.DW['15'], {
@@ -146,8 +145,8 @@ sets.QDraw["Dark Shot"] = set_combine(sets.QDraw.All, sets.QDraw["Light Shot"], 
 sets.Preshot = set_combine(sets.Preshot, {
   --head="Chass. Tricorne +1",
   --body="Oshosi Vest", -- Snapshot +12
-  --hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- Snapshot +8
-  --legs="Laksa. Trews +3",
+  hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- Snapshot +8
+  legs="Laksa. Trews +3",
 })
 
 sets.Midshot = set_combine(sets.Midshot, {
@@ -155,14 +154,14 @@ sets.Midshot = set_combine(sets.Midshot, {
   --body="Oshosi Vest",
   --back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
   --waist="Kwahu Kachina Belt",
-  --legs="Laksa. Trews +3",
+  legs="Laksa. Trews +3",
 })
 
 sets.Some_Ranged_Acc = set_combine(sets.Some_Ranged_Acc, {
 })
 
 sets.Full_Ranged_Acc = set_combine(sets.Full_Ranged_Acc, {
-  ring1="Regal Ring",
+  --ring1="Regal Ring",
   ring2="Cacoethic Ring +1",
 })
 
@@ -175,11 +174,11 @@ sets.MAB = set_combine(sets.MAB, {
 })
 
 sets.Quick_Magic = set_combine(sets.Quick_Magic, {
-  ammo="Eminent Bullet",
+  ammo="Chrono Bullet",
 })
 
 sets.Fast_Cast = set_combine(sets.Fast_Cast, {
-  ammo="Eminent Bullet",
+  ammo="Chrono Bullet",
 })
 
 --- ===============================
@@ -187,7 +186,7 @@ sets.Fast_Cast = set_combine(sets.Fast_Cast, {
 --- ===============================
 	
 sets.WS_All = set_combine(sets.WS_All,{
-  --body="Laksa. Frac +3",
+  body="Laksa. Frac +3",
   --back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 })
 
@@ -199,7 +198,7 @@ sets.WS["Savage Blade"] = set_combine(sets.WS_All,{
 })
   
 sets.WS.Ranged_All = set_combine(sets.WS.Ranged_All,{
-  --body="Laksa. Frac +3",
+  body="Laksa. Frac +3",
   --back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}},
 })
 	
@@ -207,28 +206,28 @@ sets.WS["Last Stand"] = set_combine(sets.WS.Ranged_All, {
   head="Meghanada Visor +1",
   neck="Fotia Gorget",
   ear1="Telos Earring",
-  ear2="Moonshade Earring",
-  ring1="Regal Ring",
+  --ear2="Moonshade Earring",
+  --ring1="Regal Ring",
   ring2="Dingir Ring",
   waist="Fotia Belt",
 })
   
 sets.WS["Leaden Salute"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
-  ammo="Eminent Bullet",
+  ammo="Chrono Bullet",
   --ammo="Orichalcum Bullet",
-  --head="Pixie Hairpin +1",
-  ear1="Moonshade Earring",
+  head="Pixie Hairpin +1",
+  --ear1="Moonshade Earring",
   ring1="Archon Ring",
   ring2="Dingir Ring",
-  --back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+  back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 })
 
 sets.WS["Wildfire"] = set_combine(sets.WS.Ranged_All, sets.MAB, {
-  ammo="Eminent Bullet",
+  ammo="Chrono Bullet",
   --ammo="Chrono Bullet",
-  --ring1="Garuda Ring +1",
+  ring1="Garuda Ring +1",
   ring2="Dingir Ring",
-  --back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+  back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 })
   
 --- ===============================

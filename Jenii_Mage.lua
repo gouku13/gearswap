@@ -75,8 +75,8 @@ sets.MDT = set_combine(sets.DT, {
 sets.Refresh = {
   head="Befouled Crown", -- 1 MP/tic
   ear2="Infused Earring",
-  ear1="Etiolation Earring",
-  body="Amalric Doublet", -- PDT: ?%, MDT: ?%
+  ear1="Genmei Earring",
+  body="Jhakri Robe +2", -- PDT: ?%, MDT: ?%
   waist="Fucho-no-Obi", -- 1 MP/tic when < 50% MP
   legs="Assiduity Pants +1" -- 1 MP/tic
 }

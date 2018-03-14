@@ -22,13 +22,13 @@ sets.DT = { --- PDT: 54%, MDT: 44%, BDT: 31%
     ear1="Infused Earring", -- Regen
     ear2="Etiolation Earring", -- MDT -3%
     body="Meg. Cuirie +2", -- PDT -8%
-    --hands={ name="Herculean Gloves", augments={'Accuracy+20 Attack+20','Damage taken-2%','Accuracy+6','Attack+7',}}, -- PDT -2%, DT - 2%
+    hands="Meg. Gloves +2",
     ring1= Hybrid_DT_Ring1,
     ring2= Hybrid_DT_Ring2,
     --back="Moonbeam Cape", -- DT -5%, HP+250
 	back="Solemnity Cape",
     waist="Flume Belt", -- PDT -4%
-    --legs="Mummu Kecks +1", -- DT -4%
+    legs="Mummu Kecks +2", -- DT -4%
     --feet={ name="Herculean Boots", augments={'Accuracy+23 Attack+23','Damage taken-2%','DEX+5','Attack+6',}} -- PDT -2%, DT -2%
 }
 
@@ -63,6 +63,7 @@ sets.TP.Max = {
   neck="Ainia Collar",
   --ear1="Dedition Earring",
   --ear2="Eabani Earring", -- DW: 4%
+  body="Adhemar Jacket +1",
   --body={name="Herculean Vest", augments={'Attack+21','"Triple Atk."+4','Accuracy+15',}},
   hands="Adhemar Wristbands +1",
   ring1="Epona's Ring",
@@ -71,7 +72,7 @@ sets.TP.Max = {
   --back="Bleating Mantle",
   waist="Reiki Yotai", -- DW: 7%
   --legs="Samnuha Tights",
-  legs={ name="Herculean Trousers", augments={'Accuracy+25','"Triple Atk."+3',}},
+  --legs={ name="Herculean Trousers", augments={'Accuracy+25','"Triple Atk."+3',}},
   feet={ name="Herculean Boots", augments={'DEX+1','Attack+7','Quadruple Attack +2','Accuracy+15 Attack+15','Mag. Acc.+2 "Mag.Atk.Bns."+2',}},
 }
 
@@ -113,7 +114,7 @@ end
   sets.TP.PDT_Mix = { -- PDT: 26%, MDT: 12%
     body="Meg. Cuirie +2", -- PDT -8%
     ring1=Hybrid_DT_Ring1, -- DT -10%
-    legs="Meg. Chausses +1", -- PDT -6%
+    legs="Meg. Chausses +2", -- PDT -6%
     --feet={ name="Herculean Boots", augments={'Accuracy+23 Attack+23','Damage taken-2%','DEX+5','Attack+6',}} -- PDT -2%, DT -2%
   }
 
@@ -123,36 +124,36 @@ end
 
 sets.Some_Acc = {
   --neck="Combatant's Torque",
-  ring1="Ramuh Ring +1",
-  waist="Kentarch Belt +1"
+  --ring1="Ramuh Ring +1",
+  --waist="Kentarch Belt +1"
 }
 
 sets.Full_Acc = set_combine(sets.Some_Acc, {
   ammo="Falcon Eye",
   --head="Dampening Tam",
   --ear1="Zennaroi Earring",
-  ear2="Telos Earring",
-  ring2="Cacoethic Ring +1",
+  --ear2="Telos Earring",
+  --ring2="Cacoethic Ring +1",
   --waist="Olseni Belt"
 })
 
 if (Main_Job ~= 'BLU') then
   sets.Full_Acc = set_combine(sets.Full_Acc, {
     hands="Meg. Gloves +2",
-    feet="Meg. Jam. +1",
+    feet="Meg. Jam. +2",
   })
 end
 
 if ((Main_Job == 'COR') or (Main_Job == 'BLU') or (Main_Job == 'RUN') or (Main_Job == 'RNG')) then
   sets.Full_Acc = set_combine(sets.Full_Acc, {
-    --head="Carmine Mask +1",
+    head="Carmine Mask +1",
     legs="Carmine Cuisses +1"
   })
 end
 
 if ((Main_Job == 'THF') or (Main_Job == 'NIN') or (Main_Job == 'RUN') or (Main_Job == 'DNC')) then
   sets.Full_Acc = set_combine(sets.Full_Acc, {
-    --ammo="Yamarang",
+    ammo="Yamarang",
   })
 end
 
@@ -165,7 +166,7 @@ sets.Preshot = {
   --body="Pursuer's Doublet", -- Snapshot +6
   waist="Impulse Belt", -- Snapshot +3
   --legs={ name="Adhemar Kecks", augments={'AGI+10','"Rapid Shot"+10','Enmity-5',}}, -- Snapshot +9
-  feet="Meg. Jam. +1", -- Snapshot +10
+  feet="Meg. Jam. +2", -- Snapshot +10
 }
 
 sets.Midshot = {
@@ -178,8 +179,8 @@ sets.Midshot = {
   ring1="Regal Ring",
   ring2="Ilabrat Ring",
   waist="Eschan Stone", 
-  legs="Meg. Chausses +1",
-  feet="Meg. Jam. +1",
+  legs="Meg. Chausses +2",
+  feet="Meg. Jam. +2",
 }
 
 sets.Some_Ranged_Acc = {
@@ -197,7 +198,7 @@ sets.WS_All = {
   --head={ name="Herculean Helm", augments={'Attack+27','Weapon skill damage +4%','Accuracy+14',}},
   neck="Fotia Gorget",
   ear1="Brutal Earring",
-  ear2="Moonshade Earring",
+  --ear2="Moonshade Earring",
   --body={ name="Herculean Vest", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','STR+4','Accuracy+8',}},
   hands="Meg. Gloves +2",
   ring2="Hetairoi Ring",
@@ -265,7 +266,7 @@ sets.WS["Rudra's Storm"] = set_combine(sets.WS.All, { -- Deals quintuple damage 
 
 sets.WS.Ranged_All = set_combine(sets.Midshot,{ 
   neck="Fotia Gorget",
-  ear2="Moonshade Earring",
+  --ear2="Moonshade Earring",
   --body={ name="Herculean Vest", augments={'Rng.Acc.+15 Rng.Atk.+15','Weapon skill damage +3%','STR+5','Rng.Acc.+8','Rng.Atk.+6',}},
   hands="Meg. Gloves +2",
   --ring1="Garuda Ring +1",

@@ -165,7 +165,7 @@ function get_job_sets()
     body="Baayami Robe", -- Summoning +32
     hands="Baayami Cuffs", -- Summoning +28
     ring2="Evoker's Ring", -- Summoning +10
-    ring1="Stikini Ring", -- All Magic Skills +5
+    ring1="Stikini Ring +1", -- All Magic Skills +8
     back={ name="Conveyance Cape", augments={'Summoning magic skill +5','Pet: Enmity+12','Blood Pact Dmg.+1',}}, -- Summoning +13
     waist="Kobo Obi", -- Summoning +8
     legs="Baayami Slops", -- Summoning +30
