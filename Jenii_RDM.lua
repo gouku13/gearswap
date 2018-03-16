@@ -94,6 +94,7 @@ function get_job_sets()
 --- ===============================
   
   sets.Some_MAcc = set_combine(sets.Some_MAcc,{
+    hands="Kaykaus Cuffs +1",
 	--legs={ name="Chironic Hose", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Resist Silence"+1','MND+14','Mag. Acc.+11','"Mag.Atk.Bns."+6',}},
   })
 

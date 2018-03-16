@@ -115,12 +115,15 @@ function get_job_sets()
 		head="Ea Hat +1",
 		ear1="Regal Earring",
 		body="Ea Houppelande +1",
-		hands="Ea Cuffs",
+		hands="Amalric Gages +1",
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
-		legs="Ea Slops",
+		legs="Ea Slops +1",
 	})
 	
 	sets.MB = set_combine(sets.MB, {
+		head="Ea Hat +1",
+		body="Ea Houppelande +1",
+		legs="Ea Slops +1",
 	})
 
 	sets.Enfeeble_Skill = set_combine(sets.Enfeeble_Skill,{

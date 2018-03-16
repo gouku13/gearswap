@@ -169,7 +169,7 @@ function get_job_sets()
     back={ name="Conveyance Cape", augments={'Summoning magic skill +5','Pet: Enmity+12','Blood Pact Dmg.+1',}}, -- Summoning +13
     waist="Kobo Obi", -- Summoning +8
     legs="Baayami Slops", -- Summoning +30
-    feet="Baayami Sabots", -- Summoning +24
+    feet="Baayami Sabots +1", -- Summoning +24
   }
   
   sets.BP = {}

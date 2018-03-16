@@ -1,4 +1,4 @@
-require('Jonie_Mage')
+require('Jenii_Mage')
 
 --- Build Sets
 function get_job_sets()
@@ -145,7 +145,7 @@ function get_job_sets()
 	sets.Utility["MB"]["On"] = {
       head={ name="Merlinic Hood", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Magic burst dmg.+9%','MND+5','Mag. Acc.+5','"Mag.Atk.Bns."+12',}}, -- +9%
       neck="Mizu. Kubikazari", -- +10%
-      hands="Amalric Gages", -- (+5%)
+      hands="Amalric Gages +1", -- (+5%)
       ring1="Mujin Band", -- (+5%)
       ring2="Locus Ring", -- +5%
       --back="Seshaw Cape +1", -- +6%

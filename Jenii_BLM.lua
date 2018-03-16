@@ -1,4 +1,4 @@
-require('Jonie_Mage')
+require('Jenii_Mage')
 
 --- Build Sets
 function get_job_sets()
@@ -13,8 +13,8 @@ function get_job_sets()
 --- 	Job Abilities
 --- ===============================
 
-  sets.JA['Manafont'] = {body="Sorcerer's Coat +2"}
-  sets.During_Buff['Mana Wall'] = {feet="Goetia Sabots +2",lock="feet"}
+	sets.JA['Manafont'] = {body="Sorcerer's Coat +2"}
+	sets.During_Buff['Mana Wall'] = {feet="Goetia Sabots +2",lock="feet"}
 	
 --- ===============================
 --- 	DT Sets
@@ -22,8 +22,6 @@ function get_job_sets()
 
 	--- Full -DT%. For TP/PDT and idle sets.
     sets.DT = set_combine(sets.DT, {
-	  ear1="Colossus's Earring",
-	  back="Umbra Cape"
 	})
 
 --- ===============================
@@ -32,7 +30,9 @@ function get_job_sets()
 
 	--- REFRESH: 6 (base) + 2 MP/tic
 	sets.Refresh = set_combine(sets.Refresh, {
-      body="Amalric Doublet"
+      head={ name="Merlinic Hood", augments={'STR+4','MND+6','"Refresh"+2','Mag. Acc.+7 "Mag.Atk.Bns."+7',}},
+	  body="Jhakri Robe +2",
+	  hands={ name="Merlinic Dastanas", augments={'Pet: CHR+8','Attack+12','"Refresh"+1',}},
     })
   
 --- ===============================
@@ -54,13 +54,14 @@ function get_job_sets()
     })
 
 	sets.MAB = set_combine(sets.MAB,{
+	  body="Jhakri Robe +2",
 	})
 	
 	sets.MB = set_combine(sets.MB, { body = "Spae. Coat +1",back="Taranus's Cape" })
 	
 	sets.midcast.Comet = set_combine(sets.MAB,sets.MB,{
       sub="Niobid Strap",
-	  --head="Pixie Hairpin +1",
+	  head="Pixie Hairpin +1",
 	  ammo="Pemphredo Tathlum",
 	  neck="Mizu. Kubikazari",
 	  --ear2="Static Earring",
@@ -108,7 +109,7 @@ function get_job_sets()
       --feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+21','Magic burst mdg.+10%','Mag. Acc.+4',}},  -- +10%
     }
     sets.Death.Aspir = {
-      --head="Pixie Hairpin +1",
+      head="Pixie Hairpin +1",
       ammo="Pemphredo Tathlum",
       neck="Incanter's Torque",
       ear1="Gwati Earring",

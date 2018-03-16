@@ -121,7 +121,7 @@ sets.Fast_Cast = { -- Currently FC 42%, QM 10%
 
 if ((Main_Job == 'WHM') or (Main_Job == 'BRD')) then
   sets.Fast_Cast = set_combine(sets.Fast_Cast,{ -- 45% FC
-    body="Inyanga Jubbah +1", -- FC 13%
+    body="Inyanga Jubbah +2", -- FC 13%
   })
 end
 
@@ -268,10 +268,10 @@ sets.MAB = {
   ammo="Pemphredo tathlum",
   head={ name="Merlinic Hood", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Magic Damage +6','Mag. Acc.+15','"Mag.Atk.Bns."+13',}},
   neck="Sanctity Necklace",
-  ear1="Friomisi Earring",
+  ear1="Regal Earring",
   ear2="Barkarole Earring",
   body="Amalric Doublet",
-  hands="Amalric Gages",
+  hands="Amalric Gages +1",
   ring1="Shiva Ring +1",
   ring2="Shiva Ring +1",
   back="Toro Cape",
@@ -285,8 +285,8 @@ sets.MB = {
   head={ name="Merlinic Hood", augments={'"Mag.Atk.Bns."+25','Magic burst dmg.+10%','CHR+5','Mag. Acc.+12',}}, -- +10%
   neck="Mizu. Kubikazari", -- +10%
   ear1="Barkarole Earring",
-  ear2="Friomisi Earring",
-  hands="Amalric Gages", -- (+5%)
+  ear2="Regal Earring",
+  hands="Amalric Gages +1", -- (+5%)
   ring1="Mujin Band", -- (+5%)
   ring2="Shiva Ring +1",
   back="Seshaw Cape +1", -- +6%

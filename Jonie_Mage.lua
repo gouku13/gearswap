@@ -267,7 +267,7 @@ sets.MAB = {
   ear1="Regal Earring", -- MAB: 10
   ear2="Barkarole Earring", -- MAB: 8
   body="Amalric Doublet",
-  hands="Amalric Gages",
+  hands="Amalric Gages +1",
   back="Toro Cape", --- MAB: 10 
   legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+24 "Mag.Atk.Bns."+24','"Drain" and "Aspir" potency +6','"Mag.Atk.Bns."+13',}},
   feet={ name="Merlinic Crackows", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Occult Acumen"+4','STR+6','Mag. Acc.+12','"Mag.Atk.Bns."+11',}}
@@ -280,7 +280,7 @@ sets.MB = {
   body="Amalric Doublet",
   ear1="Regal Earring",
   ear2="Barkarole Earring",
-  hands="Amalric Gages", -- (+5%)
+  hands="Amalric Gages +1", -- (+5%)
   back="Seshaw Cape",
   ring1="Mujin Band", -- (+5%)
   ring2="Locus Ring", -- +5%

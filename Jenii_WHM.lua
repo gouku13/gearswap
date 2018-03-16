@@ -1,4 +1,4 @@
-require('Jonie_Mage')
+require('Jenii_Mage')
 
 --- Build Sets
 function get_job_sets()
@@ -123,13 +123,14 @@ function get_job_sets()
 	})
 
 	sets.Enhancing_Duration = set_combine(sets.Enhancing_Duration,{
-      main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','MND+4','Mag. Acc.+17','DMG:+2',}},
+      main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','"Mag.Atk.Bns."+19',}},
       sub="Ammurapi Shield",
-      head="Telchine Cap", -- Enhancing Duration +7  
-	  body="Telchine Chas.",  -- Enhancing Duration +10
-      hands="Telchine Gloves", -- Enhancing Duration +10
-	  legs="Telchine Braconi", -- Enhancing Duration +10
-	  feet="Theo. Duckbills +3"
+	  head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+      body={ name="Telchine Chas.", augments={'Evasion+15','Enh. Mag. eff. dur. +10',}},
+	  hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
+	  legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
+	  feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+	  --feet="Theo. Duckbills +3"
 	})
   
     sets.Enhancing_Bonus["Regen"] = set_combine(sets.Enhancing_Duration,{
@@ -141,21 +142,23 @@ function get_job_sets()
     })
 
 	sets.midcast["ProtectraV"] = set_combine(sets.midcast["Enhancing_Skill"], {
+	  main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','"Mag.Atk.Bns."+19',}},
 	  sub="Ammurapi Shield",
-	  head="Telchine Cap", -- Enhancing Duration +7  
-	  body="Telchine Chas.",  -- Enhancing Duration +10
-	  hands="Telchine Gloves", -- Enhancing Duration +10
-	  legs="Telchine Braconi", -- Enhancing Duration +10
+	  head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+	  body={ name="Telchine Chas.", augments={'Evasion+15','Enh. Mag. eff. dur. +10',}},
+	  hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
+	  legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 	  feet="Piety Duckbills +1" --- Enhancing +15, Enhances Protectra V
 	})
   
   	sets.midcast["ShellraV"] = set_combine(sets.midcast["Enhancing_Skill"], {
 	  sub="Ammurapi Shield",
-	  head="Telchine Cap", -- Enhancing Duration +7  
-	  body="Telchine Chas.",  -- Enhancing Duration +10
-	  hands="Telchine Gloves", -- Enhancing Duration +10
+	  head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
+	  body={ name="Telchine Chas.", augments={'Evasion+15','Enh. Mag. eff. dur. +10',}},
+	  hands={ name="Telchine Gloves", augments={'Enh. Mag. eff. dur. +10',}},
 	  legs="Piety Pantaln. +1", -- Enhances Shellra V
-	  feet="Theo. Duckbills +3", -- Enhancing Duration +10
+	  feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +10',}},
+	  --feet="Theo. Duckbills +3", -- Enhancing Duration +10
 	})
 	
 	sets.midcast["WarpII"] = set_combine(sets.Fast_Cast,{
